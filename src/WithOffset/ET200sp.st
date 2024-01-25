@@ -3074,403 +3074,403 @@
    END_TYPE
 
    TYPE EM480VSTDataRec150   : STRUCT
-        version              : Byte    := BYTE#1;  // Version
-        resb1                : Byte;               // Reserved
-        operHoursCntTotal    : Real;               // Operating hours counter L1 L2 L3
-        operHoursCntL1       : Real;               // Operating hours counter L1
-        operHoursCntL2       : Real;               // Operating hours counter L2
-        operHoursCntL3       : Real;               // Operating hours counter L3
-        statusLimViolGW1to16 : Word;               // Status limit violation GW 1...16
-        statusEnergyCntOv    : Word;               // Status of energy counter overflows
-        cntLimViolGw1        : UDInt;              // Counter limit violation GW 1
-        cntLimViolGw2        : UDInt;              // Counter limit violation GW 2
-        cntLimViolGw3        : UDInt;              // Counter limit violation GW 3
-        cntLimViolGw4        : UDInt;              // Counter limit violation GW 4
-        cntLimViolGw5        : UDInt;              // Counter limit violation GW 5
-        cntLimViolGw6        : UDInt;              // Counter limit violation GW 6
-        cntLimViolGw7        : UDInt;              // Counter limit violation GW 7
-        cntLimViolGw8        : UDInt;              // Counter limit violation GW 8
-        cntLimViolGw9        : UDInt;              // Counter limit violation GW 9
-        cntLimViolGw10       : UDInt;              // Counter limit violation GW 10
-        cntLimViolGw11       : UDInt;              // Counter limit violation GW 11
-        cntLimViolGw12       : UDInt;              // Counter limit violation GW 12
-        cntLimViolGw13       : UDInt;              // Counter limit violation GW 13
-        cntLimViolGw14       : UDInt;              // Counter limit violation GW 14
-        cntLimViolGw15       : UDInt;              // Counter limit violation GW 15
-        cntLimViolGw16       : UDInt;              // Counter limit violation GW 16
-        qualifierL1L2L3      : Word;               // Qualifier L1 L2 L3
+        version              AT %B0 : Byte    := BYTE#1;  // Version
+        resb1                AT %B1 : Byte;               // Reserved
+        operHoursCntTotal    AT %B2 : Real;               // Operating hours counter L1 L2 L3
+        operHoursCntL1       AT %B6 : Real;               // Operating hours counter L1
+        operHoursCntL2       AT %B10 : Real;               // Operating hours counter L2
+        operHoursCntL3       AT %B14 : Real;               // Operating hours counter L3
+        statusLimViolGW1to16 AT %B18 : Word;               // Status limit violation GW 1...16
+        statusEnergyCntOv    AT %B20 : Word;               // Status of energy counter overflows
+        cntLimViolGw1        AT %B22 : UDInt;              // Counter limit violation GW 1
+        cntLimViolGw2        AT %B26 : UDInt;              // Counter limit violation GW 2
+        cntLimViolGw3        AT %B30 : UDInt;              // Counter limit violation GW 3
+        cntLimViolGw4        AT %B34 : UDInt;              // Counter limit violation GW 4
+        cntLimViolGw5        AT %B38 : UDInt;              // Counter limit violation GW 5
+        cntLimViolGw6        AT %B42 : UDInt;              // Counter limit violation GW 6
+        cntLimViolGw7        AT %B46 : UDInt;              // Counter limit violation GW 7
+        cntLimViolGw8        AT %B50 : UDInt;              // Counter limit violation GW 8
+        cntLimViolGw9        AT %B54 : UDInt;              // Counter limit violation GW 9
+        cntLimViolGw10       AT %B58 : UDInt;              // Counter limit violation GW 10
+        cntLimViolGw11       AT %B62 : UDInt;              // Counter limit violation GW 11
+        cntLimViolGw12       AT %B66 : UDInt;              // Counter limit violation GW 12
+        cntLimViolGw13       AT %B70 : UDInt;              // Counter limit violation GW 13
+        cntLimViolGw14       AT %B74 : UDInt;              // Counter limit violation GW 14
+        cntLimViolGw15       AT %B78 : UDInt;              // Counter limit violation GW 15
+        cntLimViolGw16       AT %B82 : UDInt;              // Counter limit violation GW 16
+        qualifierL1L2L3      AT %B86 : Word;               // Qualifier L1 L2 L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VSTDataRec149 : STRUCT
-        version            : Byte    := BYTE#1;  // Version
-        resb1              : Byte;               // Reserved
-        qualifierL3        : Word;               // Qualifier L3
-        voltL3N            : Real;               // Voltage UL3-N
-        currentL3          : Real;               // Current L3
-        apparentPowerL3    : Real;               // Apparent power L3
-        activePowerL3      : Real;               // Active power L3
-        reactivePowerL3    : Real;               // Reactive power L3
-        powerFactorL3      : Real;               // Power factor L3
-        phaseAngleL3       : Real;               // Phase angle L3
-        apparentEnergyL3   : LReal;              // Apparent energy L3
-        activeEnergyL3     : LReal;              // Active energy (total) L3
-        reactiveEnergyL3   : LReal;              // Reactive energy (total) L3
-        maxVoltL3N         : Real;               // Max. voltage UL3-N
-        maxCurrentL3       : Real;               // Max. current L3
-        maxApparentPowerL3 : Real;               // Max. apparent power L3
-        maxActivePowerL3   : Real;               // Max. active power L3
-        maxReactivePowerL3 : Real;               // Max. reactive power L3
-        maxPowerFactorL3   : Real;               // Max. power factor L3
-        minVoltL3N         : Real;               // Min. voltage UL3-N
-        minCurrentL3       : Real;               // Min. current L3
-        minApparentPowerL3 : Real;               // Min. apparent power L3
-        minActivePowerL3   : Real;               // Min. active power L3
-        minReactivePowerL3 : Real;               // Min. reactive power L3
-        minPowerFactorL3   : Real;               // Min. power factor L3
+        version            AT %B0 : Byte    := BYTE#1;  // Version
+        resb1              AT %B1 : Byte;               // Reserved
+        qualifierL3        AT %B2 : Word;               // Qualifier L3
+        voltL3N            AT %B4 : Real;               // Voltage UL3-N
+        currentL3          AT %B8 : Real;               // Current L3
+        apparentPowerL3    AT %B12 : Real;               // Apparent power L3
+        activePowerL3      AT %B16 : Real;               // Active power L3
+        reactivePowerL3    AT %B20 : Real;               // Reactive power L3
+        powerFactorL3      AT %B24 : Real;               // Power factor L3
+        phaseAngleL3       AT %B28 : Real;               // Phase angle L3
+        apparentEnergyL3   AT %B32 : LReal;              // Apparent energy L3
+        activeEnergyL3     AT %B40 : LReal;              // Active energy (total) L3
+        reactiveEnergyL3   AT %B48 : LReal;              // Reactive energy (total) L3
+        maxVoltL3N         AT %B56 : Real;               // Max. voltage UL3-N
+        maxCurrentL3       AT %B60 : Real;               // Max. current L3
+        maxApparentPowerL3 AT %B64 : Real;               // Max. apparent power L3
+        maxActivePowerL3   AT %B68 : Real;               // Max. active power L3
+        maxReactivePowerL3 AT %B72 : Real;               // Max. reactive power L3
+        maxPowerFactorL3   AT %B76 : Real;               // Max. power factor L3
+        minVoltL3N         AT %B80 : Real;               // Min. voltage UL3-N
+        minCurrentL3       AT %B84 : Real;               // Min. current L3
+        minApparentPowerL3 AT %B88 : Real;               // Min. apparent power L3
+        minActivePowerL3   AT %B92 : Real;               // Min. active power L3
+        minReactivePowerL3 AT %B96 : Real;               // Min. reactive power L3
+        minPowerFactorL3   AT %B100 : Real;               // Min. power factor L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VSTDataRec148 : STRUCT
-        version            : Byte    := BYTE#1;  // Version
-        resb1              : Byte;               // Reserved
-        qualifierL2        : Word;               // Qualifier L2
-        voltL2N            : Real;               // Voltage UL2-N
-        currentL2          : Real;               // Current L2
-        apparentPowerL2    : Real;               // Apparent power L2
-        activePowerL2      : Real;               // Active power L2
-        reactivePowerL2    : Real;               // Reactive power L2
-        powerFactorL2      : Real;               // Power factor L2
-        phaseAngleL2       : Real;               // Phase angle L2
-        apparentEnergyL2   : LReal;              // Apparent energy L2
-        activeEnergyL2     : LReal;              // Active energy (total) L2
-        reactiveEnergyL2   : LReal;              // Reactive energy (total) L2
-        maxVoltL2N         : Real;               // Max. voltage UL2-N
-        maxCurrentL2       : Real;               // Max. current L2
-        maxApparentPowerL2 : Real;               // Max. apparent power L2
-        maxActivePowerL2   : Real;               // Max. active power L2
-        maxReactivePowerL2 : Real;               // Max. reactive power L2
-        maxPowerFactorL2   : Real;               // Max. power factor L2
-        minVoltL2N         : Real;               // Min. voltage UL2-N
-        minCurrentL2       : Real;               // Min. current L2
-        minApparentPowerL2 : Real;               // Min. apparent power L2
-        minActivePowerL2   : Real;               // Min. active power L2
-        minReactivePowerL2 : Real;               // Min. reactive power L2
-        minPowerFactorL2   : Real;               // Min. power factor L2
+        version            AT %B0  : Byte    := BYTE#1;  // Version
+        resb1              AT %B1  : Byte;               // Reserved
+        qualifierL2        AT %B2  : Word;               // Qualifier L2
+        voltL2N            AT %B4  : Real;               // Voltage UL2-N
+        currentL2          AT %B8  : Real;               // Current L2
+        apparentPowerL2    AT %B12 : Real;               // Apparent power L2
+        activePowerL2      AT %B16 : Real;               // Active power L2
+        reactivePowerL2    AT %B20 : Real;               // Reactive power L2
+        powerFactorL2      AT %B24 : Real;               // Power factor L2
+        phaseAngleL2       AT %B28 : Real;               // Phase angle L2
+        apparentEnergyL2   AT %B32 : LReal;              // Apparent energy L2
+        activeEnergyL2     AT %B40 : LReal;              // Active energy (total) L2
+        reactiveEnergyL2   AT %B48 : LReal;              // Reactive energy (total) L2
+        maxVoltL2N         AT %B56 : Real;               // Max. voltage UL2-N
+        maxCurrentL2       AT %B60 : Real;               // Max. current L2
+        maxApparentPowerL2 AT %B64 : Real;               // Max. apparent power L2
+        maxActivePowerL2   AT %B68 : Real;               // Max. active power L2
+        maxReactivePowerL2 AT %B72 : Real;               // Max. reactive power L2
+        maxPowerFactorL2   AT %B76 : Real;               // Max. power factor L2
+        minVoltL2N         AT %B80 : Real;               // Min. voltage UL2-N
+        minCurrentL2       AT %B84 : Real;               // Min. current L2
+        minApparentPowerL2 AT %B88 : Real;               // Min. apparent power L2
+        minActivePowerL2   AT %B92 : Real;               // Min. active power L2
+        minReactivePowerL2 AT %B96 : Real;               // Min. reactive power L2
+        minPowerFactorL2   AT %B100 : Real;               // Min. power factor L2
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VSTDataRec147    : STRUCT
-        version               : Byte    := BYTE#1;  // Version
-        resb1                 : Byte;               // Reserved
-        qualifierL1           : Word;               // Qualifier L1
-        voltL1N               : Real;               // Voltage UL1-N
-        currentL1             : Real;               // Current L1
-        apparentPowerL1       : Real;               // Apparent power L1
-        activePowerL1         : Real;               // Active power L1
-        reactivePowerL1       : Real;               // Reactive power L1
-        powerFactorL1         : Real;               // Power factor L1
-        phaseAngleL1          : Real;               // Phase angle L1
-        apparentEnergyL1      : LReal;              // Apparent energy L1
-        totalActiveEnergyL1   : LReal;              // Active energy (total) L1
-        totalReactiveEnergyL1 : LReal;              // Reactive energy (total) L1
-        maxVoltL1N            : Real;               // Max. voltage UL1-N
-        maxCurrentL1          : Real;               // Max. current L1
-        maxApparentPowerL1    : Real;               // Max. apparent power L1
-        maxActivePowerL1      : Real;               // Max. active power L1
-        maxReactivePowerL1    : Real;               // Max. reactive power L1
-        maxPowerFactorL1      : Real;               // Max. power factor L1
-        minVoltL1N            : Real;               // Min. voltage UL1-N
-        minCurrentL1          : Real;               // Min. current L1
-        minApparentPowerL1    : Real;               // Min. apparent power L1
-        minActivePowerL1      : Real;               // Min. active power L1
-        minReactivePowerL1    : Real;               // Min. reactive power L1
-        minPowerFactorL1      : Real;               // Min. power factor L1
+        version               AT %B0  : Byte    := BYTE#1;  // Version
+        resb1                 AT %B1  : Byte;               // Reserved
+        qualifierL1           AT %B2  : Word;               // Qualifier L1
+        voltL1N               AT %B4  : Real;               // Voltage UL1-N
+        currentL1             AT %B8  : Real;               // Current L1
+        apparentPowerL1       AT %B12 : Real;               // Apparent power L1
+        activePowerL1         AT %B16 : Real;               // Active power L1
+        reactivePowerL1       AT %B20 : Real;               // Reactive power L1
+        powerFactorL1         AT %B24 : Real;               // Power factor L1
+        phaseAngleL1          AT %B28 : Real;               // Phase angle L1
+        apparentEnergyL1      AT %B32 : LReal;              // Apparent energy L1
+        totalActiveEnergyL1   AT %B40 : LReal;              // Active energy (total) L1
+        totalReactiveEnergyL1 AT %B48 : LReal;              // Reactive energy (total) L1
+        maxVoltL1N            AT %B56 : Real;               // Max. voltage UL1-N
+        maxCurrentL1          AT %B60 : Real;               // Max. current L1
+        maxApparentPowerL1    AT %B64 : Real;               // Max. apparent power L1
+        maxActivePowerL1      AT %B68 : Real;               // Max. active power L1
+        maxReactivePowerL1    AT %B72 : Real;               // Max. reactive power L1
+        maxPowerFactorL1      AT %B76 : Real;               // Max. power factor L1
+        minVoltL1N            AT %B80 : Real;               // Min. voltage UL1-N
+        minCurrentL1          AT %B84 : Real;               // Min. current L1
+        minApparentPowerL1    AT %B88 : Real;               // Min. apparent power L1
+        minActivePowerL1      AT %B92 : Real;               // Min. active power L1
+        minReactivePowerL1    AT %B96 : Real;               // Min. reactive power L1
+        minPowerFactorL1      AT %B100: Real;               // Min. power factor L1
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec170 : STRUCT
-        version            : Byte;                   // Version
-        resb1              : Byte;                   // Reserved
-        numIDs             : UInt;                   // Number of IDs
-        measValueID        : Array[1..580] of UInt;  // ID measured value
+        version            AT %B0 : Byte;                   // Version
+        resb1              AT %B1 : Byte;                   // Reserved
+        numIDs             AT %B2 : UInt;                   // Number of IDs
+        measValueID        AT %B4 : Array[1..580] of UInt;  // ID measured value
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM400VSTDataRec128       : STRUCT
-        majMinVer                : Byte    := BYTE#65;            // Major / minor version
-        numParamStruct           : Byte    := BYTE#2;             // Number of parameter structures = 2
-        numModuleParamBlocks     : Byte    := BYTE#1;             // Number of module parameter blocks = 1
-        lengthModuleParamBlock   : Byte    := BYTE#8;             // Length of module parameter block = 8
-        connectTypePhases        : Byte    := BYTE#0;             // Connection type of the phases
-        measRangePower           : Byte;                          // Voltage measuring range of the power supply system
-        energyCountGateLineFrequ : Byte;                          // Energy counter gate / Line frequency of the power supply system
-        lineVoltTolerance        : Byte;                          // Line voltage tolerance
-        diagLineVolt             : Byte;                          // Diagnostics line voltage
-        lowLimitCurrMeas         : Byte;                          // Low limit for current measurement [mA]
-        resb10                   : Byte;                          // Reserved
-        idUserDataVariant        : Byte;                          // ID of the user data variant
-        numChannelParamBlocks    : Byte    := BYTE#3;             // Number of channel parameter blocks = 3
-        lengthChannelParamBlock  : Byte    := BYTE#8;             // Length of channel parameter block = 8
-        channel                  : Array[0..2] of EMSTDataRecCh;
+        majMinVer                AT %B0 : Byte    := BYTE#65;            // Major / minor version
+        numParamStruct           AT %B1 : Byte    := BYTE#2;             // Number of parameter structures = 2
+        numModuleParamBlocks     AT %B2 : Byte    := BYTE#1;             // Number of module parameter blocks = 1
+        lengthModuleParamBlock   AT %B3 : Byte    := BYTE#8;             // Length of module parameter block = 8
+        connectTypePhases        AT %B4 : Byte    := BYTE#0;             // Connection type of the phases
+        measRangePower           AT %B5 : Byte;                          // Voltage measuring range of the power supply system
+        energyCountGateLineFrequ AT %B6 : Byte;                          // Energy counter gate / Line frequency of the power supply system
+        lineVoltTolerance        AT %B7 : Byte;                          // Line voltage tolerance
+        diagLineVolt             AT %B8 : Byte;                          // Diagnostics line voltage
+        lowLimitCurrMeas         AT %B9 : Byte;                          // Low limit for current measurement [mA]
+        resb10                   AT %B10 : Byte;                          // Reserved
+        idUserDataVariant        AT %B11 : Byte;                          // ID of the user data variant
+        numChannelParamBlocks    AT %B12 : Byte    := BYTE#3;             // Number of channel parameter blocks = 3
+        lengthChannelParamBlock  AT %B13 : Byte    := BYTE#8;             // Length of channel parameter block = 8
+        channel                  AT %B14 : Array[0..2] of EMSTDataRecCh;
       END_STRUCT;
 
    END_TYPE
 
    TYPE EEatIndustryProfileE1 : STRUCT
-        totalActivePower      : Real;   // Total active power L1 L2 L3
+        totalActivePower      AT %B0 : Real;   // Total active power L1 L2 L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EMSTDataRec128           : STRUCT
-        majMinVer                : Byte    := BYTE#64;            // Major / minor version
-        numParamStruct           : Byte    := BYTE#2;             // Number of parameter structures = 2
-        numModuleParamBlocks     : Byte    := BYTE#1;             // Number of module parameter blocks = 1
-        lengthModuleParamBlock   : Byte    := BYTE#8;             // Length of module parameter block = 8
-        connectTypePhases        : Byte    := BYTE#0;             // Connection type of the phases
-        measRangePower           : Byte;                          // Voltage measuring range of the power supply system
-        energyCountGateLineFrequ : Byte;                          // Energy counter gate / Line frequency of the power supply system
-        lineVoltTolerance        : Byte;                          // Line voltage tolerance
-        diagLineVolt             : Byte;                          // Diagnostics line voltage
-        lowLimitCurrMeas         : Byte;                          // Low limit for current measurement [mA]
-        resb10                   : Byte;                          // Reserved
-        idUserDataVariant        : Byte;                          // ID of the user data variant
-        numChannelParamBlocks    : Byte    := BYTE#3;             // Number of channel parameter blocks = 3
-        lengthChannelParamBlock  : Byte    := BYTE#8;             // Length of channel parameter block = 8
-        channel                  : Array[0..2] of EMSTDataRecCh;
+        majMinVer                AT %B0  : Byte    := BYTE#64;            // Major / minor version
+        numParamStruct           AT %B1  : Byte    := BYTE#2;             // Number of parameter structures = 2
+        numModuleParamBlocks     AT %B2  : Byte    := BYTE#1;             // Number of module parameter blocks = 1
+        lengthModuleParamBlock   AT %B3  : Byte    := BYTE#8;             // Length of module parameter block = 8
+        connectTypePhases        AT %B4  : Byte    := BYTE#0;             // Connection type of the phases
+        measRangePower           AT %B5  : Byte;                          // Voltage measuring range of the power supply system
+        energyCountGateLineFrequ AT %B6  : Byte;                          // Energy counter gate / Line frequency of the power supply system
+        lineVoltTolerance        AT %B7  : Byte;                          // Line voltage tolerance
+        diagLineVolt             AT %B8  : Byte;                          // Diagnostics line voltage
+        lowLimitCurrMeas         AT %B9  : Byte;                          // Low limit for current measurement [mA]
+        resb10                   AT %B10 : Byte;                          // Reserved
+        idUserDataVariant        AT %B11 : Byte;                          // ID of the user data variant
+        numChannelParamBlocks    AT %B12 : Byte    := BYTE#3;             // Number of channel parameter blocks = 3
+        lengthChannelParamBlock  AT %B13 : Byte    := BYTE#8;             // Length of channel parameter block = 8
+        channel                  AT %B14 : Array[0..2] of EMSTDataRecCh;
       END_STRUCT;
 
    END_TYPE
 
    TYPE EEatIndustryProfileE0 : STRUCT
-        currentL1             : Real;   // Current L1
-        currentL2             : Real;   // Current L2
-        currentL3             : Real;   // Current L3
+        currentL1             AT %B0 : Real;   // Current L1
+        currentL2             AT %B4 : Real;   // Current L2
+        currentL3             AT %B8 : Real;   // Current L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec147V0      : STRUCT
-        version                   : Byte;   // Version
-        resb1                     : Byte;   // Reserved
-        qualifierL1               : Word;   // Qualifier L1
-        voltL1N                   : Real;   // Voltage UL1-N
-        currentL1                 : Real;   // Current L1
-        apparentPowerL1           : Real;   // Apparent power L1
-        activePowerL1             : Real;   // Active power L1
-        reactivePowerQtotL1       : Real;   // Reactive power Qtot L1
-        powerFactorL1             : Real;   // Power factor L1
-        phaseAngleL1              : Real;   // Phase angle L1
-        apparentEnergyLongL1      : LReal;  // Apparent energy L1
-        totalActiveEnergyLongL1   : LReal;  // Active energy (total) L1
-        totalReactiveEnergyLongL1 : LReal;  // Reactive energy (total) L1
-        maxVoltL1N                : Real;   // Max. voltage UL1-N
-        maxCurrentL1              : Real;   // Max. current L1
-        maxApparentPowerL1        : Real;   // Max. apparent power L1
-        maxActivePowerL1          : Real;   // Max. active power L1
-        maxReactivePowerQtotL1    : Real;   // Max. reactive power Qtot L1
-        maxPowerFactorL1          : Real;   // Max. power factor L1
-        minVoltL1N                : Real;   // Min. voltage UL1-N
-        minCurrentL1              : Real;   // Min. current L1
-        minApparentPowerL1        : Real;   // Min. apparent power L1
-        minActivePowerL1          : Real;   // Min. active power L1
-        minReactivePowerQtotL1    : Real;   // Min. reactive power Qtot L1
-        minPowerFactorL1          : Real;   // Min. power factor L1
+        version                   AT %B0   : Byte;   // Version
+        resb1                     AT %B1   : Byte;   // Reserved
+        qualifierL1               AT %B2   : Word;   // Qualifier L1
+        voltL1N                   AT %B4   : Real;   // Voltage UL1-N
+        currentL1                 AT %B8   : Real;   // Current L1
+        apparentPowerL1           AT %B12  : Real;   // Apparent power L1
+        activePowerL1             AT %B16  : Real;   // Active power L1
+        reactivePowerQtotL1       AT %B20  : Real;   // Reactive power Qtot L1
+        powerFactorL1             AT %B24  : Real;   // Power factor L1
+        phaseAngleL1              AT %B28  : Real;   // Phase angle L1
+        apparentEnergyLongL1      AT %B32  : LReal;  // Apparent energy L1
+        totalActiveEnergyLongL1   AT %B40  : LReal;  // Active energy (total) L1
+        totalReactiveEnergyLongL1 AT %B48  : LReal;  // Reactive energy (total) L1
+        maxVoltL1N                AT %B56  : Real;   // Max. voltage UL1-N
+        maxCurrentL1              AT %B60  : Real;   // Max. current L1
+        maxApparentPowerL1        AT %B64  : Real;   // Max. apparent power L1
+        maxActivePowerL1          AT %B68  : Real;   // Max. active power L1
+        maxReactivePowerQtotL1    AT %B72  : Real;   // Max. reactive power Qtot L1
+        maxPowerFactorL1          AT %B76  : Real;   // Max. power factor L1
+        minVoltL1N                AT %B80  : Real;   // Min. voltage UL1-N
+        minCurrentL1              AT %B84  : Real;   // Min. current L1
+        minApparentPowerL1        AT %B88  : Real;   // Min. apparent power L1
+        minActivePowerL1          AT %B92  : Real;   // Min. active power L1
+        minReactivePowerQtotL1    AT %B96  : Real;   // Min. reactive power Qtot L1
+        minPowerFactorL1          AT %B100 : Real;   // Min. power factor L1
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec155      : STRUCT
-        version                 : Byte    := BYTE#1;          // Version
-        resb1                   : Byte;                       // Reserved
-        minVoltL1N              : RealValueAndPNIOTimeStamp;  // Min. voltage UL1-N
-        minVoltL2N              : RealValueAndPNIOTimeStamp;  // Min. voltage UL2-N
-        minVoltL3N              : RealValueAndPNIOTimeStamp;  // Min. voltage UL3-N
-        minVoltL1L2             : RealValueAndPNIOTimeStamp;  // Min. voltage UL1-L2
-        minVoltL2L3             : RealValueAndPNIOTimeStamp;  // Min. voltage UL2-L3
-        minVoltL3L1             : RealValueAndPNIOTimeStamp;  // Min. voltage UL3-L1
-        minCurrentL1            : RealValueAndPNIOTimeStamp;  // Min. current L1
-        minCurrentL2            : RealValueAndPNIOTimeStamp;  // Min. current L2
-        minCurrentL3            : RealValueAndPNIOTimeStamp;  // Min. current L3
-        minApparentPowerL1      : RealValueAndPNIOTimeStamp;  // Min. apparent power L1
-        minApparentPowerL2      : RealValueAndPNIOTimeStamp;  // Min. apparent power L2
-        minApparentPowerL3      : RealValueAndPNIOTimeStamp;  // Min. apparent power L3
-        minActivePowerL1        : RealValueAndPNIOTimeStamp;  // Min. active power L1
-        minActivePowerL2        : RealValueAndPNIOTimeStamp;  // Min. active power L2
-        minActivePowerL3        : RealValueAndPNIOTimeStamp;  // Min. active power L3
-        minReactivePowerQtotL1  : RealValueAndPNIOTimeStamp;  // Min. reactive power Qtot L1
-        minReactivePowerQtotL2  : RealValueAndPNIOTimeStamp;  // Min. reactive power Qtot L2
-        minReactivePowerQtotL3  : RealValueAndPNIOTimeStamp;  // Min. reactive power Qtot L3
-        minPowerFactorL1        : RealValueAndPNIOTimeStamp;  // Min. power factor L1
-        minPowerFactorL2        : RealValueAndPNIOTimeStamp;  // Min. power factor L2
-        minPowerFactorL3        : RealValueAndPNIOTimeStamp;  // Min. power factor L3
-        minFrequency            : RealValueAndPNIOTimeStamp;  // Min. frequency
-        minTotalApparentPower   : RealValueAndPNIOTimeStamp;  // Min. apparent power L1 L2 L3
-        minTotalActivePower     : RealValueAndPNIOTimeStamp;  // Min. active power L1 L2 L3
-        minTotalReactivePowerQn : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L1 L2 L3
-        minTotalPowerFactor     : RealValueAndPNIOTimeStamp;  // Min. power factor λ L1 L2 L3
-        minReactivePowerQnL1    : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L1
-        minReactivePowerQnL2    : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L2
-        minReactivePowerQnL3    : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L3
-        minMeanVoltLN           : RealValueAndPNIOTimeStamp;  // Min. mean voltage L-N
-        minMeanVoltLL           : RealValueAndPNIOTimeStamp;  // Min. mean voltage L-L
-        minTotalMeanCurr        : RealValueAndPNIOTimeStamp;  // Min. mean current L1 L2 L3
-        minFundVoltL1           : RealValueAndPNIOTimeStamp;  // Min. fundamental voltage L1
-        minFundVoltL2           : RealValueAndPNIOTimeStamp;  // Min. fundamental voltage L2
-        minFundVoltL3           : RealValueAndPNIOTimeStamp;  // Min. fundamental voltage L3
-        minFundCurrL1           : RealValueAndPNIOTimeStamp;  // Min. fundamental current L1
-        minFundCurrL2           : RealValueAndPNIOTimeStamp;  // Min. fundamental current L2
-        minFundCurrL3           : RealValueAndPNIOTimeStamp;  // Min. fundamental current L3
-        minFundApparentPowerL1  : RealValueAndPNIOTimeStamp;  // Min. fundamental apparent power L1
-        minFundApparentPowerL2  : RealValueAndPNIOTimeStamp;  // Min. fundamental apparent power L2
-        minFundApparentPowerL3  : RealValueAndPNIOTimeStamp;  // Min. fundamental apparent power L3
-        minFundReactivePowerL1  : RealValueAndPNIOTimeStamp;  // Min. fundamental reactive power L1
-        minFundReactivePowerL2  : RealValueAndPNIOTimeStamp;  // Min. fundamental reactive power L2
-        minFundReactivePowerL3  : RealValueAndPNIOTimeStamp;  // Min. fundamental reactive power L3
-        minFundActivePowerL1    : RealValueAndPNIOTimeStamp;  // Min. fundamental active power L1
-        minFundActivePowerL2    : RealValueAndPNIOTimeStamp;  // Min. fundamental active power L2
-        minFundActivePowerL3    : RealValueAndPNIOTimeStamp;  // Min. fundamental active power L3
-        minFundActiveFactorL1   : RealValueAndPNIOTimeStamp;  // Min. fundamental cos φ active factor L1
-        minFundActiveFactorL2   : RealValueAndPNIOTimeStamp;  // Min. fundamental cos φ active factor L2
-        minFundActiveFactorL3   : RealValueAndPNIOTimeStamp;  // Min. fundamental cos φ active factor L3
-        minTHDaNVoltL1          : RealValueAndPNIOTimeStamp;  // Min. THD+N voltage L1
-        minTHDaNVoltL2          : RealValueAndPNIOTimeStamp;  // Min. THD+N voltage L2
-        minTHDaNVoltL3          : RealValueAndPNIOTimeStamp;  // Min. THD+N voltage L3
-        minTHDaNCurrL1          : RealValueAndPNIOTimeStamp;  // Min. THD+N current L1
-        minTHDaNCurrL2          : RealValueAndPNIOTimeStamp;  // Min. THD+N current L2
-        minTHDaNCurrL3          : RealValueAndPNIOTimeStamp;  // Min. THD+N current L3
+        version                 AT %B0   : Byte    := BYTE#1;          // Version
+        resb1                   AT %B1   : Byte;                       // Reserved
+        minVoltL1N              AT %B2   : RealValueAndPNIOTimeStamp;  // Min. voltage UL1-N
+        minVoltL2N              AT %B18   : RealValueAndPNIOTimeStamp;  // Min. voltage UL2-N
+        minVoltL3N              AT %B34   : RealValueAndPNIOTimeStamp;  // Min. voltage UL3-N
+        minVoltL1L2             AT %B50   : RealValueAndPNIOTimeStamp;  // Min. voltage UL1-L2
+        minVoltL2L3             AT %B66   : RealValueAndPNIOTimeStamp;  // Min. voltage UL2-L3
+        minVoltL3L1             AT %B82   : RealValueAndPNIOTimeStamp;  // Min. voltage UL3-L1
+        minCurrentL1            AT %B98   : RealValueAndPNIOTimeStamp;  // Min. current L1
+        minCurrentL2            AT %B114   : RealValueAndPNIOTimeStamp;  // Min. current L2
+        minCurrentL3            AT %B130   : RealValueAndPNIOTimeStamp;  // Min. current L3
+        minApparentPowerL1      AT %B146   : RealValueAndPNIOTimeStamp;  // Min. apparent power L1
+        minApparentPowerL2      AT %B162   : RealValueAndPNIOTimeStamp;  // Min. apparent power L2
+        minApparentPowerL3      AT %B178   : RealValueAndPNIOTimeStamp;  // Min. apparent power L3
+        minActivePowerL1        AT %B194   : RealValueAndPNIOTimeStamp;  // Min. active power L1
+        minActivePowerL2        AT %B210   : RealValueAndPNIOTimeStamp;  // Min. active power L2
+        minActivePowerL3        AT %B226   : RealValueAndPNIOTimeStamp;  // Min. active power L3
+        minReactivePowerQtotL1  AT %B242   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qtot L1
+        minReactivePowerQtotL2  AT %B258   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qtot L2
+        minReactivePowerQtotL3  AT %B274   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qtot L3
+        minPowerFactorL1        AT %B290   : RealValueAndPNIOTimeStamp;  // Min. power factor L1
+        minPowerFactorL2        AT %B306   : RealValueAndPNIOTimeStamp;  // Min. power factor L2
+        minPowerFactorL3        AT %B322   : RealValueAndPNIOTimeStamp;  // Min. power factor L3
+        minFrequency            AT %B338   : RealValueAndPNIOTimeStamp;  // Min. frequency
+        minTotalApparentPower   AT %B354   : RealValueAndPNIOTimeStamp;  // Min. apparent power L1 L2 L3
+        minTotalActivePower     AT %B370   : RealValueAndPNIOTimeStamp;  // Min. active power L1 L2 L3
+        minTotalReactivePowerQn AT %B386   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L1 L2 L3
+        minTotalPowerFactor     AT %B402   : RealValueAndPNIOTimeStamp;  // Min. power factor λ L1 L2 L3
+        minReactivePowerQnL1    AT %B418   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L1
+        minReactivePowerQnL2    AT %B434   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L2
+        minReactivePowerQnL3    AT %B450   : RealValueAndPNIOTimeStamp;  // Min. reactive power Qn L3
+        minMeanVoltLN           AT %B466   : RealValueAndPNIOTimeStamp;  // Min. mean voltage L-N
+        minMeanVoltLL           AT %B482   : RealValueAndPNIOTimeStamp;  // Min. mean voltage L-L
+        minTotalMeanCurr        AT %B498   : RealValueAndPNIOTimeStamp;  // Min. mean current L1 L2 L3
+        minFundVoltL1           AT %B514   : RealValueAndPNIOTimeStamp;  // Min. fundamental voltage L1
+        minFundVoltL2           AT %B530   : RealValueAndPNIOTimeStamp;  // Min. fundamental voltage L2
+        minFundVoltL3           AT %B546   : RealValueAndPNIOTimeStamp;  // Min. fundamental voltage L3
+        minFundCurrL1           AT %B562   : RealValueAndPNIOTimeStamp;  // Min. fundamental current L1
+        minFundCurrL2           AT %B578   : RealValueAndPNIOTimeStamp;  // Min. fundamental current L2
+        minFundCurrL3           AT %B594   : RealValueAndPNIOTimeStamp;  // Min. fundamental current L3
+        minFundApparentPowerL1  AT %B610   : RealValueAndPNIOTimeStamp;  // Min. fundamental apparent power L1
+        minFundApparentPowerL2  AT %B626   : RealValueAndPNIOTimeStamp;  // Min. fundamental apparent power L2
+        minFundApparentPowerL3  AT %B642   : RealValueAndPNIOTimeStamp;  // Min. fundamental apparent power L3
+        minFundReactivePowerL1  AT %B658   : RealValueAndPNIOTimeStamp;  // Min. fundamental reactive power L1
+        minFundReactivePowerL2  AT %B674   : RealValueAndPNIOTimeStamp;  // Min. fundamental reactive power L2
+        minFundReactivePowerL3  AT %B690   : RealValueAndPNIOTimeStamp;  // Min. fundamental reactive power L3
+        minFundActivePowerL1    AT %B706   : RealValueAndPNIOTimeStamp;  // Min. fundamental active power L1
+        minFundActivePowerL2    AT %B722   : RealValueAndPNIOTimeStamp;  // Min. fundamental active power L2
+        minFundActivePowerL3    AT %B738   : RealValueAndPNIOTimeStamp;  // Min. fundamental active power L3
+        minFundActiveFactorL1   AT %B754   : RealValueAndPNIOTimeStamp;  // Min. fundamental cos φ active factor L1
+        minFundActiveFactorL2   AT %B770   : RealValueAndPNIOTimeStamp;  // Min. fundamental cos φ active factor L2
+        minFundActiveFactorL3   AT %B786   : RealValueAndPNIOTimeStamp;  // Min. fundamental cos φ active factor L3
+        minTHDaNVoltL1          AT %B802   : RealValueAndPNIOTimeStamp;  // Min. THD+N voltage L1
+        minTHDaNVoltL2          AT %B818   : RealValueAndPNIOTimeStamp;  // Min. THD+N voltage L2
+        minTHDaNVoltL3          AT %B834   : RealValueAndPNIOTimeStamp;  // Min. THD+N voltage L3
+        minTHDaNCurrL1          AT %B850   : RealValueAndPNIOTimeStamp;  // Min. THD+N current L1
+        minTHDaNCurrL2          AT %B866   : RealValueAndPNIOTimeStamp;  // Min. THD+N current L2
+        minTHDaNCurrL3          AT %B882   : RealValueAndPNIOTimeStamp;  // Min. THD+N current L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec154        : STRUCT
-        version                   : Byte    := BYTE#1;          // Version
-        resb1                     : Byte;                       // Reserved
-        maxVoltL1N                : RealValueAndPNIOTimeStamp;  // Max. voltage UL1-N
-        maxVoltL2N                : RealValueAndPNIOTimeStamp;  // Max. voltage UL2-N
-        maxVoltL3N                : RealValueAndPNIOTimeStamp;  // Max. voltage UL3-N
-        maxVoltL1L2               : RealValueAndPNIOTimeStamp;  // Max. voltage UL1-L2
-        maxVoltL2L3               : RealValueAndPNIOTimeStamp;  // Max. voltage UL2-L3
-        maxVoltL3L1               : RealValueAndPNIOTimeStamp;  // Max. voltage UL3-L1
-        maxCurrentL1              : RealValueAndPNIOTimeStamp;  // Max. current L1
-        maxCurrentL2              : RealValueAndPNIOTimeStamp;  // Max. current L2
-        maxCurrentL3              : RealValueAndPNIOTimeStamp;  // Max. current L3
-        maxApparentPowerL1        : RealValueAndPNIOTimeStamp;  // Max. apparent power L1
-        maxApparentPowerL2        : RealValueAndPNIOTimeStamp;  // Max. apparent power L2
-        maxApparentPowerL3        : RealValueAndPNIOTimeStamp;  // Max. apparent power L3
-        maxActivePowerL1          : RealValueAndPNIOTimeStamp;  // Max. active power L1
-        maxActivePowerL2          : RealValueAndPNIOTimeStamp;  // Max. active power L2
-        maxActivePowerL3          : RealValueAndPNIOTimeStamp;  // Max. active power L3
-        maxReactivePowerQtotL1    : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L1
-        maxReactivePowerQtotL2    : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L2
-        maxReactivePowerQtotL3    : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L3
-        maxPowerFactorL1          : RealValueAndPNIOTimeStamp;  // Max. power factor L1
-        maxPowerFactorL2          : RealValueAndPNIOTimeStamp;  // Max. power factor L2
-        maxPowerFactorL3          : RealValueAndPNIOTimeStamp;  // Max. power factor L3
-        maxFrequency              : RealValueAndPNIOTimeStamp;  // Max. frequency
-        maxTotalApparentPower     : RealValueAndPNIOTimeStamp;  // Max. apparent power L1 L2 L3
-        maxTotalActivePower       : RealValueAndPNIOTimeStamp;  // Max. active power L1 L2 L3
-        maxTotalReactivePowerQtot : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L1 L2 L3
-        maxTotalPowerFactor       : RealValueAndPNIOTimeStamp;  // Max. power factor λ L1L2L3
-        maxReactivePowerQnL1      : RealValueAndPNIOTimeStamp;  // Max. reactive power Qn L1
-        maxReactivePowerQnL2      : RealValueAndPNIOTimeStamp;  // Max. reactive power Qn L2
-        maxReactivePowerQnL3      : RealValueAndPNIOTimeStamp;  // Max. reactive power Qn L3
-        maxMeanVoltLN             : RealValueAndPNIOTimeStamp;  // Max. mean voltage L-N
-        maxMeanVoltLL             : RealValueAndPNIOTimeStamp;  // Max. mean voltage L-L
-        maxSumMeanCurr            : RealValueAndPNIOTimeStamp;  // Max. sum mean value current
-        maxFundVoltL1             : RealValueAndPNIOTimeStamp;  // Max. fundamental voltage L1
-        maxFundVoltL2             : RealValueAndPNIOTimeStamp;  // Max. fundamental voltage L2
-        maxFundVoltL3             : RealValueAndPNIOTimeStamp;  // Max. fundamental voltage L3
-        maxFundCurrL1             : RealValueAndPNIOTimeStamp;  // Max. fundamental current L1
-        maxFundCurrL2             : RealValueAndPNIOTimeStamp;  // Max. fundamental current L2
-        maxFundCurrL3             : RealValueAndPNIOTimeStamp;  // Max. fundamental current L3
-        maxFundApparentPowerL1    : RealValueAndPNIOTimeStamp;  // Max. fundamental apparent power L1
-        maxFundApparentPowerL2    : RealValueAndPNIOTimeStamp;  // Max. fundamental apparent power L2
-        maxFundApparentPowerL3    : RealValueAndPNIOTimeStamp;  // Max. fundamental apparent power L3
-        maxFundReactivePowerL1    : RealValueAndPNIOTimeStamp;  // Max. fundamental reactive power L1
-        maxFundReactivePowerL2    : RealValueAndPNIOTimeStamp;  // Max. fundamental reactive power L2
-        maxFundReactivePowerL3    : RealValueAndPNIOTimeStamp;  // Max. fundamental reactive power L3
-        maxFundActivePowerL1      : RealValueAndPNIOTimeStamp;  // Max. fundamental active power L1
-        maxFundActivePowerL2      : RealValueAndPNIOTimeStamp;  // Max. fundamental active power L2
-        maxFundActivePowerL3      : RealValueAndPNIOTimeStamp;  // Max. fundamental active power L3
-        maxFundActiveFactorL1     : RealValueAndPNIOTimeStamp;  // Max. fundamental cos φ active factor L1
-        maxFundActiveFactorL2     : RealValueAndPNIOTimeStamp;  // Max. fundamental cos φ active factor L2
-        maxFundActiveFactorL3     : RealValueAndPNIOTimeStamp;  // Max. fundamental cos φ active factor L3
-        maxTHDaNVoltL1            : RealValueAndPNIOTimeStamp;  // Max. THD+N voltage L1
-        maxTHDaNVoltL2            : RealValueAndPNIOTimeStamp;  // Max. THD+N voltage L2
-        maxTHDaNVoltL3            : RealValueAndPNIOTimeStamp;  // Max. THD+N voltage L3
-        maxTHDaNCurrL1            : RealValueAndPNIOTimeStamp;  // Max. THD+N current L1
-        maxTHDaNCurrL2            : RealValueAndPNIOTimeStamp;  // Max. THD+N current L2
-        maxTHDaNCurrL3            : RealValueAndPNIOTimeStamp;  // Max. THD+N current L3
+        version                   AT %B0   : Byte    := BYTE#1;          // Version
+        resb1                     AT %B1   : Byte;                       // Reserved
+        maxVoltL1N                AT %B2   : RealValueAndPNIOTimeStamp;  // Max. voltage UL1-N
+        maxVoltL2N                AT %B18  : RealValueAndPNIOTimeStamp;  // Max. voltage UL2-N
+        maxVoltL3N                AT %B34  : RealValueAndPNIOTimeStamp;  // Max. voltage UL3-N
+        maxVoltL1L2               AT %B50  : RealValueAndPNIOTimeStamp;  // Max. voltage UL1-L2
+        maxVoltL2L3               AT %B66  : RealValueAndPNIOTimeStamp;  // Max. voltage UL2-L3
+        maxVoltL3L1               AT %B82  : RealValueAndPNIOTimeStamp;  // Max. voltage UL3-L1
+        maxCurrentL1              AT %B98  : RealValueAndPNIOTimeStamp;  // Max. current L1
+        maxCurrentL2              AT %B114 : RealValueAndPNIOTimeStamp;  // Max. current L2
+        maxCurrentL3              AT %B130 : RealValueAndPNIOTimeStamp;  // Max. current L3
+        maxApparentPowerL1        AT %B146 : RealValueAndPNIOTimeStamp;  // Max. apparent power L1
+        maxApparentPowerL2        AT %B162 : RealValueAndPNIOTimeStamp;  // Max. apparent power L2
+        maxApparentPowerL3        AT %B178 : RealValueAndPNIOTimeStamp;  // Max. apparent power L3
+        maxActivePowerL1          AT %B194 : RealValueAndPNIOTimeStamp;  // Max. active power L1
+        maxActivePowerL2          AT %B210 : RealValueAndPNIOTimeStamp;  // Max. active power L2
+        maxActivePowerL3          AT %B226 : RealValueAndPNIOTimeStamp;  // Max. active power L3
+        maxReactivePowerQtotL1    AT %B242 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L1
+        maxReactivePowerQtotL2    AT %B258 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L2
+        maxReactivePowerQtotL3    AT %B274 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L3
+        maxPowerFactorL1          AT %B290 : RealValueAndPNIOTimeStamp;  // Max. power factor L1
+        maxPowerFactorL2          AT %B306 : RealValueAndPNIOTimeStamp;  // Max. power factor L2
+        maxPowerFactorL3          AT %B322 : RealValueAndPNIOTimeStamp;  // Max. power factor L3
+        maxFrequency              AT %B338 : RealValueAndPNIOTimeStamp;  // Max. frequency
+        maxTotalApparentPower     AT %B354 : RealValueAndPNIOTimeStamp;  // Max. apparent power L1 L2 L3
+        maxTotalActivePower       AT %B370 : RealValueAndPNIOTimeStamp;  // Max. active power L1 L2 L3
+        maxTotalReactivePowerQtot AT %B386 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qtot L1 L2 L3
+        maxTotalPowerFactor       AT %B402 : RealValueAndPNIOTimeStamp;  // Max. power factor λ L1L2L3
+        maxReactivePowerQnL1      AT %B418 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qn L1
+        maxReactivePowerQnL2      AT %B434 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qn L2
+        maxReactivePowerQnL3      AT %B450 : RealValueAndPNIOTimeStamp;  // Max. reactive power Qn L3
+        maxMeanVoltLN             AT %B466 : RealValueAndPNIOTimeStamp;  // Max. mean voltage L-N
+        maxMeanVoltLL             AT %B482 : RealValueAndPNIOTimeStamp;  // Max. mean voltage L-L
+        maxSumMeanCurr            AT %B498 : RealValueAndPNIOTimeStamp;  // Max. sum mean value current
+        maxFundVoltL1             AT %B514 : RealValueAndPNIOTimeStamp;  // Max. fundamental voltage L1
+        maxFundVoltL2             AT %B530 : RealValueAndPNIOTimeStamp;  // Max. fundamental voltage L2
+        maxFundVoltL3             AT %B546 : RealValueAndPNIOTimeStamp;  // Max. fundamental voltage L3
+        maxFundCurrL1             AT %B562 : RealValueAndPNIOTimeStamp;  // Max. fundamental current L1
+        maxFundCurrL2             AT %B578 : RealValueAndPNIOTimeStamp;  // Max. fundamental current L2
+        maxFundCurrL3             AT %B594 : RealValueAndPNIOTimeStamp;  // Max. fundamental current L3
+        maxFundApparentPowerL1    AT %B610 : RealValueAndPNIOTimeStamp;  // Max. fundamental apparent power L1
+        maxFundApparentPowerL2    AT %B626 : RealValueAndPNIOTimeStamp;  // Max. fundamental apparent power L2
+        maxFundApparentPowerL3    AT %B642 : RealValueAndPNIOTimeStamp;  // Max. fundamental apparent power L3
+        maxFundReactivePowerL1    AT %B658 : RealValueAndPNIOTimeStamp;  // Max. fundamental reactive power L1
+        maxFundReactivePowerL2    AT %B674 : RealValueAndPNIOTimeStamp;  // Max. fundamental reactive power L2
+        maxFundReactivePowerL3    AT %B690 : RealValueAndPNIOTimeStamp;  // Max. fundamental reactive power L3
+        maxFundActivePowerL1      AT %B706 : RealValueAndPNIOTimeStamp;  // Max. fundamental active power L1
+        maxFundActivePowerL2      AT %B722 : RealValueAndPNIOTimeStamp;  // Max. fundamental active power L2
+        maxFundActivePowerL3      AT %B738 : RealValueAndPNIOTimeStamp;  // Max. fundamental active power L3
+        maxFundActiveFactorL1     AT %B754 : RealValueAndPNIOTimeStamp;  // Max. fundamental cos φ active factor L1
+        maxFundActiveFactorL2     AT %B770 : RealValueAndPNIOTimeStamp;  // Max. fundamental cos φ active factor L2
+        maxFundActiveFactorL3     AT %B786 : RealValueAndPNIOTimeStamp;  // Max. fundamental cos φ active factor L3
+        maxTHDaNVoltL1            AT %B802 : RealValueAndPNIOTimeStamp;  // Max. THD+N voltage L1
+        maxTHDaNVoltL2            AT %B818 : RealValueAndPNIOTimeStamp;  // Max. THD+N voltage L2
+        maxTHDaNVoltL3            AT %B834 : RealValueAndPNIOTimeStamp;  // Max. THD+N voltage L3
+        maxTHDaNCurrL1            AT %B850 : RealValueAndPNIOTimeStamp;  // Max. THD+N current L1
+        maxTHDaNCurrL2            AT %B866 : RealValueAndPNIOTimeStamp;  // Max. THD+N current L2
+        maxTHDaNCurrL3            AT %B882 : RealValueAndPNIOTimeStamp;  // Max. THD+N current L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec145V1    : STRUCT
-        version                 : Byte    := BYTE#1;  // Version
-        resb1                   : Byte;               // Reserved
-        minVoltL1N              : Real;               // Min. voltage UL1-N
-        minVoltL2N              : Real;               // Min. voltage UL2-N
-        minVoltL3N              : Real;               // Min. voltage UL3-N
-        minVoltL1L2             : Real;               // Min. voltage UL1-L2
-        minVoltL2L3             : Real;               // Min. voltage UL2-L3
-        minVoltL3L1             : Real;               // Min. voltage UL3-L1
-        minCurrentL1            : Real;               // Min. current L1
-        minCurrentL2            : Real;               // Min. current L2
-        minCurrentL3            : Real;               // Min. current L3
-        minApparentPowerL1      : Real;               // Min. apparent power L1
-        minApparentPowerL2      : Real;               // Min. apparent power L2
-        minApparentPowerL3      : Real;               // Min. apparent power L3
-        minActivePowerL1        : Real;               // Min. active power L1
-        minActivePowerL2        : Real;               // Min. active power L2
-        minActivePowerL3        : Real;               // Min. active power L3
-        minReactivePowerQtotL1  : Real;               // Min. reactive power Qtot L1
-        minReactivePowerQtotL2  : Real;               // Min. reactive power Qtot L2
-        minReactivePowerQtotL3  : Real;               // Min. reactive power Qtot L3
-        minPowerFactorL1        : Real;               // Min. power factor L1
-        minPowerFactorL2        : Real;               // Min. power factor L2
-        minPowerFactorL3        : Real;               // Min. power factor L3
-        minFrequency            : Real;               // Min. frequency
-        minTotalApparentPower   : Real;               // Min. apparent power L1 L2 L3
-        minTotalActivePower     : Real;               // Min. active power L1 L2 L3
-        minTotalReactivePowerQn : Real;               // Min. reactive power Qn L1 L2 L3
-        minTotalPowerFactor     : Real;               // Min. power factor λ L1 L2 L3
-        minReactivePowerQnL1    : Real;               // Min. reactive power Qn L1
-        minReactivePowerQnL2    : Real;               // Min. reactive power Qn L2
-        minReactivePowerQnL3    : Real;               // Min. reactive power Qn L3
-        minMeanVoltLN           : Real;               // Min. mean voltage L-N
-        minMeanVoltLL           : Real;               // Min. mean voltage L-L
-        minTotalMeanCurr        : Real;               // Min. mean current L1 L2 L3
-        minFundVoltL1           : Real;               // Min. fundamental voltage L1
-        minFundVoltL2           : Real;               // Min. fundamental voltage L2
-        minFundVoltL3           : Real;               // Min. fundamental voltage L3
-        minFundCurrL1           : Real;               // Min. fundamental current L1
-        minFundCurrL2           : Real;               // Min. fundamental current L2
-        minFundCurrL3           : Real;               // Min. fundamental current L3
-        minFundApparentPowerL1  : Real;               // Min. fundamental apparent power L1
-        minFundApparentPowerL2  : Real;               // Min. fundamental apparent power L2
-        minFundApparentPowerL3  : Real;               // Min. fundamental apparent power L3
-        minFundReactivePowerL1  : Real;               // Min. fundamental reactive power L1
-        minFundReactivePowerL2  : Real;               // Min. fundamental reactive power L2
-        minFundReactivePowerL3  : Real;               // Min. fundamental reactive power L3
-        minFundActivePowerL1    : Real;               // Min. fundamental active power L1
-        minFundActivePowerL2    : Real;               // Min. fundamental active power L2
-        minFundActivePowerL3    : Real;               // Min. fundamental active power L3
-        minFundActiveFactorL1   : Real;               // Min. fundamental cos φ active factor L1
-        minFundActiveFactorL2   : Real;               // Min. fundamental cos φ active factor L2
-        minFundActiveFactorL3   : Real;               // Min. fundamental cos φ active factor L3
-        minTHDaNVoltL1          : Real;               // Min. THD+N voltage L1
-        minTHDaNVoltL2          : Real;               // Min. THD+N voltage L2
-        minTHDaNVoltL3          : Real;               // Min. THD+N voltage L3
-        minTHDaNCurrL1          : Real;               // Min. THD+N current L1
-        minTHDaNCurrL2          : Real;               // Min. THD+N current L2
-        minTHDaNCurrL3          : Real;               // Min. THD+N current L3
+        version                 AT %B0   : Byte    := BYTE#1;  // Version
+        resb1                   AT %B1   : Byte;               // Reserved
+        minVoltL1N              AT %B2   : Real;               // Min. voltage UL1-N
+        minVoltL2N              AT %B6   : Real;               // Min. voltage UL2-N
+        minVoltL3N              AT %B10   : Real;               // Min. voltage UL3-N
+        minVoltL1L2             AT %B14   : Real;               // Min. voltage UL1-L2
+        minVoltL2L3             AT %B18   : Real;               // Min. voltage UL2-L3
+        minVoltL3L1             AT %B22   : Real;               // Min. voltage UL3-L1
+        minCurrentL1            AT %B26   : Real;               // Min. current L1
+        minCurrentL2            AT %B30   : Real;               // Min. current L2
+        minCurrentL3            AT %B34   : Real;               // Min. current L3
+        minApparentPowerL1      AT %B38   : Real;               // Min. apparent power L1
+        minApparentPowerL2      AT %B42   : Real;               // Min. apparent power L2
+        minApparentPowerL3      AT %B46   : Real;               // Min. apparent power L3
+        minActivePowerL1        AT %B50   : Real;               // Min. active power L1
+        minActivePowerL2        AT %B54   : Real;               // Min. active power L2
+        minActivePowerL3        AT %B58   : Real;               // Min. active power L3
+        minReactivePowerQtotL1  AT %B62   : Real;               // Min. reactive power Qtot L1
+        minReactivePowerQtotL2  AT %B66   : Real;               // Min. reactive power Qtot L2
+        minReactivePowerQtotL3  AT %B70   : Real;               // Min. reactive power Qtot L3
+        minPowerFactorL1        AT %B74   : Real;               // Min. power factor L1
+        minPowerFactorL2        AT %B78   : Real;               // Min. power factor L2
+        minPowerFactorL3        AT %B82   : Real;               // Min. power factor L3
+        minFrequency            AT %B86   : Real;               // Min. frequency
+        minTotalApparentPower   AT %B90   : Real;               // Min. apparent power L1 L2 L3
+        minTotalActivePower     AT %B94   : Real;               // Min. active power L1 L2 L3
+        minTotalReactivePowerQn AT %B98   : Real;               // Min. reactive power Qn L1 L2 L3
+        minTotalPowerFactor     AT %B102   : Real;               // Min. power factor λ L1 L2 L3
+        minReactivePowerQnL1    AT %B106   : Real;               // Min. reactive power Qn L1
+        minReactivePowerQnL2    AT %B110   : Real;               // Min. reactive power Qn L2
+        minReactivePowerQnL3    AT %B114   : Real;               // Min. reactive power Qn L3
+        minMeanVoltLN           AT %B118   : Real;               // Min. mean voltage L-N
+        minMeanVoltLL           AT %B122   : Real;               // Min. mean voltage L-L
+        minTotalMeanCurr        AT %B126   : Real;               // Min. mean current L1 L2 L3
+        minFundVoltL1           AT %B130   : Real;               // Min. fundamental voltage L1
+        minFundVoltL2           AT %B134   : Real;               // Min. fundamental voltage L2
+        minFundVoltL3           AT %B138   : Real;               // Min. fundamental voltage L3
+        minFundCurrL1           AT %B142   : Real;               // Min. fundamental current L1
+        minFundCurrL2           AT %B146   : Real;               // Min. fundamental current L2
+        minFundCurrL3           AT %B150   : Real;               // Min. fundamental current L3
+        minFundApparentPowerL1  AT %B154   : Real;               // Min. fundamental apparent power L1
+        minFundApparentPowerL2  AT %B158   : Real;               // Min. fundamental apparent power L2
+        minFundApparentPowerL3  AT %B162   : Real;               // Min. fundamental apparent power L3
+        minFundReactivePowerL1  AT %B166   : Real;               // Min. fundamental reactive power L1
+        minFundReactivePowerL2  AT %B170   : Real;               // Min. fundamental reactive power L2
+        minFundReactivePowerL3  AT %B174   : Real;               // Min. fundamental reactive power L3
+        minFundActivePowerL1    AT %B178   : Real;               // Min. fundamental active power L1
+        minFundActivePowerL2    AT %B182   : Real;               // Min. fundamental active power L2
+        minFundActivePowerL3    AT %B186   : Real;               // Min. fundamental active power L3
+        minFundActiveFactorL1   AT %B190   : Real;               // Min. fundamental cos φ active factor L1
+        minFundActiveFactorL2   AT %B194   : Real;               // Min. fundamental cos φ active factor L2
+        minFundActiveFactorL3   AT %B198   : Real;               // Min. fundamental cos φ active factor L3
+        minTHDaNVoltL1          AT %B202   : Real;               // Min. THD+N voltage L1
+        minTHDaNVoltL2          AT %B206   : Real;               // Min. THD+N voltage L2
+        minTHDaNVoltL3          AT %B210   : Real;               // Min. THD+N voltage L3
+        minTHDaNCurrL1          AT %B214   : Real;               // Min. THD+N current L1
+        minTHDaNCurrL2          AT %B218   : Real;               // Min. THD+N current L2
+        minTHDaNCurrL3          AT %B222   : Real;               // Min. THD+N current L3
       END_STRUCT;
 
    END_TYPE
@@ -3522,392 +3522,392 @@
    END_TYPE
 
    TYPE EM480VHFDataRec142V2       : STRUCT
-        version                    : Byte    := BYTE#2;  // Version
-        resb1                      : Byte;               // Reserved
-        voltL1N                    : Real;               // Voltage UL1-N
-        voltL2N                    : Real;               // Voltage UL2-N
-        voltL3N                    : Real;               // Voltage UL3-N
-        voltL1L2                   : Real;               // Voltage UL1-L2
-        voltL2L3                   : Real;               // Voltage UL2-L3
-        voltL3L1                   : Real;               // Voltage UL3-L1
-        currentL1                  : Real;               // Current L1
-        currentL2                  : Real;               // Current L2
-        currentL3                  : Real;               // Current L3
-        powerFactorL1              : Real;               // Power factor L1
-        powerFactorL2              : Real;               // Power factor L2
-        powerFactorL3              : Real;               // Power factor L3
-        totalPowerFactor           : Real;               // Total power factor L1 L2 L3
-        frequency                  : Real;               // Frequency
-        amplUnbalanceVolt          : Real;               // Amplitude unbalance for voltage
-        amplUnbalanceCurrent       : Real;               // Amplitude unbalance for current
-        apparentPowerL1            : Real;               // Apparent power L1
-        apparentPowerL2            : Real;               // Apparent power L2
-        apparentPowerL3            : Real;               // Apparent power L3
-        totalApparentPower         : Real;               // Total apparent power L1 L2 L3
-        reactivePowerQtotL1        : Real;               // Reactive power Qtot L1
-        reactivePowerQtotL2        : Real;               // Reactive power Qtot L2
-        reactivePowerQtotL3        : Real;               // Reactive power Qtot L2
-        totalReactivePowerQtot     : Real;               // Total reactive power Qtot L1 L2 L3
-        activePowerL1              : Real;               // Active power L1
-        activePowerL2              : Real;               // Active power L2
-        activePowerL3              : Real;               // Active power L3
-        totalActivePower           : Real;               // Total active power L1 L2 L3
-        phaseAngleL1               : Real;               //  Phase angle L1
-        phaseAngleL2               : Real;               //  Phase angle L2
-        phaseAngleL3               : Real;               //  Phase angle L3
-        totalApparentEnergy        : Real;               // Total apparent energy L1 L2 L3
-        totalReactiveEnergy        : Real;               // Total reactive energy L1 L2 L3
-        totalActiveEnergy          : Real;               // Total active energy L1 L2 L3
-        totalReactiveEnergyIn      : Real;               // Total reactive energy inflow L1 L2 L3
-        totalReactiveEnergyOut     : Real;               // Total reactive energy outflow L1 L2 L3
-        totalActiveEnergyIn        : Real;               // Total active energy inflow L1 L2 L3
-        totalActiveEnergyOut       : Real;               // Total active energy outflow L1 L2 L3
-        totalApparentEnergyLong    : LReal;              // Total apparent energy L1 L2 L3
-        totalReactiveEnergyLong    : LReal;              // Total reactive energy L1 L2 L3
-        totalActiveEnergyLong      : LReal;              // Total active energy L1 L2 L3
-        totalReactiveEnergyInLong  : LReal;              // Total reactive energy inflow L1 L2 L3
-        totalReactiveEnergyOutLong : LReal;              // Total reactive energy outflow L1 L2 L3
-        totalActiveEnergyInLong    : LReal;              // Total active energy inflow L1 L2 L3
-        totalActiveEnergyOutLong   : LReal;              // Total active energy outflow L1 L2 L3
-        neutralCurrent             : Real;               // Neutral current
+        version                    AT %B0   : Byte    := BYTE#2;  // Version
+        resb1                      AT %B1   : Byte;               // Reserved
+        voltL1N                    AT %B2   : Real;               // Voltage UL1-N
+        voltL2N                    AT %B6   : Real;               // Voltage UL2-N
+        voltL3N                    AT %B10  : Real;               // Voltage UL3-N
+        voltL1L2                   AT %B14  : Real;               // Voltage UL1-L2
+        voltL2L3                   AT %B18  : Real;               // Voltage UL2-L3
+        voltL3L1                   AT %B22  : Real;               // Voltage UL3-L1
+        currentL1                  AT %B26  : Real;               // Current L1
+        currentL2                  AT %B30  : Real;               // Current L2
+        currentL3                  AT %B34  : Real;               // Current L3
+        powerFactorL1              AT %B38  : Real;               // Power factor L1
+        powerFactorL2              AT %B42  : Real;               // Power factor L2
+        powerFactorL3              AT %B46  : Real;               // Power factor L3
+        totalPowerFactor           AT %B50  : Real;               // Total power factor L1 L2 L3
+        frequency                  AT %B54  : Real;               // Frequency
+        amplUnbalanceVolt          AT %B58  : Real;               // Amplitude unbalance for voltage
+        amplUnbalanceCurrent       AT %B62  : Real;               // Amplitude unbalance for current
+        apparentPowerL1            AT %B66  : Real;               // Apparent power L1
+        apparentPowerL2            AT %B70  : Real;               // Apparent power L2
+        apparentPowerL3            AT %B74  : Real;               // Apparent power L3
+        totalApparentPower         AT %B78  : Real;               // Total apparent power L1 L2 L3
+        reactivePowerQtotL1        AT %B82  : Real;               // Reactive power Qtot L1
+        reactivePowerQtotL2        AT %B86  : Real;               // Reactive power Qtot L2
+        reactivePowerQtotL3        AT %B90  : Real;               // Reactive power Qtot L2
+        totalReactivePowerQtot     AT %B94  : Real;               // Total reactive power Qtot L1 L2 L3
+        activePowerL1              AT %B98  : Real;               // Active power L1
+        activePowerL2              AT %B102 : Real;               // Active power L2
+        activePowerL3              AT %B106 : Real;               // Active power L3
+        totalActivePower           AT %B110 : Real;               // Total active power L1 L2 L3
+        phaseAngleL1               AT %B114 : Real;               //  Phase angle L1
+        phaseAngleL2               AT %B118 : Real;               //  Phase angle L2
+        phaseAngleL3               AT %B122 : Real;               //  Phase angle L3
+        totalApparentEnergy        AT %B126 : Real;               // Total apparent energy L1 L2 L3
+        totalReactiveEnergy        AT %B130 : Real;               // Total reactive energy L1 L2 L3
+        totalActiveEnergy          AT %B134 : Real;               // Total active energy L1 L2 L3
+        totalReactiveEnergyIn      AT %B138 : Real;               // Total reactive energy inflow L1 L2 L3
+        totalReactiveEnergyOut     AT %B142 : Real;               // Total reactive energy outflow L1 L2 L3
+        totalActiveEnergyIn        AT %B146 : Real;               // Total active energy inflow L1 L2 L3
+        totalActiveEnergyOut       AT %B150 : Real;               // Total active energy outflow L1 L2 L3
+        totalApparentEnergyLong    AT %B154 : LReal;              // Total apparent energy L1 L2 L3
+        totalReactiveEnergyLong    AT %B162 : LReal;              // Total reactive energy L1 L2 L3
+        totalActiveEnergyLong      AT %B170 : LReal;              // Total active energy L1 L2 L3
+        totalReactiveEnergyInLong  AT %B178 : LReal;              // Total reactive energy inflow L1 L2 L3
+        totalReactiveEnergyOutLong AT %B186 : LReal;              // Total reactive energy outflow L1 L2 L3
+        totalActiveEnergyInLong    AT %B194 : LReal;              // Total active energy inflow L1 L2 L3
+        totalActiveEnergyOutLong   AT %B202 : LReal;              // Total active energy outflow L1 L2 L3
+        neutralCurrent             AT %B210 : Real;               // Neutral current
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec160        : STRUCT
-        version                   : Byte;           // Version
-        resb1                     : Byte;           // Reserved
-        neutralCurrIn             : Real;           // Neutral current IN
-        neutralCurrCyc10to12      : Real;           // Neutral current 10/12 cycles
-        totalCurrIn               : Real;           // Total current IL1+IL2+IL3-IN
-        totalFundReactivePower    : Real;           // Fundamental reactive power L1 L2 L3
-        totalMaxFundReactivePower : Real;           // Max. fundamental reactive power L1 L2 L3
-        totalMinFundReactivePower : Real;           // Min. fundamental reactive power L1 L2 L3
-        totalPowerFactor          : Real;           // Power factor λ L1L2L3
-        fundReactivePowerL1       : Real;           // Fundamental reactive power L1
-        fundReactivePowerL2       : Real;           // Fundamental reactive power L2
-        fundReactivePowerL3       : Real;           // Fundamental reactive power L3
-        fundActiveFactorL1        : Real;           // Fundamental cos φ active factor L1
-        fundActiveFactorL2        : Real;           // Fundamental cos φ active factor L2
-        fundActiveFactorL3        : Real;           // Fundamental cos φ active factor L3
-        THDaNVoltL1               : Real;           // THD+N voltage L1
-        THDaNVoltL2               : Real;           // THD+N voltage L2
-        THDaNVoltL3               : Real;           // THD+N voltage L3
-        THDaNCurrL1               : Real;           // THD+N current L1
-        THDaNCurrL2               : Real;           // THD+N current L2
-        THDaNCurrL3               : Real;           // THD+N current L3
-        maxTHDaNVoltL1            : Real;           // Max. THD+N voltage L1
-        maxTHDaNVoltL2            : Real;           // Max. THD+N voltage L2
-        maxTHDaNVoltL3            : Real;           // Max. THD+N voltage L3
-        maxTHDaNCurrL1            : Real;           // Max. THD+N current L1
-        maxTHDaNCurrL2            : Real;           // Max. THD+N current L2
-        maxTHDaNCurrL3            : Real;           // Max. THD+N current L3
-        minTHDaNVoltL1            : Real;           // Min. THD+N voltage L1
-        minTHDaNVoltL2            : Real;           // Min. THD+N voltage L2
-        minTHDaNVoltL3            : Real;           // Min. THD+N voltage L3
-        minTHDaNCurrL1            : Real;           // Min. THD+N current L1
-        minTHDaNCurrL2            : Real;           // Min. THD+N current L2
-        minTHDaNCurrL3            : Real;           // Min. THD+N current L3
-        voltDipValueL1            : Real;           // Voltage dip - value L1
-        voltDipDurationL1         : Real;           // Voltage dip - duration L1
-        voltDipValueL2            : Real;           // Voltage dip - value L2
-        voltDipDurationL2         : Real;           // Voltage dip - duration L2
-        voltDipValueL3            : Real;           // Voltage dip - value L3
-        voltDipDurationL3         : Real;           // Voltage dip - duration L3
-        voltIncValueL1            : Real;           // Voltage increase - value L1
-        voltIncDurationL1         : Real;           // Voltage increase - duration L1
-        voltIncValueL2            : Real;           // Voltage increase - value L2
-        voltIncDurationL2         : Real;           // Voltage increase - duration L2
-        voltIncValueL3            : Real;           // Voltage increase - value L3
-        voltIncDurationL3         : Real;           // Voltage increase - duration L3
-        voltPeakValueL1           : Real;           // Voltage peak value L1
-        voltPeakValueL2           : Real;           // Voltage peak value L2
-        voltPeakValueL3           : Real;           // Voltage peak value L3
-        currPeakValueL1           : Real;           // Current peak value L1
-        currPeakValueL2           : Real;           // Current peak value L2
-        currPeakValueL3           : Real;           // Current peak value L3
-        overCurrValueL1           : Real;           // Overcurrent value L1
-        overCurrValueL2           : Real;           // Overcurrent value L2
-        overCurrValueL3           : Real;           // Overcurrent value L3
-        ampSymVolt                : Real;           // Amplitude symmetry Voltage U2
-        ampSymCurr                : Real;           // Amplitude symmetry Current Iunsym
-        powerQualityAnalysis      : UDInt;          // Power quality analysis - Qualifier
-        currentModuleTime         : PNIOTimeStamp;  // Current module time
+        version                   AT %B0   : Byte;           // Version
+        resb1                     AT %B1   : Byte;           // Reserved
+        neutralCurrIn             AT %B2   : Real;           // Neutral current IN
+        neutralCurrCyc10to12      AT %B6   : Real;           // Neutral current 10/12 cycles
+        totalCurrIn               AT %B10  : Real;           // Total current IL1+IL2+IL3-IN
+        totalFundReactivePower    AT %B14  : Real;           // Fundamental reactive power L1 L2 L3
+        totalMaxFundReactivePower AT %B18  : Real;           // Max. fundamental reactive power L1 L2 L3
+        totalMinFundReactivePower AT %B22  : Real;           // Min. fundamental reactive power L1 L2 L3
+        totalPowerFactor          AT %B26  : Real;           // Power factor λ L1L2L3
+        fundReactivePowerL1       AT %B30  : Real;           // Fundamental reactive power L1
+        fundReactivePowerL2       AT %B34  : Real;           // Fundamental reactive power L2
+        fundReactivePowerL3       AT %B38  : Real;           // Fundamental reactive power L3
+        fundActiveFactorL1        AT %B42  : Real;           // Fundamental cos φ active factor L1
+        fundActiveFactorL2        AT %B46  : Real;           // Fundamental cos φ active factor L2
+        fundActiveFactorL3        AT %B50  : Real;           // Fundamental cos φ active factor L3
+        THDaNVoltL1               AT %B54  : Real;           // THD+N voltage L1
+        THDaNVoltL2               AT %B58  : Real;           // THD+N voltage L2
+        THDaNVoltL3               AT %B62  : Real;           // THD+N voltage L3
+        THDaNCurrL1               AT %B66  : Real;           // THD+N current L1
+        THDaNCurrL2               AT %B70  : Real;           // THD+N current L2
+        THDaNCurrL3               AT %B74  : Real;           // THD+N current L3
+        maxTHDaNVoltL1            AT %B78  : Real;           // Max. THD+N voltage L1
+        maxTHDaNVoltL2            AT %B82  : Real;           // Max. THD+N voltage L2
+        maxTHDaNVoltL3            AT %B86  : Real;           // Max. THD+N voltage L3
+        maxTHDaNCurrL1            AT %B90  : Real;           // Max. THD+N current L1
+        maxTHDaNCurrL2            AT %B94  : Real;           // Max. THD+N current L2
+        maxTHDaNCurrL3            AT %B98  : Real;           // Max. THD+N current L3
+        minTHDaNVoltL1            AT %B102 : Real;           // Min. THD+N voltage L1
+        minTHDaNVoltL2            AT %B106 : Real;           // Min. THD+N voltage L2
+        minTHDaNVoltL3            AT %B110 : Real;           // Min. THD+N voltage L3
+        minTHDaNCurrL1            AT %B114 : Real;           // Min. THD+N current L1
+        minTHDaNCurrL2            AT %B118 : Real;           // Min. THD+N current L2
+        minTHDaNCurrL3            AT %B122 : Real;           // Min. THD+N current L3
+        voltDipValueL1            AT %B126 : Real;           // Voltage dip - value L1
+        voltDipDurationL1         AT %B130 : Real;           // Voltage dip - duration L1
+        voltDipValueL2            AT %B134 : Real;           // Voltage dip - value L2
+        voltDipDurationL2         AT %B138 : Real;           // Voltage dip - duration L2
+        voltDipValueL3            AT %B142 : Real;           // Voltage dip - value L3
+        voltDipDurationL3         AT %B146 : Real;           // Voltage dip - duration L3
+        voltIncValueL1            AT %B150 : Real;           // Voltage increase - value L1
+        voltIncDurationL1         AT %B154 : Real;           // Voltage increase - duration L1
+        voltIncValueL2            AT %B158 : Real;           // Voltage increase - value L2
+        voltIncDurationL2         AT %B162 : Real;           // Voltage increase - duration L2
+        voltIncValueL3            AT %B166 : Real;           // Voltage increase - value L3
+        voltIncDurationL3         AT %B170 : Real;           // Voltage increase - duration L3
+        voltPeakValueL1           AT %B174 : Real;           // Voltage peak value L1
+        voltPeakValueL2           AT %B178 : Real;           // Voltage peak value L2
+        voltPeakValueL3           AT %B182 : Real;           // Voltage peak value L3
+        currPeakValueL1           AT %B186 : Real;           // Current peak value L1
+        currPeakValueL2           AT %B190 : Real;           // Current peak value L2
+        currPeakValueL3           AT %B194 : Real;           // Current peak value L3
+        overCurrValueL1           AT %B198 : Real;           // Overcurrent value L1
+        overCurrValueL2           AT %B202 : Real;           // Overcurrent value L2
+        overCurrValueL3           AT %B206 : Real;           // Overcurrent value L3
+        ampSymVolt                AT %B210 : Real;           // Amplitude symmetry Voltage U2
+        ampSymCurr                AT %B214 : Real;           // Amplitude symmetry Current Iunsym
+        powerQualityAnalysis      AT %B218 : UDInt;          // Power quality analysis - Qualifier
+        currentModuleTime         AT %B222 : PNIOTimeStamp;  // Current module time
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec163 : STRUCT
-        version            : Byte;                  // Version
-        resb1              : Byte;                  // Reserved
-        THDaNCurrL1        : Real;                  // THD+N current L1
-        currL1             : Real;                  // Current L1
-        harmCurrL1         : Array[1..40] of Real;  // Harmonics 1-40: Current L1
-        THDaNCurrL2        : Real;                  // THD+N current L2
-        currL2             : Real;                  // Current L2
-        harmCurrL2         : Array[1..40] of Real;  // Harmonics 1-40: Current L2
-        THDaNCurrL3        : Real;                  // THD+N current L3
-        currL3             : Real;                  // Current L3
-        harmCurrL3         : Array[1..40] of Real;  // Harmonics 1-40: Current L3
-        currentModuleTime  : PNIOTimeStamp;         // Current module time
+        version            AT %B0 : Byte;                  // Version
+        resb1              AT %B1 : Byte;                  // Reserved
+        THDaNCurrL1        AT %B2 : Real;                  // THD+N current L1
+        currL1             AT %B6 : Real;                  // Current L1
+        harmCurrL1         AT %B10 : Array[1..40] of Real;  // Harmonics 1-40: Current L1
+        THDaNCurrL2        AT %B170 : Real;                  // THD+N current L2
+        currL2             AT %B174 : Real;                  // Current L2
+        harmCurrL2         AT %B178 : Array[1..40] of Real;  // Harmonics 1-40: Current L2
+        THDaNCurrL3        AT %B338 : Real;                  // THD+N current L3
+        currL3             AT %B342 : Real;                  // Current L3
+        harmCurrL3         AT %B346 : Array[1..40] of Real;  // Harmonics 1-40: Current L3
+        currentModuleTime  AT %B506 : PNIOTimeStamp;         // Current module time
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec147V1      : STRUCT
-        version                   : Byte    := BYTE#1;  // Version
-        resb1                     : Byte;               // Reserved
-        qualifierL1               : Word;               // Qualifier L1
-        voltL1N                   : Real;               // Voltage UL1-N
-        currentL1                 : Real;               // Current L1
-        apparentPowerL1           : Real;               // Apparent power L1
-        activePowerL1             : Real;               // Active power L1
-        reactivePowerL1           : Real;               // Reactive power L1
-        powerFactorL1             : Real;               // Power factor L1
-        phaseAngleL1              : Real;               // Phase angle L1
-        apparentEnergyLongL1      : LReal;              // Apparent energy L1
-        totalActiveEnergyLongL1   : LReal;              // Active energy (total) L1
-        totalReactiveEnergyLongL1 : LReal;              // Reactive energy (total) L1
-        maxVoltL1N                : Real;               // Max. voltage UL1-N
-        maxCurrentL1              : Real;               // Max. current L1
-        maxApparentPowerL1        : Real;               // Max. apparent power L1
-        maxActivePowerL1          : Real;               // Max. active power L1
-        maxReactivePowerL1        : Real;               // Max. reactive power L1
-        maxPowerFactorL1          : Real;               // Max. power factor L1
-        minVoltL1N                : Real;               // Min. voltage UL1-N
-        minCurrentL1              : Real;               // Min. current L1
-        minApparentPowerL1        : Real;               // Min. apparent power L1
-        minActivePowerL1          : Real;               // Min. active power L1
-        minReactivePowerQtotL1    : Real;               // Min. reactive power Qtot L1
-        minPowerFactorL1          : Real;               // Min. power factor L1
-        reactivePowerQnL1         : Real;               // Reactive power Qn L1
-        voltL1Cycles10to12        : Real;               // Voltage L1 10-12 cycles
-        currL1Cycles10to12        : Real;               // Current L1 10-12 cycles
-        maxReactivePowerQnL1      : Real;               // Max. reactive power Qn L1
-        minReactivePowerQnL1      : Real;               // Min. reactive power Qn L1
-        fundVoltL1                : Real;               // Fundamental voltage L1
-        fundCurrL1                : Real;               // Fundamental current L1
-        fundApparentPowerL1       : Real;               // Fundamental apparent power L1
-        fundReactivePowerL1       : Real;               // Fundamental reactive power L1
-        fundActivePowerL1         : Real;               // Fundamental active power L1
-        fundActiveFactorL1        : Real;               // Fundamental cos φ active factor L1
-        maxFundVoltL1             : Real;               // Max. fundamental voltage L1
-        maxFundCurrL1             : Real;               // Max. fundamental current L1
-        maxFundApparentPowerL1    : Real;               // Max. fundamental apparent power L1
-        maxFundReactivePowerL1    : Real;               // Max. fundamental reactive power L1
-        maxFundActivePowerL1      : Real;               // Max. fundamental active power L1
-        maxFundActiveFactorL1     : Real;               // Max. fundamental cos φ active factor L1
-        minFundVoltL1             : Real;               // Min. fundamental voltage L1
-        minFundCurrL1             : Real;               // Min. fundamental current L1
-        minFundApparentPowerL1    : Real;               // Min. fundamental apparent power L1
-        minFundReactivePowerL1    : Real;               // Min. fundamental reactive power L1
-        minFundActivePowerL1      : Real;               // Min. fundamental active power L1
-        minFundActiveFactorL1     : Real;               // Min. fundamental cos φ active factor L1
-        THDaNVoltL1               : Real;               // THD+N voltage L1
-        THDaNCurrL1               : Real;               // THD+N current L1
-        maxTHDaNVoltL1            : Real;               // Max. THD+N voltage L1
-        maxTHDaNCurrL1            : Real;               // Max. THD+N current L1
-        minTHDaNVoltL1            : Real;               // Min. THD+N voltage L1
-        minTHDaNCurrL1            : Real;               // Min. THD+N current L1
-        voltDipValueL1            : Real;               // Voltage dip - value L1
-        voltDipDurationL1         : Real;               // Voltage dip - duration L1
-        voltSwellValueL1          : Real;               // Voltage swell - value L1
-        voltSwellDurationL1       : Real;               // Voltage swell - duration L1
-        voltPeakValueL1           : Real;               // Voltage peak value L1
-        currPeakValueL1           : Real;               // Current peak value L1
-        overCurrValueL1           : Real;               // Overcurrent value L1
+        version                   AT %B0   : Byte    := BYTE#1;  // Version
+        resb1                     AT %B1   : Byte;               // Reserved
+        qualifierL1               AT %B2   : Word;               // Qualifier L1
+        voltL1N                   AT %B6   : Real;               // Voltage UL1-N
+        currentL1                 AT %B10  : Real;               // Current L1
+        apparentPowerL1           AT %B14  : Real;               // Apparent power L1
+        activePowerL1             AT %B18  : Real;               // Active power L1
+        reactivePowerL1           AT %B22  : Real;               // Reactive power L1
+        powerFactorL1             AT %B26  : Real;               // Power factor L1
+        phaseAngleL1              AT %B30  : Real;               // Phase angle L1
+        apparentEnergyLongL1      AT %B34  : LReal;              // Apparent energy L1
+        totalActiveEnergyLongL1   AT %B42  : LReal;              // Active energy (total) L1
+        totalReactiveEnergyLongL1 AT %B50  : LReal;              // Reactive energy (total) L1
+        maxVoltL1N                AT %B58  : Real;               // Max. voltage UL1-N
+        maxCurrentL1              AT %B62  : Real;               // Max. current L1
+        maxApparentPowerL1        AT %B66  : Real;               // Max. apparent power L1
+        maxActivePowerL1          AT %B70  : Real;               // Max. active power L1
+        maxReactivePowerL1        AT %B74  : Real;               // Max. reactive power L1
+        maxPowerFactorL1          AT %B78  : Real;               // Max. power factor L1
+        minVoltL1N                AT %B82  : Real;               // Min. voltage UL1-N
+        minCurrentL1              AT %B86  : Real;               // Min. current L1
+        minApparentPowerL1        AT %B90  : Real;               // Min. apparent power L1
+        minActivePowerL1          AT %B94  : Real;               // Min. active power L1
+        minReactivePowerQtotL1    AT %B98  : Real;               // Min. reactive power Qtot L1
+        minPowerFactorL1          AT %B102  : Real;               // Min. power factor L1
+        reactivePowerQnL1         AT %B106  : Real;               // Reactive power Qn L1
+        voltL1Cycles10to12        AT %B110  : Real;               // Voltage L1 10-12 cycles
+        currL1Cycles10to12        AT %B114  : Real;               // Current L1 10-12 cycles
+        maxReactivePowerQnL1      AT %B118  : Real;               // Max. reactive power Qn L1
+        minReactivePowerQnL1      AT %B122  : Real;               // Min. reactive power Qn L1
+        fundVoltL1                AT %B126  : Real;               // Fundamental voltage L1
+        fundCurrL1                AT %B130  : Real;               // Fundamental current L1
+        fundApparentPowerL1       AT %B134  : Real;               // Fundamental apparent power L1
+        fundReactivePowerL1       AT %B138  : Real;               // Fundamental reactive power L1
+        fundActivePowerL1         AT %B142  : Real;               // Fundamental active power L1
+        fundActiveFactorL1        AT %B146  : Real;               // Fundamental cos φ active factor L1
+        maxFundVoltL1             AT %B150  : Real;               // Max. fundamental voltage L1
+        maxFundCurrL1             AT %B154  : Real;               // Max. fundamental current L1
+        maxFundApparentPowerL1    AT %B158  : Real;               // Max. fundamental apparent power L1
+        maxFundReactivePowerL1    AT %B162  : Real;               // Max. fundamental reactive power L1
+        maxFundActivePowerL1      AT %B166  : Real;               // Max. fundamental active power L1
+        maxFundActiveFactorL1     AT %B170  : Real;               // Max. fundamental cos φ active factor L1
+        minFundVoltL1             AT %B174  : Real;               // Min. fundamental voltage L1
+        minFundCurrL1             AT %B178  : Real;               // Min. fundamental current L1
+        minFundApparentPowerL1    AT %B182  : Real;               // Min. fundamental apparent power L1
+        minFundReactivePowerL1    AT %B186  : Real;               // Min. fundamental reactive power L1
+        minFundActivePowerL1      AT %B190  : Real;               // Min. fundamental active power L1
+        minFundActiveFactorL1     AT %B194  : Real;               // Min. fundamental cos φ active factor L1
+        THDaNVoltL1               AT %B198  : Real;               // THD+N voltage L1
+        THDaNCurrL1               AT %B202  : Real;               // THD+N current L1
+        maxTHDaNVoltL1            AT %B206  : Real;               // Max. THD+N voltage L1
+        maxTHDaNCurrL1            AT %B210  : Real;               // Max. THD+N current L1
+        minTHDaNVoltL1            AT %B214  : Real;               // Min. THD+N voltage L1
+        minTHDaNCurrL1            AT %B218  : Real;               // Min. THD+N current L1
+        voltDipValueL1            AT %B222  : Real;               // Voltage dip - value L1
+        voltDipDurationL1         AT %B226  : Real;               // Voltage dip - duration L1
+        voltSwellValueL1          AT %B230  : Real;               // Voltage swell - value L1
+        voltSwellDurationL1       AT %B234  : Real;               // Voltage swell - duration L1
+        voltPeakValueL1           AT %B238  : Real;               // Voltage peak value L1
+        currPeakValueL1           AT %B242  : Real;               // Current peak value L1
+        overCurrValueL1           AT %B246  : Real;               // Overcurrent value L1
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec148V0      : STRUCT
-        version                   : Byte;   // Version
-        resb1                     : Byte;   // Reserved
-        qualifierL2               : Word;   // Qualifier L2
-        voltL2N                   : Real;   // Voltage UL2-N
-        currentL2                 : Real;   // Current L2
-        apparentPowerL2           : Real;   // Apparent power L2
-        activePowerL2             : Real;   // Active power L2
-        reactivePowerQtotL2       : Real;   // Reactive power Qtot L2
-        powerFactorL2             : Real;   // Power factor L2
-        phaseAngleL2              : Real;   // Phase angle L2
-        apparentEnergyLongL2      : LReal;  // Apparent energy L2
-        totalActiveEnergyLongL2   : LReal;  // Active energy (total) L2
-        totalReactiveEnergyLongL2 : LReal;  // Reactive energy (total) L2
-        maxVoltL2N                : Real;   // Max. voltage UL2-N
-        maxCurrentL2              : Real;   // Max. current L2
-        maxApparentPowerL2        : Real;   // Max. apparent power L2
-        maxActivePowerL2          : Real;   // Max. active power L2
-        maxReactivePowerQtotL2    : Real;   // Max. reactive power Qtot L2
-        maxPowerFactorL2          : Real;   // Max. power factor L2
-        minVoltL2N                : Real;   // Min. voltage UL2-N
-        minCurrentL2              : Real;   // Min. current L2
-        minApparentPowerL2        : Real;   // Min. apparent power L2
-        minActivePowerL2          : Real;   // Min. active power L2
-        minReactivePowerQtotL2    : Real;   // Min. reactive power L2
-        minPowerFactorL2          : Real;   // Min. power factor L2
+        version                   AT %B0   : Byte;   // Version
+        resb1                     AT %B1   : Byte;   // Reserved
+        qualifierL2               AT %B2   : Word;   // Qualifier L2
+        voltL2N                   AT %B6   : Real;   // Voltage UL2-N
+        currentL2                 AT %B10  : Real;   // Current L2
+        apparentPowerL2           AT %B14  : Real;   // Apparent power L2
+        activePowerL2             AT %B18  : Real;   // Active power L2
+        reactivePowerQtotL2       AT %B22  : Real;   // Reactive power Qtot L2
+        powerFactorL2             AT %B26  : Real;   // Power factor L2
+        phaseAngleL2              AT %B30  : Real;   // Phase angle L2
+        apparentEnergyLongL2      AT %B34  : LReal;  // Apparent energy L2
+        totalActiveEnergyLongL2   AT %B42  : LReal;  // Active energy (total) L2
+        totalReactiveEnergyLongL2 AT %B50  : LReal;  // Reactive energy (total) L2
+        maxVoltL2N                AT %B58  : Real;   // Max. voltage UL2-N
+        maxCurrentL2              AT %B62  : Real;   // Max. current L2
+        maxApparentPowerL2        AT %B66  : Real;   // Max. apparent power L2
+        maxActivePowerL2          AT %B70  : Real;   // Max. active power L2
+        maxReactivePowerQtotL2    AT %B74  : Real;   // Max. reactive power Qtot L2
+        maxPowerFactorL2          AT %B78  : Real;   // Max. power factor L2
+        minVoltL2N                AT %B82  : Real;   // Min. voltage UL2-N
+        minCurrentL2              AT %B86  : Real;   // Min. current L2
+        minApparentPowerL2        AT %B90  : Real;   // Min. apparent power L2
+        minActivePowerL2          AT %B94  : Real;   // Min. active power L2
+        minReactivePowerQtotL2    AT %B98  : Real;   // Min. reactive power L2
+        minPowerFactorL2          AT %B102 : Real;   // Min. power factor L2
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec148V1      : STRUCT
-        version                   : Byte    := BYTE#1;  // Version
-        resb1                     : Byte;               // Reserved
-        qualifierL2               : Word;               // Qualifier L2
-        voltL2N                   : Real;               // Voltage UL2-N
-        currentL2                 : Real;               // Current L2
-        apparentPowerL2           : Real;               // Apparent power L2
-        activePowerL2             : Real;               // Active power L2
-        reactivePowerL2           : Real;               // Reactive power L2
-        powerFactorL2             : Real;               // Power factor L2
-        phaseAngleL2              : Real;               // Phase angle L2
-        apparentEnergyLongL2      : LReal;              // Apparent energy L2
-        totalActiveEnergyLongL2   : LReal;              // Active energy (total) L2
-        totalReactiveEnergyLongL2 : LReal;              // Reactive energy (total) L2
-        maxVoltL2N                : Real;               // Max. voltage UL2-N
-        maxCurrentL2              : Real;               // Max. current L2
-        maxApparentPowerL2        : Real;               // Max. apparent power L2
-        maxActivePowerL2          : Real;               // Max. active power L2
-        maxReactivePowerL2        : Real;               // Max. reactive power L2
-        maxPowerFactorL2          : Real;               // Max. power factor L2
-        minVoltL2N                : Real;               // Min. voltage UL2-N
-        minCurrentL2              : Real;               // Min. current L2
-        minApparentPowerL2        : Real;               // Min. apparent power L2
-        minActivePowerL2          : Real;               // Min. active power L2
-        minReactivePowerQtotL2    : Real;               // Min. reactive power Qtot L2
-        minPowerFactorL2          : Real;               // Min. power factor L2
-        reactivePowerQnL2         : Real;               // Reactive power Qn L2
-        voltL2Cycles10to12        : Real;               // Voltage L2 10-12 cycles
-        currL2Cycles10to12        : Real;               // Current L2 10-12 cycles
-        maxReactivePowerQnL2      : Real;               // Max. reactive power Qn L2
-        minReactivePowerQnL2      : Real;               // Min. reactive power Qn L2
-        fundVoltL2                : Real;               // Fundamental voltage L2
-        fundCurrL2                : Real;               // Fundamental current L2
-        fundApparentPowerL2       : Real;               // Fundamental apparent power L2
-        fundReactivePowerL2       : Real;               // Fundamental reactive power L2
-        fundActivePowerL2         : Real;               // Fundamental active power L2
-        fundActiveFactorL2        : Real;               // Fundamental cos φ active factor L2
-        maxFundVoltL2             : Real;               // Max. fundamental voltage L2
-        maxFundCurrL2             : Real;               // Max. fundamental current L2
-        maxFundApparentPowerL2    : Real;               // Max. fundamental apparent power L2
-        maxFundReactivePowerL2    : Real;               // Max. fundamental reactive power L2
-        maxFundActivePowerL2      : Real;               // Max. fundamental active power L2
-        maxFundActiveFactorL2     : Real;               // Max. fundamental cos φ active factor L2
-        minFundVoltL2             : Real;               // Min. fundamental voltage L2
-        minFundCurrL2             : Real;               // Min. fundamental current L2
-        minFundApparentPowerL2    : Real;               // Min. fundamental apparent power L2
-        minFundReactivePowerL2    : Real;               // Min. fundamental reactive power L2
-        minFundActivePowerL2      : Real;               // Min. fundamental active power L2
-        minFundActiveFactorL2     : Real;               // Min. fundamental cos φ active factor L2
-        THDaNVoltL2               : Real;               // THD+N voltage L2
-        THDaNCurrL2               : Real;               // THD+N current L2
-        maxTHDaNVoltL2            : Real;               // Max. THD+N voltage L2
-        maxTHDaNCurrL2            : Real;               // Max. THD+N current L2
-        minTHDaNVoltL2            : Real;               // Min. THD+N voltage L2
-        minTHDaNCurrL2            : Real;               // Min. THD+N current L2
-        voltDipValueL2            : Real;               // Voltage dip - value L2
-        voltDipDurationL2         : Real;               // Voltage dip - duration L2
-        voltSwellValueL2          : Real;               // Voltage swell - value L2
-        voltSwellDurationL2       : Real;               // Voltage swell - duration L2
-        voltPeakValueL2           : Real;               // Voltage peak value L2
-        currPeakValueL2           : Real;               // Current peak value L2
-        overCurrValueL2           : Real;               // Overcurrent value L2
+        version                   AT %B0   : Byte    := BYTE#1;  // Version
+        resb1                     AT %B1   : Byte;               // Reserved
+        qualifierL2               AT %B2   : Word;               // Qualifier L2
+        voltL2N                   AT %B6   : Real;               // Voltage UL2-N
+        currentL2                 AT %B10  : Real;               // Current L2
+        apparentPowerL2           AT %B14  : Real;               // Apparent power L2
+        activePowerL2             AT %B18  : Real;               // Active power L2
+        reactivePowerL2           AT %B22  : Real;               // Reactive power L2
+        powerFactorL2             AT %B26  : Real;               // Power factor L2
+        phaseAngleL2              AT %B30  : Real;               // Phase angle L2
+        apparentEnergyLongL2      AT %B34  : LReal;              // Apparent energy L2
+        totalActiveEnergyLongL2   AT %B42  : LReal;              // Active energy (total) L2
+        totalReactiveEnergyLongL2 AT %B50  : LReal;              // Reactive energy (total) L2
+        maxVoltL2N                AT %B58  : Real;               // Max. voltage UL2-N
+        maxCurrentL2              AT %B62  : Real;               // Max. current L2
+        maxApparentPowerL2        AT %B66  : Real;               // Max. apparent power L2
+        maxActivePowerL2          AT %B70  : Real;               // Max. active power L2
+        maxReactivePowerL2        AT %B74  : Real;               // Max. reactive power L2
+        maxPowerFactorL2          AT %B78  : Real;               // Max. power factor L2
+        minVoltL2N                AT %B82  : Real;               // Min. voltage UL2-N
+        minCurrentL2              AT %B86  : Real;               // Min. current L2
+        minApparentPowerL2        AT %B90  : Real;               // Min. apparent power L2
+        minActivePowerL2          AT %B94  : Real;               // Min. active power L2
+        minReactivePowerQtotL2    AT %B98  : Real;               // Min. reactive power Qtot L2
+        minPowerFactorL2          AT %B102 : Real;               // Min. power factor L2
+        reactivePowerQnL2         AT %B106 : Real;               // Reactive power Qn L2
+        voltL2Cycles10to12        AT %B110 : Real;               // Voltage L2 10-12 cycles
+        currL2Cycles10to12        AT %B114 : Real;               // Current L2 10-12 cycles
+        maxReactivePowerQnL2      AT %B118 : Real;               // Max. reactive power Qn L2
+        minReactivePowerQnL2      AT %B122 : Real;               // Min. reactive power Qn L2
+        fundVoltL2                AT %B126 : Real;               // Fundamental voltage L2
+        fundCurrL2                AT %B130 : Real;               // Fundamental current L2
+        fundApparentPowerL2       AT %B134 : Real;               // Fundamental apparent power L2
+        fundReactivePowerL2       AT %B138 : Real;               // Fundamental reactive power L2
+        fundActivePowerL2         AT %B142 : Real;               // Fundamental active power L2
+        fundActiveFactorL2        AT %B146 : Real;               // Fundamental cos φ active factor L2
+        maxFundVoltL2             AT %B150 : Real;               // Max. fundamental voltage L2
+        maxFundCurrL2             AT %B154 : Real;               // Max. fundamental current L2
+        maxFundApparentPowerL2    AT %B158 : Real;               // Max. fundamental apparent power L2
+        maxFundReactivePowerL2    AT %B162 : Real;               // Max. fundamental reactive power L2
+        maxFundActivePowerL2      AT %B166 : Real;               // Max. fundamental active power L2
+        maxFundActiveFactorL2     AT %B170 : Real;               // Max. fundamental cos φ active factor L2
+        minFundVoltL2             AT %B174 : Real;               // Min. fundamental voltage L2
+        minFundCurrL2             AT %B178 : Real;               // Min. fundamental current L2
+        minFundApparentPowerL2    AT %B182 : Real;               // Min. fundamental apparent power L2
+        minFundReactivePowerL2    AT %B186 : Real;               // Min. fundamental reactive power L2
+        minFundActivePowerL2      AT %B190 : Real;               // Min. fundamental active power L2
+        minFundActiveFactorL2     AT %B194 : Real;               // Min. fundamental cos φ active factor L2
+        THDaNVoltL2               AT %B198 : Real;               // THD+N voltage L2
+        THDaNCurrL2               AT %B202 : Real;               // THD+N current L2
+        maxTHDaNVoltL2            AT %B206 : Real;               // Max. THD+N voltage L2
+        maxTHDaNCurrL2            AT %B210 : Real;               // Max. THD+N current L2
+        minTHDaNVoltL2            AT %B214 : Real;               // Min. THD+N voltage L2
+        minTHDaNCurrL2            AT %B218 : Real;               // Min. THD+N current L2
+        voltDipValueL2            AT %B222 : Real;               // Voltage dip - value L2
+        voltDipDurationL2         AT %B226 : Real;               // Voltage dip - duration L2
+        voltSwellValueL2          AT %B230 : Real;               // Voltage swell - value L2
+        voltSwellDurationL2       AT %B234 : Real;               // Voltage swell - duration L2
+        voltPeakValueL2           AT %B238 : Real;               // Voltage peak value L2
+        currPeakValueL2           AT %B242 : Real;               // Current peak value L2
+        overCurrValueL2           AT %B246 : Real;               // Overcurrent value L2
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec149V0      : STRUCT
-        version                   : Byte;   // Version
-        resb1                     : Byte;   // Reserved
-        qualifierL3               : Word;   // Qualifier L3
-        voltL3N                   : Real;   // Voltage UL3-N
-        currentL3                 : Real;   // Current L3
-        apparentPowerL3           : Real;   // Apparent power L3
-        activePowerL3             : Real;   // Active power L3
-        reactivePowerQtotL3       : Real;   // Reactive power Qtot L3
-        powerFactorL3             : Real;   // Power factor L3
-        phaseAngleL3              : Real;   // Phase angle L3
-        apparentEnergyLongL3      : LReal;  // Apparent energy L3
-        totalActiveEnergyLongL3   : LReal;  // Active energy (total) L3
-        totalReactiveEnergyLongL3 : LReal;  // Reactive energy (total) L3
-        maxVoltL3N                : Real;   // Max. voltage UL3-N
-        maxCurrentL3              : Real;   // Max. current L3
-        maxApparentPowerL3        : Real;   // Max. apparent power L3
-        maxActivePowerL3          : Real;   // Max. active power L3
-        maxReactivePowerQtotL3    : Real;   // Max. reactive power Qtot L3
-        maxPowerFactorL3          : Real;   // Max. power factor L3
-        minVoltL3N                : Real;   // Min. voltage UL3-N
-        minCurrentL3              : Real;   // Min. current L3
-        minApparentPowerL3        : Real;   // Min. apparent power L3
-        minActivePowerL3          : Real;   // Min. active power L3
-        minReactivePowerQtotL3    : Real;   // Min. reactive power L3
-        minPowerFactorL3          : Real;   // Min. power factor L3
+        version                   AT %B0   : Byte;   // Version
+        resb1                     AT %B1   : Byte;   // Reserved
+        qualifierL3               AT %B2   : Word;   // Qualifier L3
+        voltL3N                   AT %B6   : Real;   // Voltage UL3-N
+        currentL3                 AT %B10  : Real;   // Current L3
+        apparentPowerL3           AT %B14  : Real;   // Apparent power L3
+        activePowerL3             AT %B18  : Real;   // Active power L3
+        reactivePowerQtotL3       AT %B22  : Real;   // Reactive power Qtot L3
+        powerFactorL3             AT %B26  : Real;   // Power factor L3
+        phaseAngleL3              AT %B30  : Real;   // Phase angle L3
+        apparentEnergyLongL3      AT %B34  : LReal;  // Apparent energy L3
+        totalActiveEnergyLongL3   AT %B42  : LReal;  // Active energy (total) L3
+        totalReactiveEnergyLongL3 AT %B50  : LReal;  // Reactive energy (total) L3
+        maxVoltL3N                AT %B58  : Real;   // Max. voltage UL3-N
+        maxCurrentL3              AT %B62  : Real;   // Max. current L3
+        maxApparentPowerL3        AT %B66  : Real;   // Max. apparent power L3
+        maxActivePowerL3          AT %B70  : Real;   // Max. active power L3
+        maxReactivePowerQtotL3    AT %B74  : Real;   // Max. reactive power Qtot L3
+        maxPowerFactorL3          AT %B78  : Real;   // Max. power factor L3
+        minVoltL3N                AT %B82  : Real;   // Min. voltage UL3-N
+        minCurrentL3              AT %B86  : Real;   // Min. current L3
+        minApparentPowerL3        AT %B90  : Real;   // Min. apparent power L3
+        minActivePowerL3          AT %B94  : Real;   // Min. active power L3
+        minReactivePowerQtotL3    AT %B98  : Real;   // Min. reactive power L3
+        minPowerFactorL3          AT %B102 : Real;   // Min. power factor L3
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec149V1      : STRUCT
-        version                   : Byte    := BYTE#1;  // Version
-        resb1                     : Byte;               // Reserved
-        qualifierL3               : Word;               // Qualifier L3
-        voltL3N                   : Real;               // Voltage UL3-N
-        currentL3                 : Real;               // Current L3
-        apparentPowerL3           : Real;               // Apparent power L3
-        activePowerL3             : Real;               // Active power L3
-        reactivePowerL3           : Real;               // Reactive power L3
-        powerFactorL3             : Real;               // Power factor L3
-        phaseAngleL3              : Real;               // Phase angle L3
-        apparentEnergyLongL3      : LReal;              // Apparent energy L3
-        totalActiveEnergyLongL3   : LReal;              // Active energy (total) L3
-        totalReactiveEnergyLongL3 : LReal;              // Reactive energy (total) L3
-        maxVoltL3N                : Real;               // Max. voltage UL3-N
-        maxCurrentL3              : Real;               // Max. current L3
-        maxApparentPowerL3        : Real;               // Max. apparent power L3
-        maxActivePowerL3          : Real;               // Max. active power L3
-        maxReactivePowerL3        : Real;               // Max. reactive power L3
-        maxPowerFactorL3          : Real;               // Max. power factor L3
-        minVoltL3N                : Real;               // Min. voltage UL3-N
-        minCurrentL3              : Real;               // Min. current L3
-        minApparentPowerL3        : Real;               // Min. apparent power L3
-        minActivePowerL3          : Real;               // Min. active power L3
-        minReactivePowerQtotL3    : Real;               // Min. reactive power Qtot L3
-        minPowerFactorL3          : Real;               // Min. power factor L3
-        reactivePowerQnL3         : Real;               // Reactive power Qn L3
-        voltL3Cycles10to12        : Real;               // Voltage L3 10-12 cycles
-        currL3Cycles10to12        : Real;               // Current L3 10-12 cycles
-        maxReactivePowerQnL3      : Real;               // Max. reactive power Qn L3
-        minReactivePowerQnL3      : Real;               // Min. reactive power Qn L3
-        fundVoltL3                : Real;               // Fundamental voltage L3
-        fundCurrL3                : Real;               // Fundamental current L3
-        fundApparentPowerL3       : Real;               // Fundamental apparent power L3
-        fundReactivePowerL3       : Real;               // Fundamental reactive power L3
-        fundActivePowerL3         : Real;               // Fundamental active power L3
-        fundActiveFactorL3        : Real;               // Fundamental cos φ active factor L3
-        maxFundVoltL3             : Real;               // Max. fundamental voltage L3
-        maxFundCurrL3             : Real;               // Max. fundamental current L3
-        maxFundApparentPowerL3    : Real;               // Max. fundamental apparent power L3
-        maxFundReactivePowerL3    : Real;               // Max. fundamental reactive power L3
-        maxFundActivePowerL3      : Real;               // Max. fundamental active power L3
-        maxFundActiveFactorL3     : Real;               // Max. fundamental cos φ active factor L3
-        minFundVoltL3             : Real;               // Min. fundamental voltage L3
-        minFundCurrL3             : Real;               // Min. fundamental current L3
-        minFundApparentPowerL3    : Real;               // Min. fundamental apparent power L3
-        minFundReactivePowerL3    : Real;               // Min. fundamental reactive power L3
-        minFundActivePowerL3      : Real;               // Min. fundamental active power L3
-        minFundActiveFactorL3     : Real;               // Min. fundamental cos φ active factor L3
-        THDaNVoltL3               : Real;               // THD+N voltage L3
-        THDaNCurrL3               : Real;               // THD+N current L3
-        maxTHDaNVoltL3            : Real;               // Max. THD+N voltage L3
-        maxTHDaNCurrL3            : Real;               // Max. THD+N current L3
-        minTHDaNVoltL3            : Real;               // Min. THD+N voltage L3
-        minTHDaNCurrL3            : Real;               // Min. THD+N current L3
-        voltDipValueL3            : Real;               // Voltage dip - value L3
-        voltDipDurationL3         : Real;               // Voltage dip - duration L3
-        voltSwellValueL3          : Real;               // Voltage swell - value L3
-        voltSwellDurationL3       : Real;               // Voltage swell - duration L3
-        voltPeakValueL3           : Real;               // Voltage peak value L3
-        currPeakValueL3           : Real;               // Current peak value L3
-        overCurrValueL3           : Real;               // Overcurrent value L3
+        version                   AT %B0   : Byte    := BYTE#1;  // Version
+        resb1                     AT %B1   : Byte;               // Reserved
+        qualifierL3               AT %B2   : Word;               // Qualifier L3
+        voltL3N                   AT %B6   : Real;               // Voltage UL3-N
+        currentL3                 AT %B10  : Real;               // Current L3
+        apparentPowerL3           AT %B14  : Real;               // Apparent power L3
+        activePowerL3             AT %B18  : Real;               // Active power L3
+        reactivePowerL3           AT %B22  : Real;               // Reactive power L3
+        powerFactorL3             AT %B26  : Real;               // Power factor L3
+        phaseAngleL3              AT %B30  : Real;               // Phase angle L3
+        apparentEnergyLongL3      AT %B34  : LReal;              // Apparent energy L3
+        totalActiveEnergyLongL3   AT %B42  : LReal;              // Active energy (total) L3
+        totalReactiveEnergyLongL3 AT %B50  : LReal;              // Reactive energy (total) L3
+        maxVoltL3N                AT %B58  : Real;               // Max. voltage UL3-N
+        maxCurrentL3              AT %B62  : Real;               // Max. current L3
+        maxApparentPowerL3        AT %B66  : Real;               // Max. apparent power L3
+        maxActivePowerL3          AT %B70  : Real;               // Max. active power L3
+        maxReactivePowerL3        AT %B74  : Real;               // Max. reactive power L3
+        maxPowerFactorL3          AT %B78  : Real;               // Max. power factor L3
+        minVoltL3N                AT %B82  : Real;               // Min. voltage UL3-N
+        minCurrentL3              AT %B86  : Real;               // Min. current L3
+        minApparentPowerL3        AT %B90  : Real;               // Min. apparent power L3
+        minActivePowerL3          AT %B94  : Real;               // Min. active power L3
+        minReactivePowerQtotL3    AT %B98  : Real;               // Min. reactive power Qtot L3
+        minPowerFactorL3          AT %B102 : Real;               // Min. power factor L3
+        reactivePowerQnL3         AT %B106 : Real;               // Reactive power Qn L3
+        voltL3Cycles10to12        AT %B110 : Real;               // Voltage L3 10-12 cycles
+        currL3Cycles10to12        AT %B114 : Real;               // Current L3 10-12 cycles
+        maxReactivePowerQnL3      AT %B118 : Real;               // Max. reactive power Qn L3
+        minReactivePowerQnL3      AT %B122 : Real;               // Min. reactive power Qn L3
+        fundVoltL3                AT %B126 : Real;               // Fundamental voltage L3
+        fundCurrL3                AT %B130 : Real;               // Fundamental current L3
+        fundApparentPowerL3       AT %B134 : Real;               // Fundamental apparent power L3
+        fundReactivePowerL3       AT %B138 : Real;               // Fundamental reactive power L3
+        fundActivePowerL3         AT %B142 : Real;               // Fundamental active power L3
+        fundActiveFactorL3        AT %B146 : Real;               // Fundamental cos φ active factor L3
+        maxFundVoltL3             AT %B150 : Real;               // Max. fundamental voltage L3
+        maxFundCurrL3             AT %B154 : Real;               // Max. fundamental current L3
+        maxFundApparentPowerL3    AT %B158 : Real;               // Max. fundamental apparent power L3
+        maxFundReactivePowerL3    AT %B162 : Real;               // Max. fundamental reactive power L3
+        maxFundActivePowerL3      AT %B166 : Real;               // Max. fundamental active power L3
+        maxFundActiveFactorL3     AT %B170 : Real;               // Max. fundamental cos φ active factor L3
+        minFundVoltL3             AT %B174 : Real;               // Min. fundamental voltage L3
+        minFundCurrL3             AT %B178 : Real;               // Min. fundamental current L3
+        minFundApparentPowerL3    AT %B182 : Real;               // Min. fundamental apparent power L3
+        minFundReactivePowerL3    AT %B186 : Real;               // Min. fundamental reactive power L3
+        minFundActivePowerL3      AT %B190 : Real;               // Min. fundamental active power L3
+        minFundActiveFactorL3     AT %B194 : Real;               // Min. fundamental cos φ active factor L3
+        THDaNVoltL3               AT %B198 : Real;               // THD+N voltage L3
+        THDaNCurrL3               AT %B202 : Real;               // THD+N current L3
+        maxTHDaNVoltL3            AT %B206 : Real;               // Max. THD+N voltage L3
+        maxTHDaNCurrL3            AT %B210 : Real;               // Max. THD+N current L3
+        minTHDaNVoltL3            AT %B214 : Real;               // Min. THD+N voltage L3
+        minTHDaNCurrL3            AT %B218 : Real;               // Min. THD+N current L3
+        voltDipValueL3            AT %B222 : Real;               // Voltage dip - value L3
+        voltDipDurationL3         AT %B226 : Real;               // Voltage dip - duration L3
+        voltSwellValueL3          AT %B230 : Real;               // Voltage swell - value L3
+        voltSwellDurationL3       AT %B234 : Real;               // Voltage swell - duration L3
+        voltPeakValueL3           AT %B238 : Real;               // Voltage peak value L3
+        currPeakValueL3           AT %B242 : Real;               // Current peak value L3
+        overCurrValueL3           AT %B246 : Real;               // Overcurrent value L3
       END_STRUCT;
 
    END_TYPE
