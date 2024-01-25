@@ -2704,28 +2704,28 @@
    END_TYPE
 
    TYPE EEatIndustryProfileE3      : STRUCT
-        activePowerL1              : Real;   // Active power L1
-        activePowerL2              : Real;   // Active power L2
-        activePowerL3              : Real;   // Active power L3
-        reactivePowerQtotL1        : Real;   // Reactive power Qtot L1
-        reactivePowerQtotL2        : Real;   // Reactive power Qtot L2
-        reactivePowerQtotL3        : Real;   // Reactive power Qtot L2
-        totalActiveEnergyInLong    : LReal;  // Total active energy inflow L1 L2 L3
-        totalActiveEnergyOutLong   : LReal;  // Total active energy outflow L1 L2 L3
-        totalReactiveEnergyInLong  : LReal;  // Total reactive energy inflow L1 L2 L3
-        totalReactiveEnergyOutLong : LReal;  // Total reactive energy outflow L1 L2 L3
-        voltL1N                    : Real;   // Voltage UL1-N
-        voltL2N                    : Real;   // Voltage UL2-N
-        voltL3N                    : Real;   // Voltage UL3-N
-        voltL1L2                   : Real;   // Voltage UL1-L2
-        voltL2L3                   : Real;   // Voltage UL2-L3
-        voltL3L1                   : Real;   // Voltage UL3-L1
-        currentL1                  : Real;   // Current L1
-        currentL2                  : Real;   // Current L2
-        currentL3                  : Real;   // Current L3
-        powerFactorL1              : Real;   // Power factor L1
-        powerFactorL2              : Real;   // Power factor L2
-        powerFactorL3              : Real;   // Power factor L3
+        activePowerL1              AT %B0  : Real;   // Active power L1
+        activePowerL2              AT %B4  : Real;   // Active power L2
+        activePowerL3              AT %B8  : Real;   // Active power L3
+        reactivePowerQtotL1        AT %B12 : Real;   // Reactive power Qtot L1
+        reactivePowerQtotL2        AT %B16 : Real;   // Reactive power Qtot L2
+        reactivePowerQtotL3        AT %B20 : Real;   // Reactive power Qtot L2
+        totalActiveEnergyInLong    AT %B24 : LReal;  // Total active energy inflow L1 L2 L3
+        totalActiveEnergyOutLong   AT %B32 : LReal;  // Total active energy outflow L1 L2 L3
+        totalReactiveEnergyInLong  AT %B40 : LReal;  // Total reactive energy inflow L1 L2 L3
+        totalReactiveEnergyOutLong AT %B48 : LReal;  // Total reactive energy outflow L1 L2 L3
+        voltL1N                    AT %B56 : Real;   // Voltage UL1-N
+        voltL2N                    AT %B60 : Real;   // Voltage UL2-N
+        voltL3N                    AT %B64 : Real;   // Voltage UL3-N
+        voltL1L2                   AT %B68 : Real;   // Voltage UL1-L2
+        voltL2L3                   AT %B72 : Real;   // Voltage UL2-L3
+        voltL3L1                   AT %B76 : Real;   // Voltage UL3-L1
+        currentL1                  AT %B80 : Real;   // Current L1
+        currentL2                  AT %B84 : Real;   // Current L2
+        currentL3                  AT %B88 : Real;   // Current L3
+        powerFactorL1              AT %B92 : Real;   // Power factor L1
+        powerFactorL2              AT %B96 : Real;   // Power factor L2
+        powerFactorL3              AT %B100: Real;   // Power factor L3
       END_STRUCT;
 
    END_TYPE
@@ -3476,47 +3476,47 @@
    END_TYPE
 
    TYPE EM480VHFDataRec143       : STRUCT
-        version                  : Byte    := BYTE#1;  // Version
-        resb1                    : Byte;               // Reserved
-        controlStatusByte1L1     : Byte;               // Status / control byte 1 - L1
-        controlStatusByte2L1     : Byte;               // Status / control byte 2 - L1
-        controlStatusByte1L2     : Byte;               // Status / control byte 1 - L2
-        controlStatusByte2L2     : Byte;               // Status / control byte 2 - L2
-        controlStatusByte1L3     : Byte;               // Status / control byte 1 - L3
-        controlStatusByte2L3     : Byte;               // Status / control byte 2 - L3
-        activeEnergyInLongL1     : LReal;              // Active energy inflow (initial value) L1
-        activeEnergyOutLongL1    : LReal;              // Active energy outflow (initial value) L1
-        reactiveEnergyInLongL1   : LReal;              // Reactive energy inflow (initial value) L1
-        reactiveEnergyOutLongL1  : LReal;              // Reactive energy outflow (initial value) L1
-        apparentEnergyLongL1     : LReal;              // Apparent energy (initial value) L1
-        activeEnergyInLongL2     : LReal;              // Active energy inflow (initial value) L2
-        activeEnergyOutLongL2    : LReal;              // Active energy outflow (initial value) L2
-        reactiveEnergyInLongL2   : LReal;              // Reactive energy inflow (initial value) L2
-        reactiveEnergyOutLongL2  : LReal;              // Reactive energy outflow (initial value) L2
-        apparentEnergyLongL2     : LReal;              // Apparent energy (initial value) L2
-        activeEnergyInLongL3     : LReal;              // Active energy inflow (initial value) L3
-        activeEnergyOutLongL3    : LReal;              // Active energy outflow (initial value) L3
-        reactiveEnergyInLongL3   : LReal;              // Reactive energy inflow (initial value) L3
-        reactiveEnergyOutLongL3  : LReal;              // Reactive energy outflow (initial value) L3
-        apparentEnergyLongL3     : LReal;              // Apparent energy (initial value) L3
-        ovCntActiveEnergyInL1    : UInt;               // Overflow counter active energy inflow L1
-        ovCntActiveEnergyOutL1   : UInt;               // Overflow counter active energy outflow L1
-        ovCntReactiveEnergyInL1  : UInt;               // Overflow counter reactive energy inflow L1
-        ovCntReactiveEnergyOutL1 : UInt;               // Overflow counter reactive energy outflow L1
-        ovCntApparentEnergyL1    : UInt;               // Overflow counter apparent energy L1
-        ovCntActiveEnergyInL2    : UInt;               // Overflow counter active energy inflow L2
-        ovCntActiveEnergyOutL2   : UInt;               // Overflow counter active energy outflow L2
-        ovCntReactiveEnergyInL2  : UInt;               // Overflow counter reactive energy inflow L2
-        ovCntReactiveEnergyOutL2 : UInt;               // Overflow counter reactive energy outflow L2
-        ovCntApparentEnergyL2    : UInt;               // Overflow counter apparent energy L2
-        ovCntActiveEnergyInL3    : UInt;               // Overflow counter active energy inflow L3
-        ovCntActiveEnergyOutL3   : UInt;               // Overflow counter active energy outflow L3
-        ovCntReactiveEnergyInL3  : UInt;               // Overflow counter reactive energy inflow L3
-        ovCntReactiveEnergyOutL3 : UInt;               // Overflow counter reactive energy outflow L3
-        ovCntApparentEnergyL3    : UInt;               // Overflow counter apparent energy L3
-        operHoursCntL1           : Real;               // Operating hours counter L1 (initial value)
-        operHoursCntL2           : Real;               // Operating hours counter L2 (initial value)
-        operHoursCntL3           : Real;               // Operating hours counter L2 (initial value)
+        version                  AT %B0 : Byte    := BYTE#1;  // Version
+        resb1                    AT %B1 : Byte;               // Reserved
+        controlStatusByte1L1     AT %B2 : Byte;               // Status / control byte 1 - L1
+        controlStatusByte2L1     AT %B3 : Byte;               // Status / control byte 2 - L1
+        controlStatusByte1L2     AT %B4 : Byte;               // Status / control byte 1 - L2
+        controlStatusByte2L2     AT %B5 : Byte;               // Status / control byte 2 - L2
+        controlStatusByte1L3     AT %B6 : Byte;               // Status / control byte 1 - L3
+        controlStatusByte2L3     AT %B7 : Byte;               // Status / control byte 2 - L3
+        activeEnergyInLongL1     AT %B8 : LReal;              // Active energy inflow (initial value) L1
+        activeEnergyOutLongL1    AT %B16 : LReal;              // Active energy outflow (initial value) L1
+        reactiveEnergyInLongL1   AT %B24 : LReal;              // Reactive energy inflow (initial value) L1
+        reactiveEnergyOutLongL1  AT %B32 : LReal;              // Reactive energy outflow (initial value) L1
+        apparentEnergyLongL1     AT %B40 : LReal;              // Apparent energy (initial value) L1
+        activeEnergyInLongL2     AT %B48 : LReal;              // Active energy inflow (initial value) L2
+        activeEnergyOutLongL2    AT %B56 : LReal;              // Active energy outflow (initial value) L2
+        reactiveEnergyInLongL2   AT %B64 : LReal;              // Reactive energy inflow (initial value) L2
+        reactiveEnergyOutLongL2  AT %B72 : LReal;              // Reactive energy outflow (initial value) L2
+        apparentEnergyLongL2     AT %B80 : LReal;              // Apparent energy (initial value) L2
+        activeEnergyInLongL3     AT %B88 : LReal;              // Active energy inflow (initial value) L3
+        activeEnergyOutLongL3    AT %B96 : LReal;              // Active energy outflow (initial value) L3
+        reactiveEnergyInLongL3   AT %B104 : LReal;              // Reactive energy inflow (initial value) L3
+        reactiveEnergyOutLongL3  AT %B112 : LReal;              // Reactive energy outflow (initial value) L3
+        apparentEnergyLongL3     AT %B120 : LReal;              // Apparent energy (initial value) L3
+        ovCntActiveEnergyInL1    AT %B128 : UInt;               // Overflow counter active energy inflow L1
+        ovCntActiveEnergyOutL1   AT %B130 : UInt;               // Overflow counter active energy outflow L1
+        ovCntReactiveEnergyInL1  AT %B132 : UInt;               // Overflow counter reactive energy inflow L1
+        ovCntReactiveEnergyOutL1 AT %B134 : UInt;               // Overflow counter reactive energy outflow L1
+        ovCntApparentEnergyL1    AT %B136 : UInt;               // Overflow counter apparent energy L1
+        ovCntActiveEnergyInL2    AT %B138 : UInt;               // Overflow counter active energy inflow L2
+        ovCntActiveEnergyOutL2   AT %B140 : UInt;               // Overflow counter active energy outflow L2
+        ovCntReactiveEnergyInL2  AT %B142 : UInt;               // Overflow counter reactive energy inflow L2
+        ovCntReactiveEnergyOutL2 AT %B144 : UInt;               // Overflow counter reactive energy outflow L2
+        ovCntApparentEnergyL2    AT %B146 : UInt;               // Overflow counter apparent energy L2
+        ovCntActiveEnergyInL3    AT %B148 : UInt;               // Overflow counter active energy inflow L3
+        ovCntActiveEnergyOutL3   AT %B150 : UInt;               // Overflow counter active energy outflow L3
+        ovCntReactiveEnergyInL3  AT %B152 : UInt;               // Overflow counter reactive energy inflow L3
+        ovCntReactiveEnergyOutL3 AT %B154 : UInt;               // Overflow counter reactive energy outflow L3
+        ovCntApparentEnergyL3    AT %B156 : UInt;               // Overflow counter apparent energy L3
+        operHoursCntL1           AT %B158 : Real;               // Operating hours counter L1 (initial value)
+        operHoursCntL2           AT %B162 : Real;               // Operating hours counter L2 (initial value)
+        operHoursCntL3           AT %B166 : Real;               // Operating hours counter L2 (initial value)
       END_STRUCT;
 
    END_TYPE
@@ -3638,11 +3638,11 @@
    END_TYPE
 
    TYPE EM480VHFDataRec163 : STRUCT
-        version            AT %B0 : Byte;                  // Version
-        resb1              AT %B1 : Byte;                  // Reserved
-        THDaNCurrL1        AT %B2 : Real;                  // THD+N current L1
-        currL1             AT %B6 : Real;                  // Current L1
-        harmCurrL1         AT %B10 : Array[1..40] of Real;  // Harmonics 1-40: Current L1
+        version            AT %B0   : Byte;                  // Version
+        resb1              AT %B1   : Byte;                  // Reserved
+        THDaNCurrL1        AT %B2   : Real;                  // THD+N current L1
+        currL1             AT %B6   : Real;                  // Current L1
+        harmCurrL1         AT %B10  : Array[1..40] of Real;  // Harmonics 1-40: Current L1
         THDaNCurrL2        AT %B170 : Real;                  // THD+N current L2
         currL2             AT %B174 : Real;                  // Current L2
         harmCurrL2         AT %B178 : Array[1..40] of Real;  // Harmonics 1-40: Current L2
@@ -3913,404 +3913,404 @@
    END_TYPE
 
    TYPE EM480VHFDataRec150V1 : STRUCT
-        version              : Byte    := BYTE#1;  // Version
-        resb1                : Byte;               // Reserved
-        operHoursCntTotal    : Real;               // Operating hours counter L1 L2 L3
-        operHoursCntL1       : Real;               // Operating hours counter L1
-        operHoursCntL2       : Real;               // Operating hours counter L2
-        operHoursCntL3       : Real;               // Operating hours counter L3
-        statusLimViolGW1to16 : Word;               // Status limit violation GW 1...16
-        statusEnergyCntOv    : Word;               // Status of energy counter overflows
-        cntLimViolGw1        : UDInt;              // Counter limit violation GW 1
-        cntLimViolGw2        : UDInt;              // Counter limit violation GW 2
-        cntLimViolGw3        : UDInt;              // Counter limit violation GW 3
-        cntLimViolGw4        : UDInt;              // Counter limit violation GW 4
-        cntLimViolGw5        : UDInt;              // Counter limit violation GW 5
-        cntLimViolGw6        : UDInt;              // Counter limit violation GW 6
-        cntLimViolGw7        : UDInt;              // Counter limit violation GW 7
-        cntLimViolGw8        : UDInt;              // Counter limit violation GW 8
-        cntLimViolGw9        : UDInt;              // Counter limit violation GW 9
-        cntLimViolGw10       : UDInt;              // Counter limit violation GW 10
-        cntLimViolGw11       : UDInt;              // Counter limit violation GW 11
-        cntLimViolGw12       : UDInt;              // Counter limit violation GW 12
-        cntLimViolGw13       : UDInt;              // Counter limit violation GW 13
-        cntLimViolGw14       : UDInt;              // Counter limit violation GW 14
-        cntLimViolGw15       : UDInt;              // Counter limit violation GW 15
-        cntLimViolGw16       : UDInt;              // Counter limit violation GW 16
-        qualifierL1L2L3      : Word;               // Qualifier L1 L2 L3
-        powerQualityAnalysis : UDInt;              // Power quality analysis - Qualifier
-        currentModuleTime    : PNIOTimeStamp;      // Current module time
+        version              AT %B0 : Byte    := BYTE#1;  // Version
+        resb1                AT %B1 : Byte;               // Reserved
+        operHoursCntTotal    AT %B2 : Real;               // Operating hours counter L1 L2 L3
+        operHoursCntL1       AT %B6 : Real;               // Operating hours counter L1
+        operHoursCntL2       AT %B10 : Real;               // Operating hours counter L2
+        operHoursCntL3       AT %B14 : Real;               // Operating hours counter L3
+        statusLimViolGW1to16 AT %B18 : Word;               // Status limit violation GW 1...16
+        statusEnergyCntOv    AT %B22 : Word;               // Status of energy counter overflows
+        cntLimViolGw1        AT %B26 : UDInt;              // Counter limit violation GW 1
+        cntLimViolGw2        AT %B30 : UDInt;              // Counter limit violation GW 2
+        cntLimViolGw3        AT %B34 : UDInt;              // Counter limit violation GW 3
+        cntLimViolGw4        AT %B38 : UDInt;              // Counter limit violation GW 4
+        cntLimViolGw5        AT %B42 : UDInt;              // Counter limit violation GW 5
+        cntLimViolGw6        AT %B46 : UDInt;              // Counter limit violation GW 6
+        cntLimViolGw7        AT %B50 : UDInt;              // Counter limit violation GW 7
+        cntLimViolGw8        AT %B54 : UDInt;              // Counter limit violation GW 8
+        cntLimViolGw9        AT %B58 : UDInt;              // Counter limit violation GW 9
+        cntLimViolGw10       AT %B62 : UDInt;              // Counter limit violation GW 10
+        cntLimViolGw11       AT %B66 : UDInt;              // Counter limit violation GW 11
+        cntLimViolGw12       AT %B70 : UDInt;              // Counter limit violation GW 12
+        cntLimViolGw13       AT %B74 : UDInt;              // Counter limit violation GW 13
+        cntLimViolGw14       AT %B78 : UDInt;              // Counter limit violation GW 14
+        cntLimViolGw15       AT %B82 : UDInt;              // Counter limit violation GW 15
+        cntLimViolGw16       AT %B86 : UDInt;              // Counter limit violation GW 16
+        qualifierL1L2L3      AT %B90 : Word;               // Qualifier L1 L2 L3
+        powerQualityAnalysis AT %B92 : UDInt;              // Power quality analysis - Qualifier
+        currentModuleTime    AT %B96 : PNIOTimeStamp;      // Current module time
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec151Real : STRUCT
-        version                : Byte;                   // Version
-        numMeasValues          : Byte;                   // Number of measured values for data record mapping
-        measValue              : Array[1..150] of Real;  // ID of measured value for user data mapping
+        version                AT %B0 : Byte;                   // Version
+        numMeasValues          AT %B1 : Byte;                   // Number of measured values for data record mapping
+        measValue              AT %B2 : Array[1..150] of Real;  // ID of measured value for user data mapping
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec161 : STRUCT
-        version            : Byte;                  // Version
-        resb1              : Byte;                  // Reserved
-        THDaNVoltL1        : Real;                  // THD+N voltage L1
-        voltL1             : Real;                  // Voltage L1
-        harmVoltL1         : Array[1..40] of Real;  // Harmonics 1-40: Voltage L1
-        THDaNVoltL2        : Real;                  // THD+N voltage L2
-        voltL2             : Real;                  // Voltage L2
-        harmVoltL2         : Array[1..40] of Real;  // Harmonics 1-40: Voltage L2
-        THDaNVoltL3        : Real;                  // THD+N voltage L3
-        voltL3             : Real;                  // Voltage L3
-        harmVoltL3         : Array[1..40] of Real;  // Harmonics 1-40: Voltage L3
-        currentModuleTime  : PNIOTimeStamp;         // Current module time
+        version            AT %B0   : Byte;                  // Version
+        resb1              AT %B1   : Byte;                  // Reserved
+        THDaNVoltL1        AT %B2   : Real;                  // THD+N voltage L1
+        voltL1             AT %B6   : Real;                  // Voltage L1
+        harmVoltL1         AT %B10  : Array[1..40] of Real;  // Harmonics 1-40: Voltage L1
+        THDaNVoltL2        AT %B170 : Real;                  // THD+N voltage L2
+        voltL2             AT %B174 : Real;                  // Voltage L2
+        harmVoltL2         AT %B178 : Array[1..40] of Real;  // Harmonics 1-40: Voltage L2
+        THDaNVoltL3        AT %B338 : Real;                  // THD+N voltage L3
+        voltL3             AT %B342 : Real;                  // Voltage L3
+        harmVoltL3         AT %B346 : Array[1..40] of Real;  // Harmonics 1-40: Voltage L3
+        currentModuleTime  AT %B506 : PNIOTimeStamp;         // Current module time
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VHFDataRec135 : STRUCT
-        majMinVer          : Byte    := BYTE#0;      // Major / minor version
-        dataRecordNum      : Byte    := BYTE#151;    // Data record number for data record mapping = 151
-        numMeasValues      : Byte    := BYTE#150;    // Number of measured values for data record mapping
-        resb3              : Byte;                   // Reserved
-        measValueID        : Array[1..150] of Word;  // ID of measured value for user data mapping
+        majMinVer          AT %B0 : Byte    := BYTE#0;      // Major / minor version
+        dataRecordNum      AT %B1 : Byte    := BYTE#151;    // Data record number for data record mapping = 151
+        numMeasValues      AT %B2 : Byte    := BYTE#150;    // Number of measured values for data record mapping
+        resb3              AT %B3 : Byte;                   // Reserved
+        measValueID        AT %B4 : Array[1..150] of Word;  // ID of measured value for user data mapping
       END_STRUCT;
 
    END_TYPE
 
    TYPE TMPulseDataRec : STRUCT
-        header         : TMPulseDataRecHead;               // Header
-        channel        : Array[0..1] of TMPulseDataRecCh;  // Data record for 1 channel configuration; use Array[0..1] for 2 channel configuration
+        header         AT %B0 : TMPulseDataRecHead;               // Header
+        channel        AT %B4 : Array[0..1] of TMPulseDataRecCh;  // Data record for 1 channel configuration; use Array[0..1] for 2 channel configuration
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VSTDataRec130 : STRUCT
-        majMinVer          : Byte    := BYTE#0;     // Major / minor version
-        numUserDataVariant : Byte    := BYTE#1;     // Number of user data variant = 1
-        numMeasValues      : Byte;                  // Number of measured values for user data mapping
-        resb3              : Byte;                  // Reserved
-        measValue          : Array[1..64] of Word;  // ID of measured value for user data mapping
+        majMinVer          AT %B0 : Byte    := BYTE#0;     // Major / minor version
+        numUserDataVariant AT %B1 : Byte    := BYTE#1;     // Number of user data variant = 1
+        numMeasValues      AT %B2 : Byte;                  // Number of measured values for user data mapping
+        resb3              AT %B3 : Byte;                  // Reserved
+        measValue          AT %B4 : Array[1..64] of Word;  // ID of measured value for user data mapping
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM480VSTDataRec128               : STRUCT
-        majMinVer                        : Byte    := BYTE#81;                // Major / minor version
-        numParamStruct                   : Byte    := BYTE#2;                 // Number of parameter structures = 2
-        numModuleParamBlocks             : Byte    := BYTE#1;                 // Number of module parameter blocks = 1
-        lengthModuleParamBlock           : Byte    := BYTE#8;                 // Length of module parameter block = 8
-        connectTypePhases                : Byte    := BYTE#0;                 // Connection type of the phases
-        measRangePower                   : Byte;                              // Voltage measuring range of the power supply system
-        energyCountGateScaleValLineFrequ : Byte;                              // Energy counter gate / Full-scale value for energy counter / Line frequency of the power supply system
-        lineVoltTolerance                : Byte;                              // Line voltage tolerance
-        diagLineVolt                     : Byte;                              // Diagnostics line voltage
-        idUserDataVariant                : Byte;                              // ID of the user data variant
-        resb10                           : Byte;                              // Reserved
-        resb11                           : Byte;                              // Reserved
-        numChannelParamBlocks            : Byte    := BYTE#3;                 // Number of channel parameter blocks = 3
-        lengthChannelParamBlock          : Byte    := BYTE#20;                // Length of channel parameter block = 20
-        channel                          : Array[0..2] of EM480VSTDataRecCh;
+        majMinVer                        AT %B0 : Byte    := BYTE#81;                // Major / minor version
+        numParamStruct                   AT %B1 : Byte    := BYTE#2;                 // Number of parameter structures = 2
+        numModuleParamBlocks             AT %B2 : Byte    := BYTE#1;                 // Number of module parameter blocks = 1
+        lengthModuleParamBlock           AT %B3 : Byte    := BYTE#8;                 // Length of module parameter block = 8
+        connectTypePhases                AT %B4 : Byte    := BYTE#0;                 // Connection type of the phases
+        measRangePower                   AT %B5 : Byte;                              // Voltage measuring range of the power supply system
+        energyCountGateScaleValLineFrequ AT %B6 : Byte;                              // Energy counter gate / Full-scale value for energy counter / Line frequency of the power supply system
+        lineVoltTolerance                AT %B7 : Byte;                              // Line voltage tolerance
+        diagLineVolt                     AT %B8 : Byte;                              // Diagnostics line voltage
+        idUserDataVariant                AT %B9 : Byte;                              // ID of the user data variant
+        resb10                           AT %B10 : Byte;                              // Reserved
+        resb11                           AT %B11 : Byte;                              // Reserved
+        numChannelParamBlocks            AT %B12 : Byte    := BYTE#3;                 // Number of channel parameter blocks = 3
+        lengthChannelParamBlock          AT %B13 : Byte    := BYTE#20;                // Length of channel parameter block = 20
+        channel                          AT %B14 : Array[0..2] of EM480VSTDataRecCh;
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterIAndM2 : STRUCT
-        blockType          : Int    := 16#0022;     // Block type
-        blockLength        : Int    := 16#0012;     // Block length = 18
-        blockVersion       : Int    := 16#0100;     // Block version = 1.0
-        imDate             : Array[0..15] of Char;  // Specification of an input date (YYYY-MM-DD HH:MM)
+        blockType          AT %B0 : Int    := 16#0022;     // Block type
+        blockLength        AT %B2 : Int    := 16#0012;     // Block length = 18
+        blockVersion       AT %B4 : Int    := 16#0100;     // Block version = 1.0
+        imDate             AT %B6 : Array[0..15] of Char;  // Specification of an input date (YYYY-MM-DD HH:MM)
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterIAndM1 : STRUCT
-        blockType          : Int    := 16#0021;     // Block type
-        blockLength        : Int    := 16#0038;     // Block length = 56
-        blockVersion       : Int    := 16#0100;     // Block version = 1.0
-        tagFnction         : Array[0..31] of Char;  // Plant identifier
-        tagLocation        : Array[0..21] of Char;  // Location designation
+        blockType          AT %B0 : Int    := 16#0021;     // Block type
+        blockLength        AT %B2 : Int    := 16#0038;     // Block length = 56
+        blockVersion       AT %B4 : Int    := 16#0100;     // Block version = 1.0
+        tagFnction         AT %B6 : Array[0..31] of Char;  // Plant identifier
+        tagLocation        AT %B38 : Array[0..21] of Char;  // Location designation
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterIAndM0 : STRUCT
-        header0            : Int;                   // Reserved for header
-        header2            : Int;                   // Reserved for header
-        header4            : Int;                   // Reserved for header
-        manufacturerID     : Int;                   // 42 = Manufacturer ID SIEMENS
-        orderID            : Array[0..19] of Char;  // Order No. (MLFB)
-        serialNumber       : Array[0..15] of Char;  // Serial number
-        hwRev              : Int;                   // Hardware revision or product version
-        swRev              : Array[0..3] of Char;   // Firmware version
-        revCounter         : Int;                   // Revision counter
-        profileID          : Int;                   // PROFIBUS profile
-        profileSpecType    : Int;                   // Contains further information on the profile
-        imVersion          : Int;                   // Version of the identification data (0101hex = Version 1.1)
-        imSupported        : Int;                   // Information about the available identification data (Index 2 to 4)
+        header0            AT %B0 : Int;                   // Reserved for header
+        header2            AT %B2 : Int;                   // Reserved for header
+        header4            AT %B4 : Int;                   // Reserved for header
+        manufacturerID     AT %B6 : Int;                   // 42 = Manufacturer ID SIEMENS
+        orderID            AT %B8 : Array[0..19] of Char;  // Order No. (MLFB)
+        serialNumber       AT %B28 : Array[0..15] of Char;  // Serial number
+        hwRev              AT %B44 : Int;                   // Hardware revision or product version
+        swRev              AT %B46 : Array[0..3] of Char;   // Firmware version
+        revCounter         AT %B50 : Int;                   // Revision counter
+        profileID          AT %B52 : Int;                   // PROFIBUS profile
+        profileSpecType    AT %B54 : Int;                   // Contains further information on the profile
+        imVersion          AT %B56 : Int;                   // Version of the identification data (0101hex = Version 1.1)
+        imSupported        AT %B58 : Int;                   // Information about the available identification data (Index 2 to 4)
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterDS204     : STRUCT
-        blockingTime          : Byte    := BYTE#2;   // Blocking time; 1 … 7,5s/0.5 s; [2 … 15]; Default [2]: 1 s.; for not safety starter mwith V1.0 t >= 5 sec [2 … 10]
-        warnLimitMotorHeat    : Byte;                // Warning limit - motor heating; 0 … 99 %/1 %; [0 … 99]; [0]: Deactivated
-        resw2                 : Int;                 // Reserved
-        resw4                 : Int;                 // Reserved
-        blockingCurrent       : Byte    := BYTE#16;  // Blocking current; 150 ... 1000 %/50 %; [3 ... 20]; Default [16]: 800 %
-        resb7                 : Byte;                // Reserved
-        lowerCurrentWarnLimit : Byte    := BYTE#7;   // Lower current warning limit; 18.75 … 100 %/3.125 %; [6 … 32]; [0]: Deactivated; Default [7]: 21.875 %
-        upperCurrentWarnLimit : Byte    := BYTE#36;  // Upper current warning limit; 50 … 400 %/3.125 %; [16 … 128]; [0]: Deactivated; Default [36]: 112.5 %
+        blockingTime          AT %B0 : Byte    := BYTE#2;   // Blocking time; 1 … 7,5s/0.5 s; [2 … 15]; Default [2]: 1 s.; for not safety starter mwith V1.0 t >= 5 sec [2 … 10]
+        warnLimitMotorHeat    AT %B1 : Byte;                // Warning limit - motor heating; 0 … 99 %/1 %; [0 … 99]; [0]: Deactivated
+        resw2                 AT %B2 : Int;                 // Reserved
+        resw4                 AT %B4 : Int;                 // Reserved
+        blockingCurrent       AT %B6 : Byte    := BYTE#16;  // Blocking current; 150 ... 1000 %/50 %; [3 ... 20]; Default [16]: 800 %
+        resb7                 AT %B7 : Byte;                // Reserved
+        lowerCurrentWarnLimit AT %B8 : Byte    := BYTE#7;   // Lower current warning limit; 18.75 … 100 %/3.125 %; [6 … 32]; [0]: Deactivated; Default [7]: 21.875 %
+        upperCurrentWarnLimit AT %B9 : Byte    := BYTE#36;  // Upper current warning limit; 50 … 400 %/3.125 %; [16 … 128]; [0]: Deactivated; Default [36]: 112.5 %
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterDS203              : STRUCT
-        res00                          : Bool;                // Reserved
-        loadType                       : Bool;                // Load type 0= 3phase; 1=1phase
-        exMotorApp                     : Bool;                // EX motor application 0= no; 1= yes (only F-Starter)
-        res03                          : Bool;                // Reserved
-        turnOffClass0                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        turnOffClass1                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        turnOffClass2                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        turnOffClass3                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        responseOverload0              : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
-        responseOverload1              : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
-        behaviorThermMotorModelRestart : Bool;                // 0]: Retention of the thermal motor; [1]: Deletion of the thermal motor
-        responseSafetySwitchOff        : Bool;                // [0]: no warning by safety switch-off; [1]: warning by safety switch-off
-        responseCPUStop                : Bool;                // Response to CPU STOP; [0]: Switch substitute value; [1]: Retain last value
-        responseResCurrentDetect       : Bool    := TRUE;     // Response to residual current; [0]: Warn ; [1]: Tripping
-        responseAsymmetry              : Bool    := TRUE;     // Response to asymmetry; [0]: Warn ; [1]: Tripping
-        res17                          : Bool;                // Reserved
-        input1Level                    : Bool    := TRUE;     // Input 1 level; [0]: NC contact; [1]: NO contact
-        input2Level                    : Bool    := TRUE;     // Input 2 level; [0]: NC contact; [1]: NO contact
-        input3Level                    : Bool    := TRUE;     // Input 3 level; [0]: NC contact; [1]: NO contact
-        groupFaultDiag                 : Bool;                // Group fault diagnostics; [0]: Enable; [1]: Disable
-        input1Signal                   : Bool;                // Input 1 signal; [0]: Non-retentive; [1]: Retentive
-        input2Signal                   : Bool;                // Input 2 signal; [0]: Non-retentive; [1]: Retentive
-        input3Signal                   : Bool;                // Input 3 signal; [0]: Non-retentive; [1]: Retentive
-        groupWarnDiag                  : Bool    := TRUE;     // Group warning diagnostics; [0]: Enable; [1]: Disable
-        input1Action                   : Byte    := BYTE#8;   // Input 1 action; [8]: Motor CW
-        input2Action                   : Byte    := BYTE#9;   // Input 2 action; [9]: Motor CCW
-        input3Action                   : Byte    := BYTE#13;  // Input 3 action; [13]: Cold start; not safety starter!
-        ratedOperatCurrent             : Int;                 // Rated operational current Ie; 0.3 … 9 A/10 mA
-        lowerCurrentLimit              : Byte;                // Lower current limit; 18.75 … 100 %/3.125 % [6 … 32]; [0]: Deactivated
-        upperCurrentLimit              : Byte;                // Upper current limit; 50 … 400 %/3.125 % [16 … 128]; [0]: Deactivated
+        res00                          AT %X0.0 : Bool;                // Reserved
+        loadType                       AT %X0.1 : Bool;                // Load type 0= 3phase; 1=1phase
+        exMotorApp                     AT %X0.2 : Bool;                // EX motor application 0= no; 1= yes (only F-Starter)
+        res03                          AT %X0.3 : Bool;                // Reserved
+        turnOffClass0                  AT %X0.4 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        turnOffClass1                  AT %X0.5 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        turnOffClass2                  AT %X0.6 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        turnOffClass3                  AT %X0.7 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        responseOverload0              AT %X1.0 : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
+        responseOverload1              AT %X1.1 : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
+        behaviorThermMotorModelRestart AT %X1.2 : Bool;                // 0]: Retention of the thermal motor; [1]: Deletion of the thermal motor
+        responseSafetySwitchOff        AT %X1.3 : Bool;                // [0]: no warning by safety switch-off; [1]: warning by safety switch-off
+        responseCPUStop                AT %X1.4 : Bool;                // Response to CPU STOP; [0]: Switch substitute value; [1]: Retain last value
+        responseResCurrentDetect       AT %X1.5 : Bool    := TRUE;     // Response to residual current; [0]: Warn ; [1]: Tripping
+        responseAsymmetry              AT %X1.6 : Bool    := TRUE;     // Response to asymmetry; [0]: Warn ; [1]: Tripping
+        res17                          AT %X1.7 : Bool;                // Reserved
+        input1Level                    AT %X2.0 : Bool    := TRUE;     // Input 1 level; [0]: NC contact; [1]: NO contact
+        input2Level                    AT %X2.1 : Bool    := TRUE;     // Input 2 level; [0]: NC contact; [1]: NO contact
+        input3Level                    AT %X2.2 : Bool    := TRUE;     // Input 3 level; [0]: NC contact; [1]: NO contact
+        groupFaultDiag                 AT %X2.3 : Bool;                // Group fault diagnostics; [0]: Enable; [1]: Disable
+        input1Signal                   AT %X2.4 : Bool;                // Input 1 signal; [0]: Non-retentive; [1]: Retentive
+        input2Signal                   AT %X2.5 : Bool;                // Input 2 signal; [0]: Non-retentive; [1]: Retentive
+        input3Signal                   AT %X2.6 : Bool;                // Input 3 signal; [0]: Non-retentive; [1]: Retentive
+        groupWarnDiag                  AT %X2.7 : Bool    := TRUE;     // Group warning diagnostics; [0]: Enable; [1]: Disable
+        input1Action                   AT %B3 : Byte    := BYTE#8;   // Input 1 action; [8]: Motor CW
+        input2Action                   AT %B4 : Byte    := BYTE#9;   // Input 2 action; [9]: Motor CCW
+        input3Action                   AT %B5 : Byte    := BYTE#13;  // Input 3 action; [13]: Cold start; not safety starter!
+        ratedOperatCurrent             AT %B6 : Int;                 // Rated operational current Ie; 0.3 … 9 A/10 mA
+        lowerCurrentLimit              AT %B8 : Byte;                // Lower current limit; 18.75 … 100 %/3.125 % [6 … 32]; [0]: Deactivated
+        upperCurrentLimit              AT %B9 : Byte;                // Upper current limit; 50 … 400 %/3.125 % [16 … 128]; [0]: Deactivated
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterDS95          : STRUCT
-        resb0                     : Byte;   // Reserved
-        res10                     : Bool;   // Reserved
-        res11                     : Bool;   // Reserved
-        res12                     : Bool;   // Reserved
-        res13                     : Bool;   // Reserved
-        res14                     : Bool;   // Reserved
-        res15                     : Bool;   // Reserved
-        operatHoursResolution     : Bool;   // Operating hours resolution 1 second
-        operatHoursSelect         : Bool;   // Operating hours selection 1 operating hour - device
-        resw2                     : Int;    // Reserved
-        operatHoursDevice         : DWord;  // Device operating hours in seconds
-        numStartsCw               : DInt;   // Number of motor CW starts
-        numStartsCcw              : DInt;   // Number of motor CCW starts
-        numOverloadTrips          : Int;    // Number of motor overload trips
-        resw18                    : Int;    // Reserved
-        motorCurrentMax           : DInt;   // Motor current Imax; +-0...20.000A; Inc 0.01A
-        lastTripCurrent           : DInt;   // Last tripping current Ia; +-0...20.000A; Inc 0.01A
-        operatHoursMotor          : DInt;   // Motor operating hours in seconds
-        resdw32                   : DWord;  // Reserved
-        resdw36                   : DWord;  // Reserved
-        resdw40                   : DWord;  // Reserved
-        resdw44                   : DWord;  // Reserved
-        resw48                    : Word;   // Reserved
-        numSwitchElemOverloadTrip : Int;    // Number of switching element overload trips
-        numHardSwitchOperatRelay  : Int;    // Number of hard switching operations of the relay
-        resdw54                   : DWord;  // Reserved
-        resdw58                   : DWord;  // Reserved
-        resdw62                   : DWord;  // Reserved
-        resdw66                   : DWord;  // Reserved
-        resdw70                   : DWord;  // Reserved
-        resdw74                   : DWord;  // Reserved
-        resdw78                   : DWord;  // Reserved
-        resdw82                   : DWord;  // Reserved
-        resdw86                   : DWord;  // Reserved
+        resb0                     AT %B0 : Byte;   // Reserved
+        res10                     AT %X1.0 : Bool;   // Reserved
+        res11                     AT %X1.1 : Bool;   // Reserved
+        res12                     AT %X1.2 : Bool;   // Reserved
+        res13                     AT %X1.3 : Bool;   // Reserved
+        res14                     AT %X1.4 : Bool;   // Reserved
+        res15                     AT %X1.5 : Bool;   // Reserved
+        operatHoursResolution     AT %X1.6 : Bool;   // Operating hours resolution 1 second
+        operatHoursSelect         AT %X1.7 : Bool;   // Operating hours selection 1 operating hour - device
+        resw2                     AT %B2 : Int;    // Reserved
+        operatHoursDevice         AT %B4 : DWord;  // Device operating hours in seconds
+        numStartsCw               AT %B8 : DInt;   // Number of motor CW starts
+        numStartsCcw              AT %B12 : DInt;   // Number of motor CCW starts
+        numOverloadTrips          AT %B16 : Int;    // Number of motor overload trips
+        resw18                    AT %B18 : Int;    // Reserved
+        motorCurrentMax           AT %B20 : DInt;   // Motor current Imax; +-0...20.000A; Inc 0.01A
+        lastTripCurrent           AT %B24 : DInt;   // Last tripping current Ia; +-0...20.000A; Inc 0.01A
+        operatHoursMotor          AT %B28 : DInt;   // Motor operating hours in seconds
+        resdw32                   AT %B32 : DWord;  // Reserved
+        resdw36                   AT %B36 : DWord;  // Reserved
+        resdw40                   AT %B40 : DWord;  // Reserved
+        resdw44                   AT %B44 : DWord;  // Reserved
+        resw48                    AT %B48 : Word;   // Reserved
+        numSwitchElemOverloadTrip AT %B52 : Int;    // Number of switching element overload trips
+        numHardSwitchOperatRelay  AT %B54 : Int;    // Number of hard switching operations of the relay
+        resdw54                   AT %B56 : DWord;  // Reserved
+        resdw58                   AT %B60 : DWord;  // Reserved
+        resdw62                   AT %B64 : DWord;  // Reserved
+        resdw66                   AT %B68 : DWord;  // Reserved
+        resdw70                   AT %B72 : DWord;  // Reserved
+        resdw74                   AT %B76 : DWord;  // Reserved
+        resdw78                   AT %B80 : DWord;  // Reserved
+        resdw82                   AT %B84 : DWord;  // Reserved
+        resdw86                   AT %B88 : DWord;  // Reserved
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterDS92          : STRUCT
-        ready                     : Bool;   // Ready (automatic)
-        motorCw                   : Bool;   // Motor CW
-        motorCcw                  : Bool;   // Motor CCW (Reversing starters only)
-        switchElementOverload     : Bool;   // Switching element overload
-        switchElementDefective    : Bool;   // Switching element defective
-        emergencyStartActive      : Bool;   // Emergency start active
-        groupFault                : Bool;   // Group fault
-        groupWarning              : Bool;   // Group warning
-        res10                     : Bool;   // Reserved
-        res11                     : Bool;   // Reserved
-        res12                     : Bool;   // Reserved
-        res13                     : Bool;   // Reserved
-        res14                     : Bool;   // Reserved
-        res15                     : Bool;   // Reserved
-        res16                     : Bool;   // Reserved
-        res17                     : Bool;   // Reserved
-        res20                     : Bool;   // Reserved
-        res21                     : Bool;   // Reserved
-        res22                     : Bool;   // Reserved
-        thermMotorModelOverload   : Bool;   // Thermal motor model overload
-        overloadTripping          : Bool;   // Overload tripping
-        res25                     : Bool;   // Reserved
-        coolTimeActive            : Bool;   // Cooling time active
-        fdiActivated              : Bool;   // Input F-DI activated (safety motor starters only)
-        res30                     : Bool;   // Reserved
-        res31                     : Bool;   // Reserved
-        mechRotInterlockNotReady  : Bool;   // Mechanical rotary interlock is not in the READY position
-        res33                     : Bool;   // Reserved
-        res34                     : Bool;   // Reserved
-        res35                     : Bool;   // Reserved
-        res36                     : Bool;   // Reserved
-        inputControl              : Bool;   // Input control
-        asymmetryDetected         : Bool;   // Asymmetry detected
-        asymmetryTripping         : Bool;   // Asymmetry tripping
-        upperLimitViolation       : Bool;   // Ie upper limit violation
-        lowerLimitViolation       : Bool;   // Ie lower limit violation
-        res44                     : Bool;   // Reserved
-        residualCurrentDetected   : Bool;   // Residual current detected
-        residualCurrentTripping   : Bool;   // Residual current tripping
-        trippingMotorBlocking     : Bool;   // Tripping due to motor blocking
-        input1                    : Bool;   // Input 1
-        input2                    : Bool;   // Input 2
-        input3                    : Bool;   // Input 3
-        inputLC                   : Bool;   // Input LC
-        inputTripping             : Bool;   // Input tripping
-        inputTripCw               : Bool;   // Input trip CW
-        inputWarning              : Bool;   // Input warning
-        inputTripCcw              : Bool;   // Input trip CCW
-        res60                     : Bool;   // Reserved
-        res61                     : Bool;   // Reserved
-        quickStopActive           : Bool;   // Quick stop active
-        sensorSupplyOverload      : Bool;   // Sensor supply overload
-        res64                     : Bool;   // Reserved
-        res65                     : Bool;   // Reserved
-        res66                     : Bool;   // Reserved
-        electSupplyVoltLow        : Bool;   // Electronics supply voltage too low
-        res70                     : Bool;   // Reserved
-        cpuMasterStop             : Bool;   // CPU or master STOP
-        autoMode                  : Bool;   // Automatic mode
-        res73                     : Bool;   // Reserved
-        manLocal                  : Bool;   // Manual local (local control)
-        res75                     : Bool;   // Reserved
-        res76                     : Bool;   // Reserved
-        processImageErr           : Bool;   // Process image error
-        res80                     : Bool;   // Reserved
-        invalParaValue            : Bool;   // Invalid parameter value (during operation / starting)
-        noParaChangeInOn          : Bool;   // Parameters cannot be changed in ON state
-        res83                     : Bool;   // Reserved
-        noExtStartupParaReceiv    : Bool;   // No external startup parameters received
-        res85                     : Bool;   // Reserved
-        res86                     : Bool;   // Reserved
-        res87                     : Bool;   // Reserved
-        res90                     : Bool;   // Reserved
-        res91                     : Bool;   // Reserved
-        faultSelfTest             : Bool;   // F-Starter: Fault self-teset
-        res93                     : Bool;   // Reserved
-        res94                     : Bool;   // Reserved
-        res95                     : Bool;   // Reserved
-        res96                     : Bool;   // Reserved
-        res97                     : Bool;   // Reserved
-        incorrectParaNum          : Word;   // Incorrect parameter number
-        resw12                    : Word;   // Reserved
-        coldStartActive           : Bool;   // Cold start active
-        coldStartTripping         : Bool;   // Cold start tripping
-        res142                    : Bool;   // Reserved
-        res143                    : Bool;   // Reserved
-        res144                    : Bool;   // Reserved
-        res145                    : Bool;   // Reserved
-        res146                    : Bool;   // Reserved
-        res147                    : Bool;   // Reserved
-        resb15                    : Byte;   // Reserved
-        resw16                    : Word;   // Reserved
-        resb18                    : Byte;   // Reserved
-        electSupplyVoltHigh       : Bool;   // Electronics supply voltage too high
-        readyMotorOn              : Bool;   // Ready for motor ON
-        switchElementShortCircuit : Bool;   // Switching element short-circuit
-        bypassElementDefect       : Bool;   // Bypass element defective
-        res194                    : Bool;   // Reserved
-        res195                    : Bool;   // Reserved
-        res196                    : Bool;   // Reserved
-        res197                    : Bool;   // Reserved
-        resb20                    : Byte;   // Reserved
-        res210                    : Bool;   // Reserved
-        res211                    : Bool;   // Reserved
-        currMeasRangeOvershot     : Bool;   // Current measuring range overshot
-        res213                    : Bool;   // Reserved
-        res214                    : Bool;   // Reserved
-        res215                    : Bool;   // Reserved
-        res216                    : Bool;   // Reserved
-        res217                    : Bool;   // Reserved
-        autoMode2                 : Bool;   // Automatic mode (no connection to the mech. rotary interlock)
-        res221                    : Bool;   // Reserved
-        res222                    : Bool;   // Reserved
-        manLocalMode              : Bool;   // Manual local mode (no connection to the mech. rotary interlock)
-        res224                    : Bool;   // Reserved
-        res225                    : Bool;   // Reserved
-        res226                    : Bool;   // Reserved
-        res227                    : Bool;   // Reserved
-        resb23                    : Byte;   // Reserved
-        resw24                    : Word;   // Reserved
-        resdw26                   : DWord;  // Reserved
-        resw30                    : Word;   // Reserved
-        qickStop1Dir              : Bool;   // Quick Stop 1 - direction-independent
-        qickStop1Cw               : Bool;   // Quick Stop 1 - clockwise
-        qickStop1Ccw              : Bool;   // Quick Stop 1 - counter clockwise
-        res323                    : Bool;   // Reserved
-        res324                    : Bool;   // Reserved
-        res325                    : Bool;   // Reserved
-        res326                    : Bool;   // Reserved
-        res327                    : Bool;   // Reserved
-        resb33                    : Byte;   // Reserved
-        endPosCw                  : Bool;   // Input operational trip - end position CW
-        endPosCcw                 : Bool;   // Input operational trip - end position CCW
-        res342                    : Bool;   // Reserved
-        res343                    : Bool;   // Reserved
-        res344                    : Bool;   // Reserved
-        res345                    : Bool;   // Reserved
-        res346                    : Bool;   // Reserved
-        res347                    : Bool;   // Reserved
-        resb35                    : Byte;   // Reserved
-        res360                    : Bool;   // Reserved
-        res361                    : Bool;   // Reserved
-        res362                    : Bool;   // Reserved
-        res363                    : Bool;   // Reserved
-        res364                    : Bool;   // Reserved
-        res365                    : Bool;   // Reserved
-        startPause                : Bool;   // Start_Pause command is pending
-        energySaveModeActive      : Bool;   // Energy saving mode active
-        resw37                    : Byte;   // Reserved
-        resdw38                   : DWord;  // Reserved
-        resdw42                   : DWord;  // Reserved
-        resdw46                   : DWord;  // Reserved
-        exMotorProtectActive      : Bool;   // F-Starter: Ex motor protection active
-        res501                    : Bool;   // Reserved
-        newSafetyParaRec          : Bool;   // F-Starter: new safety parameters received
-        res503                    : Bool;   // Reserved
-        res504                    : Bool;   // Reserved
-        res505                    : Bool;   // Reserved
-        res506                    : Bool;   // Reserved
-        res507                    : Bool;   // Reserved
-        resb51                    : Byte;   // Reserved
-        res520                    : Bool;   // Reserved
-        res521                    : Bool;   // Reserved
-        res522                    : Bool;   // Reserved
-        res523                    : Bool;   // Reserved
-        currWarnLimitExceed       : Bool;   // Ie warning limit exceeded
-        currWarnLimitUndershot    : Bool;   // Ie warning limit undershot
-        res526                    : Bool;   // Reserved
-        res527                    : Bool;   // Reserved
-        resb53                    : Byte;   // Reserved
+        ready                     AT %X0.0 : Bool;   // Ready (automatic)
+        motorCw                   AT %X0.1 : Bool;   // Motor CW
+        motorCcw                  AT %X0.2 : Bool;   // Motor CCW (Reversing starters only)
+        switchElementOverload     AT %X0.3 : Bool;   // Switching element overload
+        switchElementDefective    AT %X0.4 : Bool;   // Switching element defective
+        emergencyStartActive      AT %X0.5 : Bool;   // Emergency start active
+        groupFault                AT %X0.6 : Bool;   // Group fault
+        groupWarning              AT %X0.7 : Bool;   // Group warning
+        res10                     AT %X1.0 : Bool;   // Reserved
+        res11                     AT %X1.1 : Bool;   // Reserved
+        res12                     AT %X1.2 : Bool;   // Reserved
+        res13                     AT %X1.3 : Bool;   // Reserved
+        res14                     AT %X1.4 : Bool;   // Reserved
+        res15                     AT %X1.5 : Bool;   // Reserved
+        res16                     AT %X1.6 : Bool;   // Reserved
+        res17                     AT %X1.7 : Bool;   // Reserved
+        res20                     AT %X2.0 : Bool;   // Reserved
+        res21                     AT %X2.1 : Bool;   // Reserved
+        res22                     AT %X2.2 : Bool;   // Reserved
+        thermMotorModelOverload   AT %X2.3 : Bool;   // Thermal motor model overload
+        overloadTripping          AT %X2.4 : Bool;   // Overload tripping
+        res25                     AT %X2.5 : Bool;   // Reserved
+        coolTimeActive            AT %X2.6 : Bool;   // Cooling time active
+        fdiActivated              AT %X2.7 : Bool;   // Input F-DI activated (safety motor starters only)
+        res30                     AT %X3.0 : Bool;   // Reserved
+        res31                     AT %X3.1 : Bool;   // Reserved
+        mechRotInterlockNotReady  AT %X3.2 : Bool;   // Mechanical rotary interlock is not in the READY position
+        res33                     AT %X3.3 : Bool;   // Reserved
+        res34                     AT %X3.4 : Bool;   // Reserved
+        res35                     AT %X3.5 : Bool;   // Reserved
+        res36                     AT %X3.6 : Bool;   // Reserved
+        inputControl              AT %X3.7 : Bool;   // Input control
+        asymmetryDetected         AT %X4.0 : Bool;   // Asymmetry detected
+        asymmetryTripping         AT %X4.1 : Bool;   // Asymmetry tripping
+        upperLimitViolation       AT %X4.2 : Bool;   // Ie upper limit violation
+        lowerLimitViolation       AT %X4.3 : Bool;   // Ie lower limit violation
+        res44                     AT %X4.4 : Bool;   // Reserved
+        residualCurrentDetected   AT %X4.5 : Bool;   // Residual current detected
+        residualCurrentTripping   AT %X4.6 : Bool;   // Residual current tripping
+        trippingMotorBlocking     AT %X4.7 : Bool;   // Tripping due to motor blocking
+        input1                    AT %X5.0 : Bool;   // Input 1
+        input2                    AT %X5.1 : Bool;   // Input 2
+        input3                    AT %X5.2 : Bool;   // Input 3
+        inputLC                   AT %X5.3 : Bool;   // Input LC
+        inputTripping             AT %X5.4 : Bool;   // Input tripping
+        inputTripCw               AT %X5.5 : Bool;   // Input trip CW
+        inputWarning              AT %X5.6 : Bool;   // Input warning
+        inputTripCcw              AT %X5.7 : Bool;   // Input trip CCW
+        res60                     AT %X6.0 : Bool;   // Reserved
+        res61                     AT %X6.1 : Bool;   // Reserved
+        quickStopActive           AT %X6.2 : Bool;   // Quick stop active
+        sensorSupplyOverload      AT %X6.3 : Bool;   // Sensor supply overload
+        res64                     AT %X6.4 : Bool;   // Reserved
+        res65                     AT %X6.5 : Bool;   // Reserved
+        res66                     AT %X6.6 : Bool;   // Reserved
+        electSupplyVoltLow        AT %X6.7 : Bool;   // Electronics supply voltage too low
+        res70                     AT %X7.0 : Bool;   // Reserved
+        cpuMasterStop             AT %X7.1 : Bool;   // CPU or master STOP
+        autoMode                  AT %X7.2 : Bool;   // Automatic mode
+        res73                     AT %X7.3 : Bool;   // Reserved
+        manLocal                  AT %X7.4 : Bool;   // Manual local (local control)
+        res75                     AT %X7.5 : Bool;   // Reserved
+        res76                     AT %X7.6 : Bool;   // Reserved
+        processImageErr           AT %X7.7 : Bool;   // Process image error
+        res80                     AT %X8.0 : Bool;   // Reserved
+        invalParaValue            AT %X8.1 : Bool;   // Invalid parameter value (during operation / starting)
+        noParaChangeInOn          AT %X8.2 : Bool;   // Parameters cannot be changed in ON state
+        res83                     AT %X8.3 : Bool;   // Reserved
+        noExtStartupParaReceiv    AT %X8.4 : Bool;   // No external startup parameters received
+        res85                     AT %X8.5 : Bool;   // Reserved
+        res86                     AT %X8.6 : Bool;   // Reserved
+        res87                     AT %X8.7 : Bool;   // Reserved
+        res90                     AT %X9.0 : Bool;   // Reserved
+        res91                     AT %X9.1 : Bool;   // Reserved
+        faultSelfTest             AT %X9.2 : Bool;   // F-Starter: Fault self-teset
+        res93                     AT %X9.3 : Bool;   // Reserved
+        res94                     AT %X9.4 : Bool;   // Reserved
+        res95                     AT %X9.5 : Bool;   // Reserved
+        res96                     AT %X9.6 : Bool;   // Reserved
+        res97                     AT %X9.7 : Bool;   // Reserved
+        incorrectParaNum          AT %B10 : Word;   // Incorrect parameter number
+        resw12                    AT %B12 : Word;   // Reserved
+        coldStartActive           AT %X14.0 : Bool;   // Cold start active
+        coldStartTripping         AT %X14.1 : Bool;   // Cold start tripping
+        res142                    AT %X14.2 : Bool;   // Reserved
+        res143                    AT %X14.3 : Bool;   // Reserved
+        res144                    AT %X14.4 : Bool;   // Reserved
+        res145                    AT %X14.5 : Bool;   // Reserved
+        res146                    AT %X14.6 : Bool;   // Reserved
+        res147                    AT %X14.7 : Bool;   // Reserved
+        resb15                    AT %B15 : Byte;   // Reserved
+        resw16                    AT %B16 : Word;   // Reserved
+        resb18                    AT %B18 : Byte;   // Reserved
+        electSupplyVoltHigh       AT %X19.0 : Bool;   // Electronics supply voltage too high
+        readyMotorOn              AT %X19.1 : Bool;   // Ready for motor ON
+        switchElementShortCircuit AT %X19.2 : Bool;   // Switching element short-circuit
+        bypassElementDefect       AT %X19.3 : Bool;   // Bypass element defective
+        res194                    AT %X19.4 : Bool;   // Reserved
+        res195                    AT %X19.5 : Bool;   // Reserved
+        res196                    AT %X19.6 : Bool;   // Reserved
+        res197                    AT %X19.7 : Bool;   // Reserved
+        resb20                    AT %B20 : Byte;   // Reserved
+        res210                    AT %X21.0 : Bool;   // Reserved
+        res211                    AT %X21.1 : Bool;   // Reserved
+        currMeasRangeOvershot     AT %X21.2 : Bool;   // Current measuring range overshot
+        res213                    AT %X21.3 : Bool;   // Reserved
+        res214                    AT %X21.4 : Bool;   // Reserved
+        res215                    AT %X21.5 : Bool;   // Reserved
+        res216                    AT %X21.6 : Bool;   // Reserved
+        res217                    AT %X21.7 : Bool;   // Reserved
+        autoMode2                 AT %X22.0 : Bool;   // Automatic mode (no connection to the mech. rotary interlock)
+        res221                    AT %X22.1 : Bool;   // Reserved
+        res222                    AT %X22.2 : Bool;   // Reserved
+        manLocalMode              AT %X22.3 : Bool;   // Manual local mode (no connection to the mech. rotary interlock)
+        res224                    AT %X22.4 : Bool;   // Reserved
+        res225                    AT %X22.5 : Bool;   // Reserved
+        res226                    AT %X22.6 : Bool;   // Reserved
+        res227                    AT %X22.7 : Bool;   // Reserved
+        resb23                    AT %B23 : Byte;   // Reserved
+        resw24                    AT %B24 : Word;   // Reserved
+        resdw26                   AT %B26 : DWord;  // Reserved
+        resw30                    AT %B30 : Word;   // Reserved
+        qickStop1Dir              AT %X32.0 : Bool;   // Quick Stop 1 - direction-independent
+        qickStop1Cw               AT %X32.1 : Bool;   // Quick Stop 1 - clockwise
+        qickStop1Ccw              AT %X32.2 : Bool;   // Quick Stop 1 - counter clockwise
+        res323                    AT %X32.3 : Bool;   // Reserved
+        res324                    AT %X32.4 : Bool;   // Reserved
+        res325                    AT %X32.5 : Bool;   // Reserved
+        res326                    AT %X32.6 : Bool;   // Reserved
+        res327                    AT %X32.7 : Bool;   // Reserved
+        resb33                    AT %B33 : Byte;   // Reserved
+        endPosCw                  AT %X34.0 : Bool;   // Input operational trip - end position CW
+        endPosCcw                 AT %X34.1 : Bool;   // Input operational trip - end position CCW
+        res342                    AT %X34.2 : Bool;   // Reserved
+        res343                    AT %X34.3 : Bool;   // Reserved
+        res344                    AT %X34.4 : Bool;   // Reserved
+        res345                    AT %X34.5 : Bool;   // Reserved
+        res346                    AT %X34.6 : Bool;   // Reserved
+        res347                    AT %X34.7 : Bool;   // Reserved
+        resb35                    AT %B35 : Byte;   // Reserved
+        res360                    AT %X36.0 : Bool;   // Reserved
+        res361                    AT %X36.1 : Bool;   // Reserved
+        res362                    AT %X36.2 : Bool;   // Reserved
+        res363                    AT %X36.3 : Bool;   // Reserved
+        res364                    AT %X36.4 : Bool;   // Reserved
+        res365                    AT %X36.5 : Bool;   // Reserved
+        startPause                AT %X36.6 : Bool;   // Start_Pause command is pending
+        energySaveModeActive      AT %X36.7 : Bool;   // Energy saving mode active
+        resw37                    AT %B37 : Byte;   // Reserved
+        resdw38                   AT %B38 : DWord;  // Reserved
+        resdw42                   AT %B42 : DWord;  // Reserved
+        resdw46                   AT %B46 : DWord;  // Reserved
+        exMotorProtectActive      AT %X52.0 : Bool;   // F-Starter: Ex motor protection active
+        res501                    AT %X52.1 : Bool;   // Reserved
+        newSafetyParaRec          AT %X52.2 : Bool;   // F-Starter: new safety parameters received
+        res503                    AT %X52.3 : Bool;   // Reserved
+        res504                    AT %X52.4 : Bool;   // Reserved
+        res505                    AT %X52.5 : Bool;   // Reserved
+        res506                    AT %X52.6 : Bool;   // Reserved
+        res507                    AT %X52.7 : Bool;   // Reserved
+        resb51                    AT %B53 : Byte;   // Reserved
+        res520                    AT %X54.0 : Bool;   // Reserved
+        res521                    AT %X54.1 : Bool;   // Reserved
+        res522                    AT %X54.2 : Bool;   // Reserved
+        res523                    AT %X54.3 : Bool;   // Reserved
+        currWarnLimitExceed       AT %X54.4 : Bool;   // Ie warning limit exceeded
+        currWarnLimitUndershot    AT %X54.5 : Bool;   // Ie warning limit undershot
+        res526                    AT %X54.6 : Bool;   // Reserved
+        res527                    AT %X54.7 : Bool;   // Reserved
+        resb53                    AT %B55 : Byte;   // Reserved
       END_STRUCT;
 
    END_TYPE
@@ -4326,127 +4326,127 @@
    END_TYPE
 
    TYPE EM480VRCHFDataRec128             : STRUCT
-        majMinVer                        : Byte    := BYTE#97;                  // Major / minor version
-        numParamStruct                   : Byte    := BYTE#2;                   // Number of parameter structures = 2
-        numModuleParamBlocks             : Byte    := BYTE#1;                   // Number of module parameter blocks = 1
-        lengthModuleParamBlock           : Byte    := BYTE#26;                  // Length of module parameter block = 26
-        connectTypePhases                : Byte    := BYTE#0;                   // Connection type of the phases
-        measRangePower                   : Byte;                                // Voltage measuring range of the power supply system
-        energyCountGateScaleValLineFrequ : Byte;                                // Energy counter gate / Full-scale value for energy counter / Line frequency of the power supply system
-        resb07                           : Byte;                                // Reserved
-        enableCalcAnalysisDiag           : Byte;                                // Enable value calculation, analysis and diagnostic
-        idUserDataVariant                : Byte;                                // ID of the user data variant
-        currTransSecVolt                 : Word;                                // Current transformer secondary voltage [0.1mV]
-        currTransPrimCurr                : Word;                                // Current transformer Primary rated current [A]
-        currTransLineCond                : Byte;                                // Current transformer for line conductions
-        resb15                           : Byte;                                // Reserved
-        voltDipLimit                     : Word;                                // Voltage dip limit in relation to nominal value voltage [0.1%]
-        voltSwellLimit                   : Word;                                // Voltage swell limit in relation to nominal value voltage [0.1%]
-        thresOverCurr                    : Word;                                // Threshold overcurrent in relation to nominal value current [0.1%]
-        numCycForAnalysis                : Word;                                // Number of cycles for analysis of voltage increase and dip
-        resw24                           : Word;                                // Reserved
-        resw26                           : Word;                                // Reserved
-        resw28                           : Word;                                // Reserved
-        numChannelParamBlocks            : Byte    := BYTE#3;                   // Number of channel parameter blocks = 3
-        lengthChannelParamBlock          : Byte    := BYTE#32;                  // Length of channel parameter block = 32
-        channel                          : Array[0..2] of EM480VRCHFDataRecCh;
+        majMinVer                        AT %B0 : Byte    := BYTE#97;                  // Major / minor version
+        numParamStruct                   AT %B1 : Byte    := BYTE#2;                   // Number of parameter structures = 2
+        numModuleParamBlocks             AT %B2 : Byte    := BYTE#1;                   // Number of module parameter blocks = 1
+        lengthModuleParamBlock           AT %B3 : Byte    := BYTE#26;                  // Length of module parameter block = 26
+        connectTypePhases                AT %B4 : Byte    := BYTE#0;                   // Connection type of the phases
+        measRangePower                   AT %B5 : Byte;                                // Voltage measuring range of the power supply system
+        energyCountGateScaleValLineFrequ AT %B6 : Byte;                                // Energy counter gate / Full-scale value for energy counter / Line frequency of the power supply system
+        resb07                           AT %B7 : Byte;                                // Reserved
+        enableCalcAnalysisDiag           AT %B8 : Byte;                                // Enable value calculation, analysis and diagnostic
+        idUserDataVariant                AT %B9 : Byte;                                // ID of the user data variant
+        currTransSecVolt                 AT %B10 : Word;                                // Current transformer secondary voltage [0.1mV]
+        currTransPrimCurr                AT %B12 : Word;                                // Current transformer Primary rated current [A]
+        currTransLineCond                AT %B14 : Byte;                                // Current transformer for line conductions
+        resb15                           AT %B15 : Byte;                                // Reserved
+        voltDipLimit                     AT %B16 : Word;                                // Voltage dip limit in relation to nominal value voltage [0.1%]
+        voltSwellLimit                   AT %B18 : Word;                                // Voltage swell limit in relation to nominal value voltage [0.1%]
+        thresOverCurr                    AT %B20 : Word;                                // Threshold overcurrent in relation to nominal value current [0.1%]
+        numCycForAnalysis                AT %B22 : Word;                                // Number of cycles for analysis of voltage increase and dip
+        resw24                           AT %B24 : Word;                                // Reserved
+        resw26                           AT %B26 : Word;                                // Reserved
+        resw28                           AT %B28 : Word;                                // Reserved
+        numChannelParamBlocks            AT %B30 : Byte    := BYTE#3;                   // Number of channel parameter blocks = 3
+        lengthChannelParamBlock          AT %B31 : Byte    := BYTE#32;                  // Length of channel parameter block = 32
+        channel                          AT %B32 : Array[0..2] of EM480VRCHFDataRecCh;
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterIn          : STRUCT
-        ready                   : Bool;   // Ready (automatic)
-        motorOn                 : Bool;   // Motor on
-        groupFault              : Bool;   // Group fault
-        groupWarning            : Bool;   // Group warning
-        input1                  : Bool;   // Input 1 (with 3DI/LC module)
-        input2                  : Bool;   // Input 2 (with 3DI/LC module)
-        input3                  : Bool;   // Input 3 (with 3DI/LC module)
-        inputLC                 : Bool;   // Input LC (with 3DI/LC module)
-        currMotorCurrentBit0    : Bool;   // Current motor current Icurr [%] Bit 0
-        currMotorCurrentBit1    : Bool;   // Current motor current Icurr [%] Bit 1
-        currMotorCurrentBit2    : Bool;   // Current motor current Icurr [%] Bit 2
-        currMotorCurrentBit3    : Bool;   // Current motor current Icurr [%] Bit 3
-        currMotorCurrentBit4    : Bool;   // Current motor current Icurr [%] Bit 4
-        currMotorCurrentBit5    : Bool;   // Current motor current Icurr [%] Bit 5
-        manLocalMode            : Bool;   // Manual local mode (with 3DI/LC module)
-        res17                   : Bool;   // Reserved
-        readyStartMotorOn       : Bool;   // Ready to start for motor on
-        motorCw                 : Bool;   // Motor CW
-        motorCcw                : Bool;   // Motor CCW (Reversing starters only)
-        quickStopActive         : Bool;   // Quick stop active
-        energySaveModeActive    : Bool;   // Energy saving mode active
-        diModulePlugged         : Bool;   // DI module plugged (for non safety motor starters version >= V1.1)
-        exMotorProtection       : Bool;   // EX motor protection (safety motor starters only)
-        res27                   : Bool;   // Reserved
-        thermMotorModelOverload : Bool;   // Thermal motor model overload
-        res31                   : Bool;   // Reserved
-        currentLimitTripping    : Bool;   // Ie current limit tripping
-        fdiActivated            : Bool;   // Input F-DI activated (safety motor starters only)
-        residualCurrentDetected : Bool;   // Residual current detected
-        asymmetryDetected       : Bool;   // Asymmetry detected
-        overTemperature         : Bool;   // Overtemperature
-        res37                   : Bool;   // Reserved
+        ready                   AT %X0.0 : Bool;   // Ready (automatic)
+        motorOn                 AT %X0.1 : Bool;   // Motor on
+        groupFault              AT %X0.2 : Bool;   // Group fault
+        groupWarning            AT %X0.3 : Bool;   // Group warning
+        input1                  AT %X0.4 : Bool;   // Input 1 (with 3DI/LC module)
+        input2                  AT %X0.5 : Bool;   // Input 2 (with 3DI/LC module)
+        input3                  AT %X0.6 : Bool;   // Input 3 (with 3DI/LC module)
+        inputLC                 AT %X0.7 : Bool;   // Input LC (with 3DI/LC module)
+        currMotorCurrentBit0    AT %X1.0 : Bool;   // Current motor current Icurr [%] Bit 0
+        currMotorCurrentBit1    AT %X1.1 : Bool;   // Current motor current Icurr [%] Bit 1
+        currMotorCurrentBit2    AT %X1.2 : Bool;   // Current motor current Icurr [%] Bit 2
+        currMotorCurrentBit3    AT %X1.3 : Bool;   // Current motor current Icurr [%] Bit 3
+        currMotorCurrentBit4    AT %X1.4 : Bool;   // Current motor current Icurr [%] Bit 4
+        currMotorCurrentBit5    AT %X1.5 : Bool;   // Current motor current Icurr [%] Bit 5
+        manLocalMode            AT %X1.6 : Bool;   // Manual local mode (with 3DI/LC module)
+        res17                   AT %X1.7 : Bool;   // Reserved
+        readyStartMotorOn       AT %X2.0 : Bool;   // Ready to start for motor on
+        motorCw                 AT %X2.1 : Bool;   // Motor CW
+        motorCcw                AT %X2.2 : Bool;   // Motor CCW (Reversing starters only)
+        quickStopActive         AT %X2.3 : Bool;   // Quick stop active
+        energySaveModeActive    AT %X2.4 : Bool;   // Energy saving mode active
+        diModulePlugged         AT %X2.5 : Bool;   // DI module plugged (for non safety motor starters version >= V1.1)
+        exMotorProtection       AT %X2.6 : Bool;   // EX motor protection (safety motor starters only)
+        res27                   AT %X2.7 : Bool;   // Reserved
+        thermMotorModelOverload AT %X3.0 : Bool;   // Thermal motor model overload
+        res31                   AT %X3.1 : Bool;   // Reserved
+        currentLimitTripping    AT %X3.2 : Bool;   // Ie current limit tripping
+        fdiActivated            AT %X3.3 : Bool;   // Input F-DI activated (safety motor starters only)
+        residualCurrentDetected AT %X3.4 : Bool;   // Residual current detected
+        asymmetryDetected       AT %X3.5 : Bool;   // Asymmetry detected
+        overTemperature         AT %X3.6 : Bool;   // Overtemperature
+        res37                   AT %X3.7 : Bool;   // Reserved
       END_STRUCT;
 
    END_TYPE
 
    TYPE EMRCHFDataRec128            : STRUCT
-        majMinVer                   : Byte    := BYTE#105;             // Major / minor version
-        numParamStruct              : Byte    := BYTE#2;               // Number of parameter structures = 2
-        numModuleParamBlocks        : Byte    := BYTE#1;               // Number of module parameter blocks = 1
-        lengthModuleParamBlock      : Byte    := BYTE#26;              // Length of module parameter block = 26
-        connectTypePhases           : Byte;                            // Connection type of the phases
-        measRangePower              : Byte;                            // Voltage measuring range of the power supply system
-        energyGateCountLineFrequ    : Byte;                            // Energy meters gate switch / End value / Line frequency of the power supply system
-        resb07                      : Byte;                            // Reserved
-        minMaxValueCalcGateDiagVolt : Byte;                            // Min/Max value calc. / Min/Max value calc. gate / Diagnostics load voltage
-        idUserDataVariant           : Byte;                            // ID of the user data variant
-        currTransSecVolt            : Word;                            // Current transformer secondary voltage
-        currTransPrimCurr           : Word;                            // Current transformer primary rated current
-        currTransLineCond           : Byte;                            // Current transformer for line
-        resb15                      : Byte;                            // Reserved
-        voltDipLimit                : Word;                            // Voltage dip limit in relation to nominal value voltage [0.1%]
-        voltSwellLimit              : Word;                            // Voltage swell limit in relation to nominal value voltage [0.1%]
-        thresOverCurr               : Word;                            // Threshold overcurrent in relation to nominal value current [0.1%]
-        numCycForAnalysis           : Word;                            // Number of cycles for analysis of voltage increase and dip
-        resb24                      : Byte;                            // Reserved
-        resb25                      : Byte;                            // Reserved
-        resb26                      : Byte;                            // Reserved
-        resb27                      : Byte;                            // Reserved
-        resb28                      : Byte;                            // Reserved
-        resb29                      : Byte;                            // Reserved
-        numChannelParamBlocks       : Byte    := BYTE#3;               // Number of channel parameter blocks = 3
-        lengthChannelParamBlock     : Byte    := BYTE#32;              // Length of channel parameter block = 32
-        channel                     : Array[0..2] of EMRCHFDataRecCh;  // Channels
+        majMinVer                   AT %B0 : Byte    := BYTE#105;             // Major / minor version
+        numParamStruct              AT %B1 : Byte    := BYTE#2;               // Number of parameter structures = 2
+        numModuleParamBlocks        AT %B2 : Byte    := BYTE#1;               // Number of module parameter blocks = 1
+        lengthModuleParamBlock      AT %B3 : Byte    := BYTE#26;              // Length of module parameter block = 26
+        connectTypePhases           AT %B4 : Byte;                            // Connection type of the phases
+        measRangePower              AT %B5 : Byte;                            // Voltage measuring range of the power supply system
+        energyGateCountLineFrequ    AT %B6 : Byte;                            // Energy meters gate switch / End value / Line frequency of the power supply system
+        resb07                      AT %B7 : Byte;                            // Reserved
+        minMaxValueCalcGateDiagVolt AT %B8 : Byte;                            // Min/Max value calc. / Min/Max value calc. gate / Diagnostics load voltage
+        idUserDataVariant           AT %B9 : Byte;                            // ID of the user data variant
+        currTransSecVolt            AT %B10 : Word;                            // Current transformer secondary voltage
+        currTransPrimCurr           AT %B12 : Word;                            // Current transformer primary rated current
+        currTransLineCond           AT %B14 : Byte;                            // Current transformer for line
+        resb15                      AT %B15 : Byte;                            // Reserved
+        voltDipLimit                AT %B16 : Word;                            // Voltage dip limit in relation to nominal value voltage [0.1%]
+        voltSwellLimit              AT %B18 : Word;                            // Voltage swell limit in relation to nominal value voltage [0.1%]
+        thresOverCurr               AT %B20 : Word;                            // Threshold overcurrent in relation to nominal value current [0.1%]
+        numCycForAnalysis           AT %B22 : Word;                            // Number of cycles for analysis of voltage increase and dip
+        resb24                      AT %B24 : Byte;                            // Reserved
+        resb25                      AT %B25 : Byte;                            // Reserved
+        resb26                      AT %B26 : Byte;                            // Reserved
+        resb27                      AT %B27 : Byte;                            // Reserved
+        resb28                      AT %B28 : Byte;                            // Reserved
+        resb29                      AT %B29 : Byte;                            // Reserved
+        numChannelParamBlocks       AT %B30 : Byte    := BYTE#3;               // Number of channel parameter blocks = 3
+        lengthChannelParamBlock     AT %B31 : Byte    := BYTE#32;              // Length of channel parameter block = 32
+        channel                     AT %B32 : Array[0..2] of EMRCHFDataRecCh;  // Channels
       END_STRUCT;
 
    END_TYPE
 
    TYPE MotorStarterDS94  : STRUCT
-        phaseCurrentL1    : Byte;   // Phase current L1 in %; 0...796%; Inc 3.125%
-        phaseCurrentL2    : Byte;   // Phase current L2 in %; 0...796%; Inc 3.125%
-        phaseCurrentL3    : Byte;   // Phase current L3 in %; 0...796%; Inc 3.125%
-        resb3             : Byte;   // Reserved
-        resw4             : Word;   // Reserved
-        resb6             : Byte;   // Reserved
-        unbalance         : Byte;   // Unbalance; 0...255%; Inc 1%
-        motorHeating      : Word;   // Motor heating; 0...1.000%
-        resdw10           : DWord;  // Reserved
-        resdw14           : DWord;  // Reserved
-        resdw18           : DWord;  // Reserved
-        resdw22           : DWord;  // Reserved
-        resw26            : Word;   // Reserved
-        phaseCurrentEffL1 : DInt;   // Phase current L1; +-0...20.000A; Inc 0.01A
-        phaseCurrentEffL2 : DInt;   // Phase current L2; +-0...20.000A; Inc 0.01A
-        phaseCurrentEffL3 : DInt;   // Phase current L3; +-0...20.000A; Inc 0.01A
-        electrSupplyVolt  : Int;    // Electronics supply voltage; 0... 1.500V; Inc 0.1V
-        readw42           : DWord;  // Reserved
-        resdw46           : DWord;  // Reserved
-        resdw50           : DWord;  // Reserved
-        resdw54           : DWord;  // Reserved
-        resdw58           : DWord;  // Reserved
-        resw62            : Word;   // Reserved
+        phaseCurrentL1    AT %B0 : Byte;   // Phase current L1 in %; 0...796%; Inc 3.125%
+        phaseCurrentL2    AT %B1 : Byte;   // Phase current L2 in %; 0...796%; Inc 3.125%
+        phaseCurrentL3    AT %B2 : Byte;   // Phase current L3 in %; 0...796%; Inc 3.125%
+        resb3             AT %B3 : Byte;   // Reserved
+        resw4             AT %B4 : Word;   // Reserved
+        resb6             AT %B6 : Byte;   // Reserved
+        unbalance         AT %B7 : Byte;   // Unbalance; 0...255%; Inc 1%
+        motorHeating      AT %B8 : Word;   // Motor heating; 0...1.000%
+        resdw10           AT %B10 : DWord;  // Reserved
+        resdw14           AT %B14 : DWord;  // Reserved
+        resdw18           AT %B18 : DWord;  // Reserved
+        resdw22           AT %B22 : DWord;  // Reserved
+        resw26            AT %B26 : Word;   // Reserved
+        phaseCurrentEffL1 AT %B28 : DInt;   // Phase current L1; +-0...20.000A; Inc 0.01A
+        phaseCurrentEffL2 AT %B32 : DInt;   // Phase current L2; +-0...20.000A; Inc 0.01A
+        phaseCurrentEffL3 AT %B36 : DInt;   // Phase current L3; +-0...20.000A; Inc 0.01A
+        electrSupplyVolt  AT %B40 : Int;    // Electronics supply voltage; 0... 1.500V; Inc 0.1V
+        readw42           AT %B42 : DWord;  // Reserved
+        resdw46           AT %B46 : DWord;  // Reserved
+        resdw50           AT %B50 : DWord;  // Reserved
+        resdw54           AT %B54 : DWord;  // Reserved
+        resdw58           AT %B58 : DWord;  // Reserved
+        resw62            AT %B62 : Word;   // Reserved
       END_STRUCT;
 
    END_TYPE
@@ -4489,36 +4489,36 @@
    END_TYPE
 
    TYPE MotorStarterDS201              : STRUCT
-        res00                          : Bool;                // Reserved
-        loadType                       : Bool;                // Load type 0= 3phase; 1=1phase
-        exMotorApp                     : Bool;                // EX motor application 0= no; 1= yes (only F-Starter)
-        res03                          : Bool;                // Reserved
-        turnOffClass0                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        turnOffClass1                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        turnOffClass2                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        turnOffClass3                  : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
-        responseOverload0              : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
-        responseOverload1              : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
-        behaviorThermMotorModelRestart : Bool;                // 0]: Retention of the thermal motor; [1]: Deletion of the thermal motor
-        responseSafetySwitchOff        : Bool;                // [0]: no warning by safety switch-off; [1]: warning by safety switch-off
-        responseCPUStop                : Bool;                // Response to CPU STOP; [0]: Switch substitute value; [1]: Retain last value
-        responseResCurrentDetect       : Bool    := TRUE;     // Response to residual current; [0]: Warn ; [1]: Tripping
-        responseAsymmetry              : Bool    := TRUE;     // Response to asymmetry; [0]: Warn ; [1]: Tripping
-        res17                          : Bool;                // Reserved
-        input1Level                    : Bool    := TRUE;     // Input 1 level; [0]: NC contact; [1]: NO contact
-        input2Level                    : Bool    := TRUE;     // Input 2 level; [0]: NC contact; [1]: NO contact
-        input3Level                    : Bool    := TRUE;     // Input 3 level; [0]: NC contact; [1]: NO contact
-        groupFaultDiag                 : Bool;                // Group fault diagnostics; [0]: Enable; [1]: Disable
-        input1Signal                   : Bool;                // Input 1 signal; [0]: Non-retentive; [1]: Retentive
-        input2Signal                   : Bool;                // Input 2 signal; [0]: Non-retentive; [1]: Retentive
-        input3Signal                   : Bool;                // Input 3 signal; [0]: Non-retentive; [1]: Retentive
-        groupWarnDiag                  : Bool    := TRUE;     // Group warning diagnostics; [0]: Enable; [1]: Disable
-        input1Action                   : Byte    := BYTE#8;   // Input 1 action; [8]: Motor CW
-        input2Action                   : Byte    := BYTE#9;   // Input 2 action; [9]: Motor CCW
-        input3Action                   : Byte    := BYTE#13;  // Input 3 action; [13]: Cold start; not safety starter!
-        ratedOperatCurrent             : Int;                 // Rated operational current Ie; 0.3 … 9 A/10 mA
-        lowerCurrentLimit              : Byte;                // Lower current limit; 18.75 … 100 %/3.125 % [6 … 32]; [0]: Deactivated
-        upperCurrentLimit              : Byte;                // Upper current limit; 50 … 400 %/3.125 % [16 … 128]; [0]: Deactivated
+        res00                          AT %X0.0 : Bool;                // Reserved
+        loadType                       AT %X0.1 : Bool;                // Load type 0= 3phase; 1=1phase
+        exMotorApp                     AT %X0.2 : Bool;                // EX motor application 0= no; 1= yes (only F-Starter)
+        res03                          AT %X0.3 : Bool;                // Reserved
+        turnOffClass0                  AT %X0.4 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        turnOffClass1                  AT %X0.5 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        turnOffClass2                  AT %X0.6 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        turnOffClass3                  AT %X0.7 : Bool;                // Trip class; [0]: CLASS 10; [3]: CLASS 5 (10a)
+        responseOverload0              AT %X1.0 : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
+        responseOverload1              AT %X1.1 : Bool;                // Response to overload - TMM; [0]: Trip without restart; [1]: Trip with restart ; [2]: Warn only
+        behaviorThermMotorModelRestart AT %X1.2 : Bool;                // 0]: Retention of the thermal motor; [1]: Deletion of the thermal motor
+        responseSafetySwitchOff        AT %X1.3 : Bool;                // [0]: no warning by safety switch-off; [1]: warning by safety switch-off
+        responseCPUStop                AT %X1.4 : Bool;                // Response to CPU STOP; [0]: Switch substitute value; [1]: Retain last value
+        responseResCurrentDetect       AT %X1.5 : Bool    := TRUE;     // Response to residual current; [0]: Warn ; [1]: Tripping
+        responseAsymmetry              AT %X1.6 : Bool    := TRUE;     // Response to asymmetry; [0]: Warn ; [1]: Tripping
+        res17                          AT %X1.7 : Bool;                // Reserved
+        input1Level                    AT %X2.0 : Bool    := TRUE;     // Input 1 level; [0]: NC contact; [1]: NO contact
+        input2Level                    AT %X2.1 : Bool    := TRUE;     // Input 2 level; [0]: NC contact; [1]: NO contact
+        input3Level                    AT %X2.2 : Bool    := TRUE;     // Input 3 level; [0]: NC contact; [1]: NO contact
+        groupFaultDiag                 AT %X2.3 : Bool;                // Group fault diagnostics; [0]: Enable; [1]: Disable
+        input1Signal                   AT %X2.4 : Bool;                // Input 1 signal; [0]: Non-retentive; [1]: Retentive
+        input2Signal                   AT %X2.5 : Bool;                // Input 2 signal; [0]: Non-retentive; [1]: Retentive
+        input3Signal                   AT %X2.6 : Bool;                // Input 3 signal; [0]: Non-retentive; [1]: Retentive
+        groupWarnDiag                  AT %X2.7 : Bool    := TRUE;     // Group warning diagnostics; [0]: Enable; [1]: Disable
+        input1Action                   AT %B3 : Byte    := BYTE#8;   // Input 1 action; [8]: Motor CW
+        input2Action                   AT %B4 : Byte    := BYTE#9;   // Input 2 action; [9]: Motor CCW
+        input3Action                   AT %B5 : Byte    := BYTE#13;  // Input 3 action; [13]: Cold start; not safety starter!
+        ratedOperatCurrent             AT %B6 : Int;                 // Rated operational current Ie; 0.3 … 9 A/10 mA
+        lowerCurrentLimit              AT %B8 : Byte;                // Lower current limit; 18.75 … 100 %/3.125 % [6 … 32]; [0]: Deactivated
+        upperCurrentLimit              AT %B9 : Byte;                // Upper current limit; 50 … 400 %/3.125 % [16 … 128]; [0]: Deactivated
       END_STRUCT;
 
    END_TYPE
@@ -4532,81 +4532,81 @@
    END_TYPE
 
    TYPE EM480VCTHFDataRec128             : STRUCT
-        majMinVer                        : Byte    := BYTE#97;                  // Major / minor version
-        numParamStruct                   : Byte    := BYTE#2;                   // Number of parameter structures = 2
-        numModuleParamBlocks             : Byte    := BYTE#1;                   // Number of module parameter blocks = 1
-        lengthModuleParamBlock           : Byte    := BYTE#26;                  // Length of module parameter block = 26
-        connectTypePhases                : Byte    := BYTE#0;                   // Connection type of the phases
-        measRangePower                   : Byte;                                // Voltage measuring range of the power supply system
-        energyCountGateScaleValLineFrequ : Byte;                                // Energy counter gate / Full-scale value for energy counter / Line frequency of the power supply system
-        resb07                           : Byte;                                // Reserved
-        enableCalcAnalysisDiag           : Byte;                                // Enable value calculation, analysis and diagnostic
-        idUserDataVariant                : Byte;                                // ID of the user data variant
-        currTransPrimCurr                : DWord;                               // Current transformer Primary current (A)
-        currTransSecCurr                 : Byte;                                // Current transformer secondary current; 00=1A, 01=5A 
-        resb15                           : Byte;                                // Reserved
-        voltDipLimit                     : Word;                                // Voltage dip limit in relation to nominal value voltage [0.1%]
-        voltSwellLimit                   : Word;                                // Voltage swell limit in relation to nominal value voltage [0.1%]
-        thresOverCurr                    : Word;                                // Threshold overcurrent in relation to nominal value current [0.1%]
-        numCycForAnalysis                : Word;                                // Number of cycles for analysis of voltage increase and dip
-        resw24                           : Word;                                // Reserved
-        resw26                           : Word;                                // Reserved
-        resw28                           : Word;                                // Reserved
-        numChannelParamBlocks            : Byte    := BYTE#3;                   // Number of channel parameter blocks = 3
-        lengthChannelParamBlock          : Byte    := BYTE#32;                  // Length of channel parameter block = 32
-        channel                          : Array[0..2] of EM480VCTHFDataRecCh;
+        majMinVer                        AT %B0 : Byte    := BYTE#97;                  // Major / minor version
+        numParamStruct                   AT %B1 : Byte    := BYTE#2;                   // Number of parameter structures = 2
+        numModuleParamBlocks             AT %B2 : Byte    := BYTE#1;                   // Number of module parameter blocks = 1
+        lengthModuleParamBlock           AT %B3 : Byte    := BYTE#26;                  // Length of module parameter block = 26
+        connectTypePhases                AT %B4 : Byte    := BYTE#0;                   // Connection type of the phases
+        measRangePower                   AT %B5 : Byte;                                // Voltage measuring range of the power supply system
+        energyCountGateScaleValLineFrequ AT %B6 : Byte;                                // Energy counter gate / Full-scale value for energy counter / Line frequency of the power supply system
+        resb07                           AT %B7 : Byte;                                // Reserved
+        enableCalcAnalysisDiag           AT %B8 : Byte;                                // Enable value calculation, analysis and diagnostic
+        idUserDataVariant                AT %B9 : Byte;                                // ID of the user data variant
+        currTransPrimCurr                AT %B10 : DWord;                               // Current transformer Primary current (A)
+        currTransSecCurr                 AT %B14 : Byte;                                // Current transformer secondary current; 00=1A, 01=5A 
+        resb15                           AT %B15 : Byte;                                // Reserved
+        voltDipLimit                     AT %B16 : Word;                                // Voltage dip limit in relation to nominal value voltage [0.1%]
+        voltSwellLimit                   AT %B18 : Word;                                // Voltage swell limit in relation to nominal value voltage [0.1%]
+        thresOverCurr                    AT %B20 : Word;                                // Threshold overcurrent in relation to nominal value current [0.1%]
+        numCycForAnalysis                AT %B22 : Word;                                // Number of cycles for analysis of voltage increase and dip
+        resw24                           AT %B24 : Word;                                // Reserved
+        resw26                           AT %B26 : Word;                                // Reserved
+        resw28                           AT %B28 : Word;                                // Reserved
+        numChannelParamBlocks            AT %B30 : Byte    := BYTE#3;                   // Number of channel parameter blocks = 3
+        lengthChannelParamBlock          AT %B31 : Byte    := BYTE#32;                  // Length of channel parameter block = 32
+        channel                          AT %B32 : Array[0..2] of EM480VCTHFDataRecCh;
       END_STRUCT;
 
    END_TYPE
 
    TYPE EM400VSTDataRec142         : STRUCT
-        version                    : Byte;   // Version
-        resb1                      : Byte;   // Reserved
-        voltL1N                    : Real;   // Voltage UL1-N
-        voltL2N                    : Real;   // Voltage UL2-N
-        voltL3N                    : Real;   // Voltage UL3-N
-        voltL1L2                   : Real;   // Voltage UL1-L2
-        voltL2L3                   : Real;   // Voltage UL2-L3
-        voltL3L1                   : Real;   // Voltage UL3-L1
-        currentL1                  : Real;   // Current L1
-        currentL2                  : Real;   // Current L2
-        currentL3                  : Real;   // Current L3
-        powerFactorL1              : Real;   // Power factor L1
-        powerFactorL2              : Real;   // Power factor L2
-        powerFactorL3              : Real;   // Power factor L3
-        totalPowerFactor           : Real;   // Total power factor L1 L2 L3
-        frequency                  : Real;   // Frequency
-        amplUnbalanceVolt          : Real;   // Amplitude unbalance for voltage
-        amplUnbalanceCurrent       : Real;   // Amplitude unbalance for current
-        apparentPowerL1            : Real;   // Apparent power L1
-        apparentPowerL2            : Real;   // Apparent power L2
-        apparentPowerL3            : Real;   // Apparent power L3
-        totalApparentPower         : Real;   // Total apparent power L1 L2 L3
-        reactivePowerL1            : Real;   // Reactive power L1
-        reactivePowerL2            : Real;   // Reactive power L2
-        reactivePowerL3            : Real;   // Reactive power L2
-        totalReactivePower         : Real;   // Total reactive power L1 L2 L3
-        activePowerL1              : Real;   // Active power L1
-        activePowerL2              : Real;   // Active power L2
-        activePowerL3              : Real;   // Active power L3
-        totalActivePower           : Real;   // Total active power L1 L2 L3
-        phaseAngleL1               : Real;   //  Phase angle L1
-        phaseAngleL2               : Real;   //  Phase angle L2
-        phaseAngleL3               : Real;   //  Phase angle L3
-        totalApparentEnergy        : Real;   // Total apparent energy L1 L2 L3
-        totalReactiveEnergy        : Real;   // Total reactive energy L1 L2 L3
-        totalActiveEnergy          : Real;   // Total active energy L1 L2 L3
-        totalReactiveEnergyIn      : Real;   // Total reactive energy inflow L1 L2 L3
-        totalReactiveEnergyOut     : Real;   // Total reactive energy outflow L1 L2 L3
-        totalActiveEnergyIn        : Real;   // Total active energy inflow L1 L2 L3
-        totalActiveEnergyOut       : Real;   // Total active energy outflow L1 L2 L3
-        totalApparentEnergyLong    : LReal;  // Total apparent energy L1 L2 L3
-        totalReactiveEnergyLong    : LReal;  // Total reactive energy L1 L2 L3
-        totalActiveEnergyLong      : LReal;  // Total active energy L1 L2 L3
-        totalReactiveEnergyInLong  : LReal;  // Total reactive energy inflow L1 L2 L3
-        totalReactiveEnergyOutLong : LReal;  // Total reactive energy outflow L1 L2 L3
-        totalActiveEnergyInLong    : LReal;  // Total active energy inflow L1 L2 L3
-        totalActiveEnergyOutLong   : LReal;  // Total active energy outflow L1 L2 L3
+        version                    AT %B0   : Byte;   // Version
+        resb1                      AT %B1   : Byte;   // Reserved
+        voltL1N                    AT %B2   : Real;   // Voltage UL1-N
+        voltL2N                    AT %B6   : Real;   // Voltage UL2-N
+        voltL3N                    AT %B10   : Real;   // Voltage UL3-N
+        voltL1L2                   AT %B14   : Real;   // Voltage UL1-L2
+        voltL2L3                   AT %B18   : Real;   // Voltage UL2-L3
+        voltL3L1                   AT %B22   : Real;   // Voltage UL3-L1
+        currentL1                  AT %B26   : Real;   // Current L1
+        currentL2                  AT %B30   : Real;   // Current L2
+        currentL3                  AT %B34   : Real;   // Current L3
+        powerFactorL1              AT %B38   : Real;   // Power factor L1
+        powerFactorL2              AT %B42   : Real;   // Power factor L2
+        powerFactorL3              AT %B46   : Real;   // Power factor L3
+        totalPowerFactor           AT %B50   : Real;   // Total power factor L1 L2 L3
+        frequency                  AT %B54   : Real;   // Frequency
+        amplUnbalanceVolt          AT %B58   : Real;   // Amplitude unbalance for voltage
+        amplUnbalanceCurrent       AT %B62   : Real;   // Amplitude unbalance for current
+        apparentPowerL1            AT %B66   : Real;   // Apparent power L1
+        apparentPowerL2            AT %B70   : Real;   // Apparent power L2
+        apparentPowerL3            AT %B74   : Real;   // Apparent power L3
+        totalApparentPower         AT %B78   : Real;   // Total apparent power L1 L2 L3
+        reactivePowerL1            AT %B82   : Real;   // Reactive power L1
+        reactivePowerL2            AT %B86   : Real;   // Reactive power L2
+        reactivePowerL3            AT %B90   : Real;   // Reactive power L2
+        totalReactivePower         AT %B94   : Real;   // Total reactive power L1 L2 L3
+        activePowerL1              AT %B98   : Real;   // Active power L1
+        activePowerL2              AT %B102   : Real;   // Active power L2
+        activePowerL3              AT %B106   : Real;   // Active power L3
+        totalActivePower           AT %B110   : Real;   // Total active power L1 L2 L3
+        phaseAngleL1               AT %B114   : Real;   //  Phase angle L1
+        phaseAngleL2               AT %B118   : Real;   //  Phase angle L2
+        phaseAngleL3               AT %B122   : Real;   //  Phase angle L3
+        totalApparentEnergy        AT %B126   : Real;   // Total apparent energy L1 L2 L3
+        totalReactiveEnergy        AT %B130   : Real;   // Total reactive energy L1 L2 L3
+        totalActiveEnergy          AT %B134   : Real;   // Total active energy L1 L2 L3
+        totalReactiveEnergyIn      AT %B138   : Real;   // Total reactive energy inflow L1 L2 L3
+        totalReactiveEnergyOut     AT %B142   : Real;   // Total reactive energy outflow L1 L2 L3
+        totalActiveEnergyIn        AT %B146   : Real;   // Total active energy inflow L1 L2 L3
+        totalActiveEnergyOut       AT %B150   : Real;   // Total active energy outflow L1 L2 L3
+        totalApparentEnergyLong    AT %B158   : LReal;  // Total apparent energy L1 L2 L3
+        totalReactiveEnergyLong    AT %B166   : LReal;  // Total reactive energy L1 L2 L3
+        totalActiveEnergyLong      AT %B174   : LReal;  // Total active energy L1 L2 L3
+        totalReactiveEnergyInLong  AT %B182   : LReal;  // Total reactive energy inflow L1 L2 L3
+        totalReactiveEnergyOutLong AT %B190   : LReal;  // Total reactive energy outflow L1 L2 L3
+        totalActiveEnergyInLong    AT %B198   : LReal;  // Total active energy inflow L1 L2 L3
+        totalActiveEnergyOutLong   AT %B206   : LReal;  // Total active energy outflow L1 L2 L3
       END_STRUCT;
 
    END_TYPE
