@@ -1,4 +1,5 @@
-NAMESPACE Siemens.Ax.Types.NoOffset
+NAMESPACE Simatic.Ax.Types.NoOffset
+   
 TYPE CountHwIrq : STRUCT
           gateStart   : Bool;   // Gate start
           gateStop    : Bool;   // Gate stop

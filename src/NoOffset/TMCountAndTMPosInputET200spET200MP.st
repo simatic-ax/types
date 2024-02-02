@@ -1,4 +1,4 @@
-﻿NAMESPACE Siemens.Ax.Types.NoOffset
+﻿NAMESPACE Simatic.Ax.Types.NoOffset
 
    TYPE CountDataRecCh : STRUCT
          operationMode  : Byte := BYTE#16#01;   // Operation mode

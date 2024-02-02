@@ -1,4 +1,4 @@
-﻿NAMESPACE Siemens.Ax.Types.WithOffset
+﻿NAMESPACE Simatic.Ax.Types.WithOffset
 
    TYPE PDSTW1BM : STRUCT
       reserved_Bit08      AT %X0.0 : Bool;   // Reserved

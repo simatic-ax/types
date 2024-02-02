@@ -1,5 +1,5 @@
-﻿NAMESPACE Siemens.Ax.Types.WithOffset
-
+﻿NAMESPACE Simatic.Ax.Types.WithOffset
+   
    TYPE CountDataRecCh : STRUCT
          operationMode AT %B0 : Byte := BYTE#16#01;   // Operation mode
          basicParam    AT %B1 : Byte;   // Basic Parameters

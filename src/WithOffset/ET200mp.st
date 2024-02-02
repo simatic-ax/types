@@ -1,4 +1,4 @@
-﻿NAMESPACE Siemens.Ax.Types.WithOffset
+﻿NAMESPACE Simatic.Ax.Types.WithOffset
    TYPE DI16HFCountControlCh : STRUCT
          loadValue   AT %B0 : DWord;   // Load value counter
          controlByte AT %B4 : Byte;   // Control byte counter

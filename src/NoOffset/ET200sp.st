@@ -1,4 +1,5 @@
-﻿NAMESPACE Siemens.Tiax.Types.NoOffset
+﻿NAMESPACE Simatic.Ax.Types.NoOffset
+   
    TYPE PNIOTimeStamp : STRUCT
         status        : UInt;   // Status synchronization
         secondsHigh   : UInt;   // Seconds high
