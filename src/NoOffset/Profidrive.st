@@ -1059,7 +1059,7 @@
 
    END_TYPE
 
-   TYPE PD_TEL105_IN : STRUCT
+   TYPE PDTel105In : STRUCT
       ZSW1     : PD_ZSW1_611UMode;
       NIST_B   : DWORD;
       ZSW2     : PD_ZSW2_611UMode;
@@ -1071,7 +1071,7 @@
 
 END_TYPE
 
-TYPE PD_TEL105_OUT : STRUCT
+TYPE PDTel105Out : STRUCT
       STW1    : PD_STW1_611UMode;
       NSOLL_B : DWORD;
       STW2    : PD_STW2_611UMode;
