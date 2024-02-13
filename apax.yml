@@ -3,7 +3,9 @@ name: "@simatic-ax/types"
 version: 0.0.0-placeholder
 author: Siemens AG
 # Description will be displayed in the apax extension
-description: PLC data types which describe the data structure of the address spaces and the data records of peripheral / technology modules and communication standards like PROFIdrive drives
+description: PLC data types which describe the data structure of the address
+  spaces and the data records of peripheral / technology modules and
+  communication standards like PROFIdrive drives
 type: lib
 #URL to the repository
 repository:
