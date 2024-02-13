@@ -5,6 +5,7 @@
 This package contains a collection of structured data types for specific applications. This includes types for hardware components that are available inside the SIMATIC ecosystem and standardized communication types.
 
 Currently, there are data types available for the following:
+
 - Modules for the ET 200MP distributed IO system
 - Modules for the ET 200SP distributed IO system
 - Modules for IO modules of the SIMATIC S7-1500 compact PLC
@@ -44,13 +45,17 @@ Simatic.Ax.Types.WithOffset;
 
 1. Add the package to your repository as a dependency
 2. Depending on if you want to use the data type with or without offsets, add either
+
     ```iec-st
     USING Simatic.Ax.Types.WithOffset;
     ```
+
     or
+
     ```iec-st
     USING Simatic.Ax.Types.NoOffset;
     ```
+
     to the file where you want to use the data type
 3. Use the data type in your project as if you would have created it in your project
 
