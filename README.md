@@ -25,13 +25,13 @@ apax add @simatic-ax/types
 There is a main namespace of this library as well as two sub-namespaces. The main namespace is
 
 ```iec-st
-Simatic.Ax.types;
+Simatic.Ax.Types;
 ```
 
 The sub-namespace for data types without relative address offsets is
 
 ```iec-st
-Simatic.Ax.types;
+Simatic.Ax.Types.NoOffset;
 ```
 
 The sub-namespace for the same data types with added relative address offsets is
