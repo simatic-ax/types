@@ -3,14 +3,15 @@ name: "@simatic-ax/types"
 version: 0.0.0-placeholder
 author: Siemens AG
 # Description will be displayed in the apax extension
-description: PLC data types which describe the data structure of the address
-  spaces and the data records of peripheral / technology modules and
-  communication standards like PROFIdrive drives
+description: PLC data types which describe the data structure of the address spaces and the data records of peripheral / technology modules and communication standards like PROFIdrive drives
 type: lib
 #URL to the repository
 repository:
   type: git
   url: https://github.com/simatic-ax/types
+# Registry information, where the package will be published
+registries:
+  '@simatic-ax': 'https://npm.pkg.github.com/'
 # Environment variables
 variables:
   APAX_BUILD_ARGS:
@@ -18,13 +19,13 @@ variables:
 targets:
   - '1500'
   - 'llvm'
+# Install Setting
+installStrategy: strict
+apaxVersion: 3.2.1
 # Dependencies
 devDependencies:
-  '@ax/sdk': 2311.0.1
+  '@ax/sdk': 2405.0.0
   "@simatic-ax/snippetscollection": 1.0.0
-# Registry information, where the package will be published
-registries:
-  '@simatic-ax': 'https://npm.pkg.github.com/'
 # Files, which will be shipped with the library
 files:
   - 'README.md'
@@ -32,5 +33,3 @@ files:
   - 'doc'
   - 'src'
   - 'snippets'
-installStrategy: strict
-apaxVersion: 3.1.0
